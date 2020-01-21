@@ -1,0 +1,393 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ca" dir="ltr" lang="ca"><head><!-- Generat el 27/Oct/2010  8:24:46  amb HTTrack -->
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  
+
+<title>Elaboració avançada de documents amb bases de dades</title><link rel="stylesheet" media="all" type="text/css" href="css/cssff6e.css?s=all&amp;t=estatic" />
+<link rel="stylesheet" media="screen" type="text/css" href="css/css6139.css?t=estatic" />
+<link rel="stylesheet" media="print" type="text/css" href="css/css6f71.css?s=print&amp;t=estatic" />
+
+  <link rel="shortcut icon" href="ico/favicon.ico" /></head>
+
+
+ 
+<body>
+<div class="headerinc">
+<a id="inici"> </a>
+<a href="http://apliedu.xtec.cat/wikiform" title="Materials de formació"><img alt="logo" style="border-width: 0pt;" src="png/logosuperior.png" /></a>
+</div>
+
+<div class="dokuwiki">
+
+
+<div class="titol">Les taules, element principal. Filtres </div><div class="subtitol"> Pràctica 2 - Exercici 4</div><div class="navega"><div id="navcontainer">
+<ul id="navlist">
+<li><a href="index.html" title="Inici">&lt;&lt;</a></li>  
+<li><a href="index-3.html">&lt;</a></li>  
+<li><a href="practica_1-2.html">Exercici 1</a></li>  
+<li><a href="practica_2-2.html">Exercici 2</a></li>  
+<li><a href="practica_3-2.html">Exercici 3</a></li>  
+<li id="active"><a id="current" href="#">Exercici 4</a></li>
+<li><a href="projecte_2.html">Projecte II</a></li>  
+</ul></div></div>
+
+  
+  <div class="page">
+
+    <!-- ......... wikipage start ......... -->
+    
+
+
+<h3><a name="filtresprimers_passos" id="filtresprimers_passos">Filtres: Primers passos</a></h3>
+<div class="level3">
+
+<p>
+
+</p><div class="notetip">
+Aquesta pràctica serveix d'enllaç entre el mòdul 2 i el 3, que tractarà de les consultes
+</div> 
+
+
+<p>
+Ara estudiarem:
+
+</p>
+<ul>
+<li class="level1"><div class="li"> <strong>Introducció</strong></div>
+</li>
+<li class="level1"><div class="li"> <strong>Què és un filtre</strong></div>
+</li>
+<li class="level1"><div class="li"> <strong>Tipus del filtres</strong></div>
+</li>
+<li class="level1"><div class="li"> <strong>Fem filtres</strong></div>
+</li>
+</ul>
+
+</div>
+
+<h4><a name="introduccio" id="introduccio">Introducció</a></h4>
+<div class="level4">
+
+<p>
+Actualment ens passa que tenim molta informació per tot arreu
+(internet, televisió, ràdio, diaris, discos, CD, DVD, etc) i el nostre
+problema és com tractar-la, com trobar una dada concreta enmig de tot
+un munt d'elements diversos: és com trobar una agulla en un…
+<img src="jpg/m2_p1_22c6eb.jpg?w=300" class="mediacenter" alt="" width="300" />
+</p>
+
+<p>Per ajudar-nos en la nostra feina diària, entren en joc les Bases de
+Dades: seran una eina que ens ajudarà a treballar amb tota aquesta
+descomunal acumulació de dades, d'informació que ens està omplint la
+vida moderna.
+</p>
+
+<p>
+En el mòdul anterior hem vist com un programa de Base de Dades relacional com és <strong>l'Open Base</strong>
+ens permet crear unes taules en les quals incorporem la informació. En
+les anteriors pràctiques d'aquest mòdul hem relacionat les taules i
+creat una estructura.
+</p>
+
+<p>Però aquesta informacióo estructurada, ens serviria de poc si en el
+moment que la tenim tota incorporada no hi hagués alguna forma de
+trobar allò que ens interessa dins del conjunt global.
+</p>
+
+<p>Aquí entren en joc les eines de cerca i filtrat de la informació.
+Així en aquest mòdul es tractarà de forma detallada n dels dos elements
+principals d'aquesta funció: FILTRES. L'altre elements important de
+recerca d'informació, molt més potent, s'estudiarà en el següent mòdul:
+les CONSULTES.
+</p>
+
+<p>I com que si les coses no es fan en ordre no es poden entendre,
+anirem pas a pas. Primer caldrà explicar els filtres, el concepte i com
+es fan amb alguns exemples.
+</p>
+
+</div>
+
+<h4><a name="que_es_un_filtre" id="que_es_un_filtre">Què és un filtre</a></h4>
+<div class="level4">
+
+<p>Sobre les dades més o menys grans d'una taula, en moltes ocasions
+ens interessarà trobar un registre concret. El filtre és, tal com diu
+la paraula, una cerca d'una informació que se'ns mostra en pantalla
+ocultant la resta. És a dir, si volem triar els alumnes de tercer de la
+resta dels del centre, el filtre ocultarà tots els alumnes del centre
+menys els de tercer.
+</p>
+
+</div>
+
+<h4><a name="tipus_de_filtres" id="tipus_de_filtres">Tipus de filtres</a></h4>
+<div class="level4">
+
+<p>
+
+<img src="jpg/m2_p1_01.jpg" class="mediacenter" title="Botons dels filtres" alt="Botons dels filtres" />
+</p>
+
+<p>
+Les diferents modalitats de filtres que podem crear amb el programa <strong>Open Base</strong>
+són els que s'anomenen automàtic i estàndard, els quals venen
+representats pels botons de la barra representada en la imatge
+anterior.
+</p>
+<ul>
+<li class="level1"><div class="li"> El filtre automàtic: Fem clic en la
+paraula a partir de la qual volem fer el filtrat d'informació, i el
+programa ocultarà tots els registres que tinguin una dada diferent a
+aquesta.</div>
+</li>
+</ul>
+<ul>
+<li class="level1"><div class="li"> El filtre estàndard ens permetrà
+amb aquesta finestra triar unes condicions per establir aquesta
+selecció de la informació desitjada, tal com la imatge que es mostra a
+continuació.</div>
+</li>
+</ul>
+
+<p>
+
+<img src="jpg/m2_p1_02b.jpg" class="mediacenter" alt="" />
+</p>
+
+<p>
+Ara que sabem la funció i els tipus que n'hi ha, estem en disposició de fer-ne uns quants per acabar-ho de comprendre.
+</p>
+
+</div>
+
+<h4><a name="fem_filtres" id="fem_filtres">Fem filtres</a></h4>
+<div class="level4">
+
+<p>
+
+Aquests <strong>botons</strong> ens permetran treballar amb els filtres, tal com podem veure a continuació.
+</p>
+
+<p>
+Observem aquesta imatge en la qual es mostren les funcions de cada botó dels filtres:
+<img src="jpg/m2_p1_23.jpg" class="mediacenter" title="Explicació" alt="Explicació" />
+</p>
+
+</div>
+
+<h4><a name="filtre_automatic" id="filtre_automatic">Filtre automàtic</a></h4>
+<div class="level4">
+
+<p>
+Per tant, el primer botó que ara provarem serà el del filtre automàtic,
+que és el del primer botó de l'esquerra de la imatge superior.
+</p>
+
+<p>
+<img src="jpg/m2_p1_24.jpg" class="mediacenter" alt="" />
+</p>
+
+<p>Per tant, si obrim una taula Llibres com la que es mostra a la
+imatge anterior i fem un clic en el camp (columna) on hi ha les dades
+de l'Any edicio a la dada “2000”, i després activem, mitjançant un clic
+el botó esmentat, el resultat serà aquest:
+</p>
+
+<p>
+<img src="jpg/m2_p1_25.jpg" class="mediacenter" alt="" />
+</p>
+
+<p>Per tant, què ha passat? Doncs que el filtre ha fet la seva funció,
+ens amaga totes les dades que no compleixin la condició Any edicio = a
+2000, per tant, ja tenim les dades desitjades en pantalla i amb elles
+podrem treballar de forma independent del total de registres. Si volem
+eliminar el filtrat i mostrar de nou tots els registres, només hem de
+fer clic al botó que té l'aspa vermella i tornarem a la situació
+inicial.
+Podem fer-ne més proves amb els diferents anys i veure'n els resultas.
+També podem fer proves amb els altres camps, com per exemple, tot els
+que el seu lloc d'edició sigui “mx”, és a dir, Mèxic. El resultat que
+ens mostrarà són aquests pocs registres:
+<img src="jpg/m2_p1_26.jpg" class="mediacenter" alt="" />
+</p>
+
+</div>
+
+<h4><a name="filtre_estandard" id="filtre_estandard">Filtre estàndard</a></h4>
+<div class="level4">
+
+<p>Ara provarem l'altre tipus de filtre, que ens permetrà fer unes
+recerques més detallades i completes, podríem dir que es troba ja més
+dins de les consultes per la seva potència d'acció.
+</p>
+
+<p>Aquest tipus de filtre permet establir uns paràmetres més detallats
+i complexes que en el cas anterior. Poden afectar a més d'un camp a
+l'hora i introduir les expressions condicionals amb el <strong>i</strong> i el <strong>o</strong> lògics.
+</p>
+
+<p>
+Així sobre les dades abans presentades, anem a suposar vàrios exemples que podem fer de filtrats més complexes:
+
+</p>
+<ul>
+<li class="level1"><div class="li"> Volem filtrar tots els llibres
+editats a partir de l'any 1991. Com ho fem? Doncs si introduim aquesta
+expressió entrant amb el bótó del “filtre estàndard” i escrivim el que
+es veu en la imatge de sota:</div>
+</li>
+</ul>
+
+<p>
+
+<img src="jpg/m2_p1_27.jpg" class="mediacenter" alt="" />
+</p>
+
+<p>
+El resultat que obtindrem serà:
+</p>
+
+<p>
+<img src="jpg/m2_p1_28.jpg" class="mediacenter" alt="" />
+</p>
+
+<p>
+Està molt bé, oi? Doncs ara anem a fer més proves amb aquesta modalitat de filtrat.
+
+</p>
+<ul>
+<li class="level1"><div class="li"> Si volem que ens tregui en pantalla els llibres editats entre l'any 2001 i 2002, caldrà introduir uns criteris semblants a:</div>
+</li>
+</ul>
+
+<p>
+
+<img src="jpg/m2_p1_29.jpg" class="mediacenter" alt="" />
+</p>
+
+<p>
+I el resultat que obtindrem serà:
+</p>
+
+<p>
+<img src="jpg/m2_p1_30.jpg" class="mediacenter" alt="" />
+</p>
+
+<p>
+Com podem veure, el signe &gt; = (major o igual) i el signe &lt; =
+(menor o igual) permeten precisar molt més en el filtrat. Fixeu-vos en
+els resultats obtinguts. En aquest cas hem utilitzat el criteri <strong>i lògic</strong>, que agafa entre un de petit i un de més gran.
+
+</p>
+<ul>
+<li class="level1"><div class="li"> Si volem que ens mostri a l'hora
+els registres més petits d'un any determinat i també a l'hora els més
+grans d'un altre any, que exclogui, per tant els situats entre dos
+anys, és a dir, volem veure les dates del 1950 en avall i les del 1960
+endavant (excloent del filtrat els anys que van entre el 1950 i el
+1960). Caldrà utilitzar el criteri <strong>o lògic</strong>, i ho faríem així:</div>
+</li>
+</ul>
+
+<p>
+
+<img src="jpg/m2_p1_31.jpg" class="mediacenter" alt="" />
+</p>
+
+<p>
+I el resultat obtingut serà aquest:
+<img src="jpg/m2_p1_32.jpg" class="mediacenter" alt="" />
+</p>
+
+<p>
+També podem fer proves que afectin a diferents camps a l'hora o de forma simultània. Ara em posem un exemple:
+
+</p>
+<ul>
+<li class="level1"><div class="li"> Què la llengua del llibre sigui
+“fr” (francès) i que el nivell del llibre sigui “bat” (Batxillerat). La
+finestra del filtrat seria com aquesta:</div>
+</li>
+</ul>
+
+<p>
+<img src="jpg/m2_p1_33.jpg" class="mediacenter" alt="" />
+</p>
+
+<p>
+I el resultat obtingut seria com es pot veure aquí:
+</p>
+
+<p>
+<img src="jpg/m2_p1_34.jpg" class="mediacenter" alt="" />
+</p>
+
+<p>
+I a partir d'aquí només la imaginació de cadascú podrà imposar límits per treballar…
+</p>
+
+<p>
+</p><div class="notetip">Aquesta darrera pràctica ens introdueix en el
+tema de les consultes d'informació que en el proper mòdul estudiarem de
+forma detallada, som'hi!.
+</div>
+
+
+
+</div>
+
+    <!-- ......... wikipage stop  ......... -->
+
+  </div>
+
+  <div class="clearer">&nbsp;</div>
+
+   
+<br /><br />
+  <a href="#inici" title="Inici pàgina"><img src="gif/up.gif" alt="Inici" /></a> <div class="footerinc">
+  <hr />
+  <table style="width: 100%;">
+  <tbody><tr style="vertical-align: middle;">
+    <td style="width: 30%;">
+      <div style="float: left;">
+      <a href="http://apliedu.xtec.cat/wikiform" title="Materials de formació"><img src="png/matfor.png" alt="Generalitat de Catalunya" height="42" width="100" /></a>
+      </div> 
+    </td>
+    <td style="width: 40%;">
+      <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/es/deed.ca"><img alt="Creative Commons License" style="border-width: 0pt;" src="png/cc.png" /></a>
+    </td>
+    <td style="width: 30%;">
+      <div style="float: right;">
+      <a href="http://www.xtec.cat/" title="XTEC"><img src="png/xtec.png" alt="XTEC" height="15" width="62" /></a>
+      </div>
+    </td>
+  </tr>  
+  </tbody></table>
+<!--
+<rdf:RDF xmlns="http://web.resource.org/cc/"
+    xmlns:dc="http://purl.org/dc/elements/1.1/"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<Work rdf:about="">
+   <dc:type rdf:resource="http://purl.org/dc/dcmitype/Text" />
+   <license rdf:resource="http://creativecommons.org/licenses/by-nc-sa/2.0/" />
+</Work>
+
+<License rdf:about="http://creativecommons.org/licenses/by-nc-sa/2.0/">
+   <permits rdf:resource="http://web.resource.org/cc/Reproduction" />
+   <permits rdf:resource="http://web.resource.org/cc/Distribution" />
+   <requires rdf:resource="http://web.resource.org/cc/Notice" />
+   <requires rdf:resource="http://web.resource.org/cc/Attribution" />
+   <prohibits rdf:resource="http://web.resource.org/cc/CommercialUse" />
+   <permits rdf:resource="http://web.resource.org/cc/DerivativeWorks" />
+   <requires rdf:resource="http://web.resource.org/cc/ShareAlike" />
+</License>
+
+</rdf:RDF>
+-->
+</div>
+
+</div>
+
+<!-- Generat el 27/Oct/2010  8:24:46  amb HTTrack --> 
+</body></html>

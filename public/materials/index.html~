@@ -1,0 +1,155 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ca" dir="ltr" lang="ca"><head>
+<!-- Generat el 27/Oct/2010 8:24:46 amb HTTrack -->
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>Elaboració avançada de documents amb bases de dades</title>
+
+<link rel="stylesheet" media="all" type="text/css" href="css/cssff6e.css?s=all&amp;t=estatic" />
+<link rel="stylesheet" media="screen" type="text/css" href="css/css6139.css?t=estatic" />
+<link rel="stylesheet" media="print" type="text/css" href="css/css6f71.css?s=print&amp;t=estatic" />
+<link rel="shortcut icon" href="ico/favicon.ico" />
+</head>
+<body>
+<div class="headerinc">
+<a id="inici"> </a><a href="index.html" title="Materials de formació"><img alt="logo" style="border-width: 0pt;" src="png/logosuperior.png" /></a></div>
+<div class="dokuwiki">
+<div class="titol">Elaboració avançada de documents amb bases de dades</div>
+<div class="subtitol"></div>
+<div class="navega">
+<div id="navcontainer">
+<ul id="navlist">
+<li><a href="guia.html">Guia</a></li>
+<!-- <li><a href="projecte.html">Projecte</a></li> -->
+<li><a href="index-2.html">Pràctica 1</a></li>
+<li><a href="index-3.html">Pràctica 2</a></li>
+<li><a href="index-4.html">Pràctica 3</a></li>
+<li><a href="index-5.html">Pràctica 4</a></li>
+<li><a href="index-6.html">Pràctica 5</a></li>
+<li><a href="index-7.html">Pràctica 6</a></li>
+<li><a href="projecte.html">Projecte</a></li>
+<li><a href="avis.html">Avís</a></li>
+</ul>
+</div>
+</div>
+<div class="page"><!-- ......... wikipage start ......... -->
+<h1><a name="esquema_general_de_continguts" id="esquema_general_de_continguts">Esquema general de
+continguts</a></h1>
+<div class="level1">
+<p><!--D124 - Introducció a les bases de dades: usos didàctics --></p>
+<ul>
+<li class="level1">
+<div class="li"> <a href="index-2.html" class="wikilink1" title="cursos:tic:d124:modul_1:index">L’entorn
+de l’Open Base</a></div>
+</li>
+<li class="level1">
+<div class="li"> <a href="index-3.html" class="wikilink1" title="cursos:tic:d124:modul_2:index">Les
+taules, l'element principal. Filtres</a></div>
+</li>
+<li class="level1">
+<div class="li"> <a href="index-4.html" class="wikilink1" title="cursos:tic:d124:modul_3:index">Creació
+de l'estructura: Les relacions</a></div>
+</li>
+<li class="level1">
+<div class="li"> <a href="index-5.html" class="wikilink1" title="cursos:tic:d124:modul_4:index">Treballem
+amb la informació: Les consultes</a></div>
+</li>
+<li class="level1">
+<div class="li"> <a href="index-6.html" class="wikilink1" title="cursos:tic:d124:modul_5:index">La
+creació de formularis</a></div>
+</li>
+<li class="level1">
+<div class="li"> <a href="index-7.html" class="wikilink1" title="cursos:tic:d124:modul_6:index">La
+creació d'informes.</a></div>
+</li>
+</ul>
+<ul>
+<!-- <li class="level1"> -->
+<!-- <div class="li"> <a href="projecte.html" --><!-- class="wikilink1" title="cursos:tic:d124:projecte">Projecte</a> -->
+<!-- </div> --><!-- </li> -->
+<li class="level1">
+<div class="li"> <a href="guia.html" class="wikilink1" title="cursos:tic:d124:guia">Guia
+del curs</a></div>
+</li>
+<li class="level1">
+<div class="li"> <a href="avis.html" class="wikilink1" title="cursos:tic:d124:avis"> Avís
+legal</a></div>
+</li>
+</ul>
+<ul>
+<!-- <li class="level1"> -->
+<!-- <div class="li"> <a -->
+<!-- href="http://www.xtec.cat/formaciotic/dvdformacio/materials/zip/td124.zip" -->
+<!-- class="media mediafile mf_zip" -->
+<!-- title="http://www.xtec.cat/formaciotic/dvdformacio/materials/zip/td124.zip">Descàrrega -->
+<!-- del curs (versió juny 2010)</a> </div> -->
+<!-- </li> -->
+</ul>
+</div>
+<h5><a name="autoria" id="autoria">Autoria</a></h5>
+<div class="level5">
+<ul>
+<li class="level1">
+<div class="li"> Baltasar Sin Morancho</div>
+</li>
+<li class="level1">
+<div class="li"> Joan Carles Bernal Olmo</div>
+</li>
+</ul>
+</div>
+</div>
+<h5><a name="adaptaciMaterials" id="adaptacioMaterials">Adaptació dels Materials</a></h5>
+<div class="level5">
+<ul>
+<li class="level1">
+<div class="li"> Josep Cañellas</div>
+</li>
+<li class="level1">
+<div class="li"> Eduad Laffite</div>
+</li>
+<li class="level1">
+<div class="li"> Ivan Quero</div>
+</li>
+<li class="level1">
+<div class="li"> Miriam Subirats</div>
+</li>
+</ul>
+</div>
+<!-- ......... wikipage stop ......... --> </div>
+<div class="clearer">&nbsp;</div>
+<div class="footerinc">
+<hr />
+<table style="width: 100%;">
+<tbody>
+<tr style="vertical-align: middle;">
+<td style="width: 30%;">
+<div style="float: left;"> <a href="http://apliedu.xtec.cat/wikiform" title="Materials de formació"><img src="png/matfor.png" alt="Generalitat de Catalunya" height="42" width="100" /></a></div>
+</td>
+<td style="width: 40%;"> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/es/deed.ca"><img alt="Creative Commons License" style="border-width: 0pt;" src="png/cc.png" /></a> </td>
+<td style="width: 30%;">
+<div style="float: right;"> <a href="http://www.xtec.cat/" title="XTEC"><img src="png/xtec.png" alt="XTEC" height="15" width="62" /></a> </div>
+</td>
+</tr>
+</tbody>
+</table>
+<!--
+<rdf:RDF xmlns="http://web.resource.org/cc/"
+xmlns:dc="http://purl.org/dc/elements/1.1/"
+xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<Work rdf:about="">
+<dc:type rdf:resource="http://purl.org/dc/dcmitype/Text" />
+<license rdf:resource="http://creativecommons.org/licenses/by-nc-sa/2.0/" />
+</Work>
+<License rdf:about="http://creativecommons.org/licenses/by-nc-sa/2.0/">
+<permits rdf:resource="http://web.resource.org/cc/Reproduction" />
+<permits rdf:resource="http://web.resource.org/cc/Distribution" />
+<requires rdf:resource="http://web.resource.org/cc/Notice" />
+<requires rdf:resource="http://web.resource.org/cc/Attribution" />
+<prohibits rdf:resource="http://web.resource.org/cc/CommercialUse" />
+<permits rdf:resource="http://web.resource.org/cc/DerivativeWorks" />
+<requires rdf:resource="http://web.resource.org/cc/ShareAlike" />
+</License>
+</rdf:RDF>
+-->
+</div>
+</div>
+<!-- Generat el 27/Oct/2010 8:24:46 amb HTTrack -->
+</body></html>

@@ -1,0 +1,299 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ca" dir="ltr" lang="ca"><head><!-- Generat el 27/Oct/2010  8:24:46  amb HTTrack -->
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  
+
+<title>Elaboració avançada de documents amb bases de dades</title><link rel="stylesheet" media="all" type="text/css" href="css/cssff6e.css?s=all&amp;t=estatic" />
+<link rel="stylesheet" media="screen" type="text/css" href="css/css6139.css?t=estatic" />
+<link rel="stylesheet" media="print" type="text/css" href="css/css6f71.css?s=print&amp;t=estatic" />
+
+  <link rel="shortcut icon" href="ico/favicon.ico" /></head>
+
+
+ 
+<body>
+<div class="headerinc">
+<a id="inici"> </a>
+<a href="http://apliedu.xtec.cat/wikiform" title="Materials de formació"><img alt="logo" style="border-width: 0pt;" src="png/logosuperior.png" /></a>
+</div>
+
+<div class="dokuwiki">
+
+
+<div class="titol">Treballem amb la inforamció. Les consultes </div><div class="subtitol"> Pràctica 4 - Exercici 3</div><div class="navega"><div id="navcontainer">
+<ul id="navlist">
+<li><a href="index.html" title="Inici">&lt;&lt;</a></li>  
+<li><a href="index-5.html">&lt;</a></li>  
+<li><a href="practica_1-4.html">Exercici 1</a></li>  
+<li><a href="practica_2-4.html">Exercici 2</a></li>  
+<li id="active"><a id="current" href="#">Exercici 3</a></li>  
+<li><a href="practica_4-3.html">Exercici 4</a></li>  
+<li><a href="practica_5.html">Exercici 5</a></li>
+<li><a href="projecte_4.html">Projecte IV</a></li>  
+</ul></div></div>
+
+  
+  <div class="page">
+
+    <!-- ......... wikipage start ......... -->
+    
+<h4><a name="creacio_de_consultes_amb_l_assistent" id="creacio_de_consultes_amb_l_assistent">Creació de consultes amb l'assistent</a></h4>
+<div class="level4">
+
+<p>
+Una segona forma de crear les consultes és mitjançant l'ajut de
+l'assistent de consultes, al qual accedim des d'aquesta opció de la
+finestra de consultes:
+<br />
+
+<br />
+
+<img src="jpg/modul3_34bis.jpg" class="mediacenter" alt="" />
+<br />
+
+<br />
+
+Ara per explicar aquest sistema de fer consultes, ho farem 
+mitjançant un exemple, és a dir intentant respondre aquesta nova pregunta:
+</p>
+
+<p>
+<em>Quants llibres són diccionaris en la biblioteca?</em>
+</p>
+
+<p>
+També hem de decidir quins camps volem que es mostri en el resultat de la consulta, i a quines taules pertanyen aquestes dades.
+</p>
+
+<p>
+De moment, activem l'opció de l'assistent <img src="jpg/modul3_35.jpg" class="media" alt="" />
+i de forma automàtica s'iniciarà aquest mostrant-nos una sèrie de
+finestres a les que haurem de donar resposta per completar el procés.
+La primera d'elles serà aquesta:
+<br />
+
+<br />
+
+<img src="jpg/modul3_36.jpg" class="mediacenter" alt="" />
+<br />
+
+<br />En ella haurem de triar les taules a la part superior, i dins
+d'elles els camps que volem. Quan els veiem, es tracta de passar-los a
+la dreta amb alguns dels botons que apunten cap aquesta direcció. Un
+cop els tenim a la dreta, ja podrem continuar. En aquest cas hem triat:
+</p>
+<ul>
+<li class="level1"><div class="li"> Taula Llibres: Registre</div>
+</li>
+<li class="level1"><div class="li"> Taula Llibres: Títol</div>
+</li>
+<li class="level1"><div class="li"> Taula Llibres: Autors</div>
+</li>
+<li class="level1"><div class="li"> Taula Material: codi material</div>
+</li>
+<li class="level1"><div class="li"> Taula Material: material nom</div>
+</li>
+</ul>
+
+<p>
+Tal com es pot veure en aquesta imatge:
+<br />
+
+<br />
+
+<img src="jpg/modul3_36b.jpg" class="mediacenter" alt="" />
+<br />
+
+<br />
+
+</p>
+
+<p>
+Quan tenim els noms dels camps triats i passats a la part dreta de la finestra, ja podrem donar al botó Següent.
+La finestra que obtindrem serà aquesta:
+</p>
+
+<p>
+<br />
+
+<br />
+
+<img src="jpg/modul3_37f4f6.jpg?w=550" class="mediacenter" alt="" width="550" />
+<br />
+
+<br />En ella podrem triar l'ordre que volem que mostri la resposta de
+la consulta. En el nostre exemple, hem triat que volem que els llibres
+es mostrin en ordre ascendent segons la dada del Titol del llibre.
+Polsem sobre el botó següent i ens apareixerà aquesta finestra:
+<br />
+
+<br />
+
+<img src="jpg/modul3_38.jpg" class="mediacenter" alt="" />
+<br />
+
+<br />Com es pot apreciar, en ella s'ha donat el criteri, i és que el
+valor del camp codi material sigui = “dic”. També se'n podria donar
+algun altre de forma simultània, és a dir que fos un diccionari i també
+que fossin escrits en català (per que això fos possible, en les
+finestres anteriors hauríem d'haver triat també el camp Idioma del
+llibre)
+Fent clic a Següent, se'ns mostrarà aquesta finestra, en la qual podrem
+dir que ens mostri tots els resultats o només d'una forma abreviada:
+<br />
+
+<br />
+
+<img src="jpg/modul3_39.jpg" class="mediacenter" alt="" />
+<br />
+
+<br />
+
+Triem tots, i passem a la següent finestra:
+<br />
+
+<br />
+
+<img src="jpg/modul3_40.jpg" class="mediacenter" alt="" />
+<br />
+
+<br />Si volem que la resposta de la pantalla mostri noms dels camps
+diferents al real que tenen, ho posarem aquí. En l'exemple, hem canviat
+titol (nom del camp) per Titol del llibre (àlies) i aquest últim serà
+el que es mostrarà al final.
+</p>
+
+<p>
+<br />
+
+<br />
+
+<img src="jpg/modul3_41bis.jpg" class="mediacenter" alt="" />
+<br />
+
+<br />Aquí hem arribat al pas de l'assistent on cal triar el nom de la
+consulta que quedarà guardada. Polsem el botó Fi i accedirem al disseny
+de la consulta per tal de assegurar-se de que les dues taules quedin
+vinculades tal com mostra aquesta imatge. <br />
+
+<br />
+
+<img src="jpg/modul3_41_1bis.jpg" class="mediacenter" alt="" />
+<br />
+
+<br />
+Cas de no estar-ho, cal establir manualment la relació entre els camps
+codi material de la taules Llibres i codi material de la taula
+Material. Un cop fet això, podem tancar el disseny de la consulta i
+desar el canvis efectuats, si és el cas.
+La consulta estarà feta i la segúent imatge ens mostra el seu resultat:
+</p>
+
+<p>
+<br />
+
+<br />
+
+<img src="jpg/modul3_41b.jpg" class="mediacenter" alt="" />
+<br />
+
+<br />
+
+Si la volem modificar tenim l'ocasió de fer-ho a partir del disseny de la consulta, el qual interessaria que deixesim així: 
+<br />
+
+<br />
+
+<img src="jpg/modul3_42.jpg" class="mediacenter" alt="" />
+<br />
+
+<br />I la resposta de la consulta serà aquesta (es mostra el final de
+la mateixa per poder veure quants registres hi ha, que són 31 en
+total):
+<br />
+
+<br />
+
+<img src="jpg/modul3_43.jpg" class="mediacenter" alt="" />
+<br />
+
+<br />
+
+</p>
+
+<p>
+Podem apreciar els àlies també en la mateixa imatge.
+Li posem el nom de <strong>Consulta02:Diccionaris</strong>, i la desem tal com queda.
+</p>
+
+<p>Aquí acaba l'explicació de l'ús de l'assistent de consultes. És útil
+i fàcil, però de vegades dóna alguna errada en els passos finals.
+Normalment quan es fa només tenint en compte dades d'una taula no sol
+fallar, però quan en els primers passos de l'assistent es trien més
+d'una taula, de vegades es queda aturat en la darrera pantalla. S'ha detectac que aquest problema sol aparaeixer quan s'utilitza una clau forània en la vista. El problema pot solucionar-se si en comptes d'agafar la clau fòrània incorporem en el seu lloc la clau primària de la taula relacionada. </p>
+
+<p>
+
+</p><div class="noteclassic">
+Acabem de crear una consulta amb l'assistent. Ara avançarem a crear consultes en mode disseny però més complexes.
+
+</div>
+
+
+
+</div>
+
+    <!-- ......... wikipage stop  ......... -->
+
+  </div>
+
+  <div class="clearer">&nbsp;</div>
+
+   
+<br /><br />
+  <a href="#inici" title="Inici pàgina"><img src="gif/up.gif" alt="Inici" /></a> <div class="footerinc">
+  <hr />
+  <table style="width: 100%;">
+  <tbody><tr style="vertical-align: middle;">
+    <td style="width: 30%;">
+      <div style="float: left;">
+      <a href="http://apliedu.xtec.cat/wikiform" title="Materials de formació"><img src="png/matfor.png" alt="Generalitat de Catalunya" height="42" width="100" /></a>
+      </div> 
+    </td>
+    <td style="width: 40%;">
+      <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/es/deed.ca"><img alt="Creative Commons License" style="border-width: 0pt;" src="png/cc.png" /></a>
+    </td>
+    <td style="width: 30%;">
+      <div style="float: right;">
+      <a href="http://www.xtec.cat/" title="XTEC"><img src="png/xtec.png" alt="XTEC" height="15" width="62" /></a>
+      </div>
+    </td>
+  </tr>  
+  </tbody></table>
+<!--
+<rdf:RDF xmlns="http://web.resource.org/cc/"
+    xmlns:dc="http://purl.org/dc/elements/1.1/"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<Work rdf:about="">
+   <dc:type rdf:resource="http://purl.org/dc/dcmitype/Text" />
+   <license rdf:resource="http://creativecommons.org/licenses/by-nc-sa/2.0/" />
+</Work>
+
+<License rdf:about="http://creativecommons.org/licenses/by-nc-sa/2.0/">
+   <permits rdf:resource="http://web.resource.org/cc/Reproduction" />
+   <permits rdf:resource="http://web.resource.org/cc/Distribution" />
+   <requires rdf:resource="http://web.resource.org/cc/Notice" />
+   <requires rdf:resource="http://web.resource.org/cc/Attribution" />
+   <prohibits rdf:resource="http://web.resource.org/cc/CommercialUse" />
+   <permits rdf:resource="http://web.resource.org/cc/DerivativeWorks" />
+   <requires rdf:resource="http://web.resource.org/cc/ShareAlike" />
+</License>
+
+</rdf:RDF>
+-->
+</div>
+
+</div>
+
+<!-- Generat el 27/Oct/2010  8:24:46  amb HTTrack --> 
+</body></html>

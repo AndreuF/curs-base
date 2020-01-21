@@ -1,0 +1,372 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ca" dir="ltr" lang="ca"><head><!-- Generat el 27/Oct/2010  8:24:46  amb HTTrack -->
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  
+
+<title>Elaboració avançada de documents amb bases de dades</title><link rel="stylesheet" media="all" type="text/css" href="css/cssff6e.css?s=all&amp;t=estatic" />
+<link rel="stylesheet" media="screen" type="text/css" href="css/css6139.css?t=estatic" />
+<link rel="stylesheet" media="print" type="text/css" href="css/css6f71.css?s=print&amp;t=estatic" />
+
+  <link rel="shortcut icon" href="ico/favicon.ico" /></head>
+
+
+ 
+<body>
+<div class="headerinc">
+<a id="inici"> </a>
+<a href="http://apliedu.xtec.cat/wikiform" title="Materials de formació"><img alt="logo" style="border-width: 0pt;" src="png/logosuperior.png" /></a>
+</div>
+
+<div class="dokuwiki">
+
+
+<div class="titol">Treballem amb la inforamció. Les consultes </div><div class="subtitol"> Pràctica 4 - Exercici 2</div><div class="navega"><div id="navcontainer">
+<ul id="navlist">
+<li><a href="index.html" title="Inici">&lt;&lt;</a></li>  
+<li><a href="index-5.html">&lt;</a></li>  
+<li><a href="practica_1-4.html">Exercici 1</a></li>  
+<li id="active"><a id="current" href="#">Exercici 2</a></li>  
+<li><a href="practica_3-4.html">Exercici 3</a></li>  
+<li><a href="practica_4-3.html">Exercici 4</a></li>  
+<li><a href="practica_5.html">Exercici 5</a></li>
+<li><a href="projecte_4.html">Projecte IV</a></li>  
+</ul></div></div>
+
+  
+  <div class="page">
+
+    <!-- ......... wikipage start ......... -->
+    
+<h4><a name="que_son_les_consultes" id="que_son_les_consultes">Què són les consultes?</a></h4>
+<div class="level4">
+
+<p>
+Per introduir el tema consultes, en primer lloc es defineix el
+concepte. Una consulta és una pregunta que se li fa a la base de dades.
+Aquesta pregunta cada cop que l'executem ens pot donar un resultat
+diferent, doncs les dades han pogut augmentar, disminuir o
+modificar-se, per tant, la resposta de la consulta reflectirà aquests
+possibles canvis cada cop que l'executem.
+És una eina semblant als filtres vistos en el mòdul 2 d'aquest curs,
+però amb molt més potencial.
+</p>
+
+</div>
+
+<h4><a name="fem_la_nostra_primera_consulta" id="fem_la_nostra_primera_consulta">Fem la nostra primera consulta</a></h4>
+<div class="level4">
+
+<p>
+
+La primera consulta o pregunta que li farem a la base de dades és aquesta:
+</p>
+
+<p>
+<em>Quins són els llibres editats a l'Argentina, “arg”?</em>
+</p>
+
+<p>
+La resposta final serà 9 llibres, i es pot veure en aquesta imatge:
+<br />
+
+<br />
+
+<img src="jpg/modul3_26.jpg" class="mediacenter" alt="" />
+<br />
+
+<br />
+
+Però com es fa això? Doncs ara ens hi posarem pas a pas.
+</p>
+
+<p>
+Per començar anem a la part de consultes, fent clic al botó de l'esquerra de l'aplicació:
+<br />
+
+<br />
+
+<img src="jpg/modul3_28.jpg" class="mediacenter" alt="" />
+<br />
+
+<br />
+ 
+Ara veiem que no en tenim cap de creada i començarem la creació mitjançant l'opció que diu <img src="jpg/modul3_29.jpg" class="media" alt="" /> Polsant sobre ella ens mostrarà en pantalla la següent finestra:
+<br />
+
+<br />
+
+<img src="jpg/modul3_30.jpg" class="mediacenter" alt="" />
+<br />
+
+<br />
+
+</p>
+
+<p>Es poden veure la llista de totes les taules de les que consta la
+base de dades, de les quals podrem triar-ne les que necessitem per fer
+la consulta.
+</p>
+
+<p>Per afegir les taules a la consulta ho haurem de fer seleccionant
+les que ens interessi i fent clic en el botó afegir. En aquest punt cal
+aclarir que una consulta es pot fer sobre una sola taula (semblant als
+filtres vistos en la unitat anterior), o que afecti a dades de varies
+taules a l'hora. En aquest cas inicial, ho farem sobre una sola taula,
+per tant, si agafem la taula Llibres, només podrà mostrar el codi del
+país “arg” i no la descripció “Argentina”, doncs aquesta dada es troba
+incorporada, no en la taula Llibres sinó en la taula Pais.
+</p>
+
+<p>
+Bé, doncs triem la taula Llibres i afegeix, tal com es mostra en la imatge següent:
+<br />
+
+<br />
+
+<img src="jpg/modul3_31.jpg" class="mediacenter" alt="" />
+<br />
+
+<br />
+
+</p>
+
+<p>Aquesta pantalla del disseny de la consulta és convenient
+descriure-la de forma detallada per poder treballar-hi posteriorment.
+En la imatge següent es pot veure totes aquestes parts esmentades:
+<br />
+
+<br />
+
+<img src="jpg/modul3_32.jpg" class="mediacenter" alt="" />
+<br />
+
+<br />
+
+L'aspecte del disseny d'aquesta consulta concreta, ha de ser semblant a aquest:
+<br />
+
+<br />
+
+<img src="jpg/modul3_27_abis.jpg" class="mediacenter" alt="" />
+<br />
+
+<br />
+
+</p><div class="noteclassic">Per incorporar els camps a la part
+inferior de la pantalla, es pot fer amb doble clic sobre el nom del
+camp a la part superior, arrossegant-los o també fent clic en la línia
+Camp i triar del desplegable el nom de camp-taula que ens interessi.
+Veure imatge següent:
+</div>
+
+
+<p>
+<br />
+
+<br />
+
+<img src="jpg/modul3_33bis.jpg" class="mediacenter" alt="" />
+<br />
+
+<br />
+
+</p>
+
+<p>En la imatge del disseny de la consulta, s'hi pot veure com s'han
+inclòs una sèrie de camps en la consulta, dels quals n'hi ha algun que
+no es veurà en la resposta (visible = No) i en un d'ells hi consta un
+criteri = arg (és a dir, que només mostri els que el codi de país sigui
+“arg” o “Argentina”)
+</p>
+
+<p>
+El resultat de la consulta, ja el sabeu, és el que hi ha representat a la part inicial d'aquesta pàgina.
+</p>
+
+<p>
+Finalment la desarem amb el nom de <strong>Consulta01:Llibres_arg</strong>
+</p>
+
+</div>
+
+<h4><a name="consulta_de_varies_taules" id="consulta_de_varies_taules">Consulta de vàries taules</a></h4>
+<div class="level4">
+
+<p>Aquesta mateixa consulta la podem completar encara més, però aquesta
+vegada que inclogui les dades completes del nom del país, és a dir
+“Argentina”, i no només el codi “arg”.
+</p>
+
+<p>Duplicarem la consulta anterior amb Copiar / Enganxar (amb el botó
+secundari del ratolí triem l'opció copiar i una mica més avall, femt el
+mateix, però ara amb l'opció enganxar), i li donarem el nom de: <strong>Consulta01:Llibres_argentina</strong>, amb el nom complet, per diferenciar-la de l'anterior:
+<br />
+
+<br />
+
+<img src="jpg/modul3_33h.jpg" class="mediacenter" alt="" />
+<br />
+
+<br />
+
+</p>
+
+<p>
+Per fer aquestes modificacions, haureu de seguir aquestes instruccions:
+</p>
+
+<p>
+Anar al disseny de la consulta recent duplicada. A la finestra de
+consultes, amb el botó secundari del ratolí, treieu l'opció Edita:
+<br />
+
+<br />
+
+<img src="jpg/modul3_33b.jpg" class="mediacenter" alt="" />
+<br />
+
+<br />
+
+</p>
+
+<p>
+Entrarem a la pantalla que ens permetrà incloure més taules al disseny de la consulta. És el botó: <img src="jpg/modul3_33c.jpg" class="media" alt="" />, el qual ens mostrarà en pantalla aquesta finestra que ja hem vist abans:
+</p>
+
+<p>
+<br />
+
+<br />
+
+<img src="jpg/modul3_30.jpg" class="mediacenter" alt="" />
+<br />
+
+<br />
+
+</p>
+
+<p>En ella trien la taula Pais i el botó afegeix. Així aconseguirem
+incorporar en la consulta una segona taula, i se'ns mostrarà la
+pantalla del disseny de la consulta de la manera següent:
+<br />
+
+<br />
+
+<img src="jpg/modul3_33ddbis.jpg" class="mediacenter" alt="" />
+<br />
+
+<br />Només caldrà que eliminem la columna del camp codi_pais de la taula llibres i incorporem el camp “pais_nom” i també el camp codi_pais de la taula país (algunes versions de open base necessiten la calu principal en lloc de la clau forània per funcionar correctament). A més farem que aquest últim nom sigui visible (doncs no interessa veure les mateixes dades dues vegades a la consulta, el codi i el nom del país):
+<br />
+
+<br />
+
+<img src="jpg/modul3_33eebis.jpg" class="mediacenter" alt="" />
+<br />
+
+<br />
+
+I per últim, només queda desar la consulta:
+<br />
+
+<br />
+
+<img src="jpg/modul3_33f.jpg" class="mediacenter" alt="" />
+<br />
+
+<br />
+
+</p>
+
+<p>
+L'obrim amb un doble clic i veiem els resultats:
+<br />
+
+<br />
+
+<img src="jpg/modul3_33g.jpg" class="mediacenter" alt="" />
+<br />
+
+<br />
+
+
+</p>
+
+<p>
+Aquesta consulta ha de quedar també desada amb el nom esmentat de <strong>Consulta01:Llibres_Argentina</strong>.
+</p>
+
+</div>
+
+<h4><a name="mes_sobre_les_consultes" id="mes_sobre_les_consultes">Més sobre les consultes</a></h4>
+<div class="level4">
+
+<p>
+
+A les pràctiques següents es proposaran una sèrie d'activitats de consultes seguint aquest mateix model. 
+És el que en diem Consultes de selecció, amb un grau de complexitat creixent:
+</p>
+<ul>
+<li class="level1"><div class="li"> Amb criteris simples</div>
+</li>
+<li class="level1"><div class="li"> Amb criteris complexes (amb el I i el O lògics)</div>
+</li>
+<li class="level1"><div class="li"> I amb els anomenats Paràmetres.</div>
+</li>
+</ul>
+
+</div>
+
+    <!-- ......... wikipage stop  ......... -->
+
+  </div>
+
+  <div class="clearer">&nbsp;</div>
+
+   
+<br /><br />
+  <a href="#inici" title="Inici pàgina"><img src="gif/up.gif" alt="Inici" /></a> <div class="footerinc">
+  <hr />
+  <table style="width: 100%;">
+  <tbody><tr style="vertical-align: middle;">
+    <td style="width: 30%;">
+      <div style="float: left;">
+      <a href="http://apliedu.xtec.cat/wikiform" title="Materials de formació"><img src="png/matfor.png" alt="Generalitat de Catalunya" height="42" width="100" /></a>
+      </div> 
+    </td>
+    <td style="width: 40%;">
+      <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/es/deed.ca"><img alt="Creative Commons License" style="border-width: 0pt;" src="png/cc.png" /></a>
+    </td>
+    <td style="width: 30%;">
+      <div style="float: right;">
+      <a href="http://www.xtec.cat/" title="XTEC"><img src="png/xtec.png" alt="XTEC" height="15" width="62" /></a>
+      </div>
+    </td>
+  </tr>  
+  </tbody></table>
+<!--
+<rdf:RDF xmlns="http://web.resource.org/cc/"
+    xmlns:dc="http://purl.org/dc/elements/1.1/"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<Work rdf:about="">
+   <dc:type rdf:resource="http://purl.org/dc/dcmitype/Text" />
+   <license rdf:resource="http://creativecommons.org/licenses/by-nc-sa/2.0/" />
+</Work>
+
+<License rdf:about="http://creativecommons.org/licenses/by-nc-sa/2.0/">
+   <permits rdf:resource="http://web.resource.org/cc/Reproduction" />
+   <permits rdf:resource="http://web.resource.org/cc/Distribution" />
+   <requires rdf:resource="http://web.resource.org/cc/Notice" />
+   <requires rdf:resource="http://web.resource.org/cc/Attribution" />
+   <prohibits rdf:resource="http://web.resource.org/cc/CommercialUse" />
+   <permits rdf:resource="http://web.resource.org/cc/DerivativeWorks" />
+   <requires rdf:resource="http://web.resource.org/cc/ShareAlike" />
+</License>
+
+</rdf:RDF>
+-->
+</div>
+
+</div>
+
+<!-- Generat el 27/Oct/2010  8:24:46  amb HTTrack --> 
+</body></html>

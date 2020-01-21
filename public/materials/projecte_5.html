@@ -1,0 +1,182 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+ "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ca" lang="ca" dir="ltr">
+
+<!-- Generat el 27/Oct/2010  8:24:46  amb HTTrack --> 
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>Elaboració avançada de documents amb bases de dades</title>
+
+  <link rel="stylesheet" media="all" type="text/css" href="css/cssff6e.css?s=all&amp;t=estatic" />
+<link rel="stylesheet" media="screen" type="text/css" href="css/css6139.css?t=estatic" />
+<link rel="stylesheet" media="print" type="text/css" href="css/css6f71.css?s=print&amp;t=estatic" />
+
+  <link rel="shortcut icon" href="ico/favicon.ico" />
+
+  </head>
+
+
+
+<body>
+<div class="headerinc">
+<a id="inici"> </a>
+<a href="http://apliedu.xtec.cat/wikiform" title="Materials de formació"><img alt="logo" style="border-width:0" src="png/logosuperior.png" /></a>
+</div>
+
+<div class="dokuwiki">
+
+
+<div class="titol">Elaboració avançada de documents amb bases de dades</div><div class="subtitol"> Projecte V. Creació de formularis</div>
+
+<div class="navega"><div id="navcontainer"><ul id="navlist">
+<li><a href="index.html" title="Inici">&lt;&lt;</a></li>  
+<li><a href="index-6.html">&lt;</a></li>  
+<li><a href="practica_1-5.html">Exercici 1</a></li>  
+<li><a href="practica_2-5.html">Exercici 2</a></li>  
+<li><a href="practica_3-5.html">Exercici 3</a></li>  
+<li id="active"><a id="current" href="#">Projecte V</a></li>
+</ul></div></div>
+
+  
+  <div class="page">
+
+    <!-- ......... wikipage start ......... -->
+    
+
+
+<h3><a name="projecte" id="projecte">Creacio de formularis</a></h3>
+<div class="level3">
+
+<h5><a name="introduccio_projecte_projecte1" id="introduccio_projecte_projecte1">Marc general del projecte. Recordatori</a></h5>
+<div class="level5">
+<p>
+El projecte consistirà en crear una base de dades que permeti gestionar un hospital. L'hospital està compost de diferents unitats hospitalàries cada una de les quals té assignat diferents personal sanitari. Per exemple a la unitat de traumatologia se li han assignat 6 metges, 3 anestesistes, 5 fisioterapeutes, 8 infermeres i 15 auxiliars d'infermeria. 
+</p>
+<p>
+Per fer aquestes assignacions caldrà controlar l'especialitat del personal sanitari. l'Especialitat es definirà per una categoria: metge, fisioterapeuta, infermera, ... i una especialitat: trauma, medicina general, neurologia, maxil·lofacial, etc. 
+</p>
+<p>
+La base de dades gestionarà també els pacients de l'hospital, tant els que requereixin d'hospitalització com els que s'intervinguin sense ingrés. Els pacients no s'esborren mai per tal de mantenir un historial d'ingressos i intervencions. 
+</p>
+
+<p>
+Dels ingressos caldrà saber la data de l'ingrés i la data d'alta en cas que ja s'hagi produït, el pacient que es trobava ingressat, l'habitació i el llit on es va hospitalitzar al malalt i el temps que el metge va estimar que romandria ingressat. 
+</p>
+
+<p>
+Les intervencions es classifiquen per tipus. Per exemple visita, operació, radiografia, etc. Cada intervenció ha de tenir un metge responsable que és qui l'ha decidit. Ara bé, a banda del metge responsable, hi podran intervenir altre personal sanitari com fisioterapeutes, infermeres, altres metges, anestesistes, radiòlegs, etc. Es necessita saber qui són tots el que actuïn en una intervenció. 
+</p>
+</div>
+
+<h5><a name="projecte_1_creacio_de_taules" id="projecte_1_creacio_de_taules">Creació de Formularis</a></h5>
+<div class="level5">
+
+<p>
+
+En aquesta part del projecte caldrà crear Un conjunt de formularis que ajudin a introduir la informació de la base de dades de forma més còmoda. 
+</p>
+
+<p>
+A mode de guia us direm que:
+</p>
+<ul>
+<li class="level1"><div class="li">Feu un formulari senzill per a les taules d'informació bàsica: Aquelles que hagis decidit afegir al projecte III, les taules EspecialitatSanitaria, UnitatsHospitalaries, Tipus d'intervencions, Pacients, PersonalSanitari i Ingressos. Inicialment pots fer servir l'auxiliar per dissenyar el gruix del formulari, però també cal que els modifiquis pensant sobre tot amb la facilitat d'introduir les dades (quadres de llista per seleccionar valors predetermiants, camps formatats, etc.).</div>
+</li>
+<li class="level1"><div class="li">Feu un formulari que inclogui subformularis per visualitzar el detall de les intervencions. Intenta que el formulari s'assembli al de la figura següent:</div>
+</li>
+</ul>
+
+<p>
+<img src="jpg/m5_pr5_01.jpg" class="mediacenter" alt="" />
+</p>
+
+<p>
+Cal que tingueu en compte que per fer aquest formulari s'han fet servir  4 formularis (com podeu observar en el navegador de formularis adjunt a la figura):
+<ul>
+<li class="level1"><div class="li">El formulari principal (MainForm) lligat a la taula Intervencions.</div>
+</li>
+<li class="level1"><div class="li">El subformulari (SubForm) que penja del principal i es troba associat a la taula IntervencionsPersonalSanitari. Aquest es pot genera amb l'auxiliar de creació de formularis des de bon principi. El seu objectiu és vincular els registres de tot el personal sanitari que hagi intervingut en l'acció actual (intervenció) del formulari principal (MainForm). Aquest subformulari conté també el control quadre de llista anomenat <em>llistaLlistaSeleccioMetgesQueintervenen</em> el qual permet seleccionar el personal sanitari sense necessitat d'haver de saber-se el seu nif. De fet el quadre visualitza els cognoms de tot el personal sanitari malgrat que el que emmagatzemarà a la taula IntervencionsPersonalSanitari serà el nif.</div>
+</li>
+<li class="level1"><div class="li">Necessitem un formulari vinculat a la taula PersonalSanitari per obtenir informació addicional del treballador sanitari. Per aconseguir-ho afegirem una formulari que depengui de SubForm. És el formulari que a la figura s'anomena frmMetgesIntervencio i que conté 4 camps d'informació especifica. El formulari frmMetgesIntervencio estrà associat a la taula PersonalSanitari i es trobarà vinculat a Subform a través dels camps nif i idPersonal respectivament.</div>
+</li>
+<li class="level1"><div class="li">Finalment per obtenir els cognoms del metge responsable necessitarem una altre formulari associat també a la taula PersonalSanitari, però vinculat amb el formulari principal (MainForm) en comptes del subformulari, perquè el metge responable pertany al formulari principal. Ambdós formularis es vincularan pel nif i pel camp idMetgeResponsable.</div>
+</li>
+</ul>
+</p>
+<p>
+Destacar també que el control data i hora està format per dos controls un de tipus data i l'altre de tipus hora amn la propietat "selecció de valors" la propietat "desplegat" actives. Els controls TipusIntervenció i Pacient són de tipus llista per tal de poder mostrar uns camps descriptius però emmagatzemar les claus principals. En canvi s'ha considerat que el nif del metge responsable era suficient per fer la tria. Malgrat tot, per assegurar que l'usuari pugui estar segur de la tria realitzada, s'afegeix un camp de només lectura amb els cognoms del metge.
+</p>
+<p>
+Finalment comentar que el camp informe és de tipus quadre de text al qual se li ha modificat les propietats per tal de convertir-lo en un control multi-línia i amb la barra de desplaçament activa.
+</p>
+
+</div>
+
+<h5><a name="projecte_1_lliurament" id="projecte_1_lliurament">Lliurament d'aquesta part</a></h5>
+<div class="level5">
+
+<p>
+Cal que abans de començar el mòdul següent lliuris el document de base de dades que hagis creat a la bústia del moodle oberta per a l'entrega de la cinquena part de projecte (Projecte V), 
+</p>
+</div>
+
+    <!-- ......... wikipage stop  ......... -->
+
+  </div>
+
+  <div class="clearer">&nbsp;</div>
+
+   
+<br /><br />
+  <a href="#inici" title="Inici pàgina"><img src="gif/up.gif" alt="Inici"/></a> <div class="footerinc">
+  <hr />
+  <table style="width: 100%;">
+  <tr style="vertical-align: middle;">
+    <td  style="width: 30%; ">
+      <div style="float: left;">
+      <a  href="http://apliedu.xtec.cat/wikiform" title="Materials de formació"><img src="png/matfor.png" width="100" height="42" alt="Generalitat de Catalunya" /></a>
+      </div> 
+    </td>
+    <td style="width: 40%;">
+      <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/es/deed.ca"><img alt="Creative Commons License" style="border-width:0" src="png/cc.png" /></a>
+    </td>
+    <td style="width: 30%;">
+      <div style="float: right;">
+      <a href="http://www.xtec.cat/" title="XTEC"><img src="png/xtec.png" width="62" height="15" alt="XTEC" /></a>
+      </div>
+    </td>
+  </tr>  
+  </table>
+<!--
+<rdf:RDF xmlns="http://web.resource.org/cc/"
+    xmlns:dc="http://purl.org/dc/elements/1.1/"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<Work rdf:about="">
+   <dc:type rdf:resource="http://purl.org/dc/dcmitype/Text" />
+   <license rdf:resource="http://creativecommons.org/licenses/by-nc-sa/2.0/" />
+</Work>
+
+<License rdf:about="http://creativecommons.org/licenses/by-nc-sa/2.0/">
+   <permits rdf:resource="http://web.resource.org/cc/Reproduction" />
+   <permits rdf:resource="http://web.resource.org/cc/Distribution" />
+   <requires rdf:resource="http://web.resource.org/cc/Notice" />
+   <requires rdf:resource="http://web.resource.org/cc/Attribution" />
+   <prohibits rdf:resource="http://web.resource.org/cc/CommercialUse" />
+   <permits rdf:resource="http://web.resource.org/cc/DerivativeWorks" />
+   <requires rdf:resource="http://web.resource.org/cc/ShareAlike" />
+</License>
+
+</rdf:RDF>
+-->
+</div>
+
+</div>
+
+</body>
+
+<!-- Generat el 27/Oct/2010  8:24:46  amb HTTrack --> 
+</html>
+
+
+
+

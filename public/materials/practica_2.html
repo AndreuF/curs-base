@@ -1,0 +1,256 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ca" dir="ltr" lang="ca"><head><!-- Generat el 27/Oct/2010  8:24:46  amb HTTrack -->
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  
+
+<title>Elaboració avançada de documents amb bases de dades</title><link rel="stylesheet" media="all" type="text/css" href="css/cssff6e.css?s=all&amp;t=estatic" />
+<link rel="stylesheet" media="screen" type="text/css" href="css/css6139.css?t=estatic" />
+<link rel="stylesheet" media="print" type="text/css" href="css/css6f71.css?s=print&amp;t=estatic" />
+
+  <link rel="shortcut icon" href="ico/favicon.ico" /></head>
+
+
+ 
+<body>
+<div class="headerinc">
+<a id="inici"> </a>
+<a href="http://apliedu.xtec.cat/wikiform" title="Materials de formació"><img alt="logo" style="border-width: 0pt;" src="png/logosuperior.png" /></a>
+</div>
+
+<div class="dokuwiki">
+
+
+<div class="titol">L'entorn de l'Open Base </div><div class="subtitol"> Pràctica 1 - Exercici 2</div><div class="navega"><div id="navcontainer"><ul id="navlist">
+<li><a href="index.html" title="Inici">&lt;&lt;</a></li>  
+<li><a href="index-2.html">&lt;</a></li> 
+ <li><a href="practica_1.html">Exercici 1</a></li>  
+ <li id="active"><a id="current" href="#">Exercici 2</a></li>
+ <li><a href="practica_3.html">Exercici 3</a></li> 
+  <li><a href="practica_4.html">Exercici 4</a></li>
+<li><a href="projecte_1.html">Projecte I</a></li>
+</ul></div></div>
+
+  
+  <div class="page">
+
+    <!-- ......... wikipage start ......... -->
+    
+
+
+<h3><a name="concepte_de_taula_registre_i_camp" id="concepte_de_taula_registre_i_camp">Concepte de taula, registre i camp</a></h3>
+<div class="level3">
+
+<p>
+Com hem pogut veure a la pràctica anterior els objectes que podem crear
+dintre d'una base de dades són: Taules, Consultes, Formularis i
+Informes.
+</p>
+
+<p>L'objecte fonamental és la Taula. La Taula és la que conté la
+informació que més tard tractaran d'una o altra manera els altres tres.
+</p>
+
+<p>La informació dintre de la taula es divideix en files i columnes.
+Cada fila correspon a un registre, en el cas de la Biblioteca i de la
+Taula Llibres, cada registre ens dona informació sobre un Llibre.
+Cada Columna correspon a un Camp. Cadascun dels quals ens dóna
+informació sobre un atribut dels diferents registres. En el cas de la
+taula Llibres, tenim els camps Títol, Editorial…
+</p>
+
+<p>És fonamental abans de crear la taula pensar quins seran els camps
+que la composaran, és a dir, reflexionar sobre la informació que volem
+de cada registre. </p>
+
+<p>
+No ens hem de preocupar molt si quan es crea la taula ens hem deixat un
+camp, ja que podem modificar el disseny de la mateixa en qualsevol
+moment.
+</p>
+
+<p>
+<img src="jpg/m1012.jpg" class="mediacenter" alt="" />
+</p>
+
+<p>
+En aquesta imatge ja coneguda podem identificar els elements que caracteritzen a la taula Llibres.
+</p>
+
+<p>
+Ara optarem pel modo disseny d'aquesta taula perquè pugueu veure el procés de definir-la.
+</p>
+
+<p>
+Per accedir al disseny d'una taula feu un clic sobre la taula Llibres amb el botó dret del ratolí i seleccioneu Edita.
+</p>
+
+<p>
+<img src="jpg/m1017.jpg" class="mediacenter" alt="" />
+</p>
+
+<p>Dintre de la finestra del disseny de la taula podem identificar tres
+columnes a la part superior. La primera columna correspon al Nom del
+camp, la segona al Tipus de camp, que fa referència al tipus de dada
+que emmagatzemarà, i la tercera serveix per fer una petita Descripció
+del camp (si es considera necessari, per tal que un altre possible
+usuari de la base de dades entengui, si no és evident la seva
+característica).
+</p>
+
+<p>
+<img src="jpg/m1m18.jpg" class="mediacenter" alt="" />
+</p>
+
+<p>Fent un clic sobre la concreció del tipus triat(Tipus de camp) en
+qualsevol dels camps es desplegarà la llista de tota la tipologia
+possible. </p>
+
+<p>
+<img src="jpg/m1m19.jpg" class="mediacenter" alt="" />
+</p>
+
+<p>
+A la part inferior de la finestra del disseny podeu veure un apartat
+anomenat Propietats del camp, on a mesura que canvieu de camp, a la
+part superior, podreu veure com canvien els valors que es mostren.
+</p>
+
+<p>
+<img src="jpg/m1m20.jpg" class="mediacenter" alt="" />
+</p>
+
+<p>Al camp Id_Llibre podeu veure que té a la part esquerra (zona de
+selecció de registres) una clau. Aquesta indica que el camp conté una
+clau primària, i això significa que el valor d'aquest camp no podrà
+estar repetit i que possiblement servirà per establir relacions amb
+altres taules que es puguin crear dintre de la mateixa base de dades.
+Aquest concepte quedarà àmpliament desenvolupat al següent mòdul.
+</p>
+
+<p>
+<img src="jpg/m1m21.jpg" class="mediacenter" alt="" />
+</p>
+
+</div>
+
+<h4><a name="tipus_de_camps" id="tipus_de_camps">Tipus de camps</a></h4>
+<div class="level4">
+
+<p>El tipus de camp limita el tipus de valor que pot emmagatzemar un
+camp i a més marca la mida d'espai de memòria que ocuparà el valor
+introduït.
+</p>
+
+<p>Per exemple un camp que és de tipus Text, no pot guardar dades que
+continguin dates. Si podria guardar xifres numèriques enteres com a
+dígits alfabètics. Un exemple de camp tipus text que recull xifres
+numèriques seria el camp NIF, que no hauria de ser numèric si volem que
+l'usuari introdueixi la lletra del NIF.
+</p>
+
+<p>Per tant quan creem el disseny d'una taula tal com es farà a la
+següent pràctica hem de pensar bé el tipus de camp que volem en cada
+camp, tenim present el tipus d'informació que deurà guardar.
+</p>
+
+<p>
+Ara us presentem una llista de la principal tipologia de Camps amb les seves característiques més importants:
+</p>
+<ul>
+<li class="level1"><div class="li"> Enter [INTEGER], número enter qualsevol amb capacitat d'emmagatzemar 10 dígits.</div>
+</li>
+<li class="level1"><div class="li"> Enter minúscul [TINYINT], número enter molt petit. Només accepta 3 dígits.</div>
+</li>
+<li class="level1"><div class="li"> Enter petit [SMALLINT], número enter amb valors que no sobrepassin els 5 dígits.</div>
+</li>
+<li class="level1"><div class="li"> Número fraccionari o decimal [FLOAT], número decimal capaç d'emmagatzemar valors que no sobrepassin els 17 dígits entre dígits enters i dígits decimals.</div>
+</li>
+<li class="level1"><div class="li"> Número real o decimal [REAL], número decimal capaç d'emmagatzemar valors que sobrepassin els 17 dígits.</div>
+</li>
+<li class="level2"><div class="li"> Text [V A R C H A R], aquest tipus
+de camp permet escriure qualsevol caràcter que sigui alfabètic
+(lletres) o numèric, això sí, no permet fer operacions numèriques ja
+que tracta els nombres com si fossin lletres.</div>
+</li>
+<li class="level2"><div class="li"> Text [V A R C H A R_I G N O R E C A SE], aquest és un tipus semblant a l'anterior, però es diferencia en que no s'hi distingeixen majúscules ni minúscules durant la cerca.</div>
+</li>
+<li class="level2"><div class="li"> Text (fix) [CHAR], permet que tots els valors d'aquest camp dels diferents registres siguin iguals en grandària. Normalment s'utilitza per textos de mida fixa o poc variable, com per exemple el codi postal, el telèfon, el tractament personal, textos predefinits (CARRER, PLAÇA, PIS, PORTA, etc).</div>
+</li>
+<li class="level2"><div class="li"> Memo [L O N G V A R C H A R], aquests tipus de camp permet introduir textos molt grans.</div>
+</li>
+<li class="level2"><div class="li"> Data [DATE], emmagatzema una data en format dd/mm/aa.</div>
+</li>
+<li class="level2"><div class="li"> Hora [TIME], per a dades horaris en format hh:mm:ss.</div>
+</li>
+<li class="level2"><div class="li"> Data i hora [TIMESTAMP], combinació de data i hora.</div>
+</li>
+<li class="level2"><div class="li"> Si/No [BOOLEAN], enmagatzema només 2 valors: Si o No, 0 o 1, true o false.</div>
+</li>
+<li class="level2"><div class="li"> Imatge [LONGVARBINAR], permet introduir fotos, imatges, gràfics.</div>
+</li>
+</ul>
+<p>
+Existeixen altres tipus de camps com per exemple el tipus [BIGINT] per escriure valors enters molt grans o [BINARY] per emmagatzemar dades binàries de mida fixa, però no s'utilitzen gaire.
+</p>
+
+<p>
+
+<em>Afegiu un nou camp a la taula Llibres: Prestat, de tipus Sí/No.</em>
+</p>
+
+</div>
+
+    <!-- ......... wikipage stop  ......... -->
+
+  </div>
+
+  <div class="clearer">&nbsp;</div>
+
+   
+<br /><br />
+  <a href="#inici" title="Inici pàgina"><img src="gif/up.gif" alt="Inici" /></a> <div class="footerinc">
+  <hr />
+  <table style="width: 100%;">
+  <tbody><tr style="vertical-align: middle;">
+    <td style="width: 30%;">
+      <div style="float: left;">
+      <a href="http://apliedu.xtec.cat/wikiform" title="Materials de formació"><img src="png/matfor.png" alt="Generalitat de Catalunya" height="42" width="100" /></a>
+      </div> 
+    </td>
+    <td style="width: 40%;">
+      <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/es/deed.ca"><img alt="Creative Commons License" style="border-width: 0pt;" src="png/cc.png" /></a>
+    </td>
+    <td style="width: 30%;">
+      <div style="float: right;">
+      <a href="http://www.xtec.cat/" title="XTEC"><img src="png/xtec.png" alt="XTEC" height="15" width="62" /></a>
+      </div>
+    </td>
+  </tr>  
+  </tbody></table>
+<!--
+<rdf:RDF xmlns="http://web.resource.org/cc/"
+    xmlns:dc="http://purl.org/dc/elements/1.1/"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<Work rdf:about="">
+   <dc:type rdf:resource="http://purl.org/dc/dcmitype/Text" />
+   <license rdf:resource="http://creativecommons.org/licenses/by-nc-sa/2.0/" />
+</Work>
+
+<License rdf:about="http://creativecommons.org/licenses/by-nc-sa/2.0/">
+   <permits rdf:resource="http://web.resource.org/cc/Reproduction" />
+   <permits rdf:resource="http://web.resource.org/cc/Distribution" />
+   <requires rdf:resource="http://web.resource.org/cc/Notice" />
+   <requires rdf:resource="http://web.resource.org/cc/Attribution" />
+   <prohibits rdf:resource="http://web.resource.org/cc/CommercialUse" />
+   <permits rdf:resource="http://web.resource.org/cc/DerivativeWorks" />
+   <requires rdf:resource="http://web.resource.org/cc/ShareAlike" />
+</License>
+
+</rdf:RDF>
+-->
+</div>
+
+</div>
+
+<!-- Generat el 27/Oct/2010  8:24:46  amb HTTrack --> 
+</body></html>

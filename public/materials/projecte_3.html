@@ -1,0 +1,238 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+ "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ca" lang="ca" dir="ltr">
+
+<!-- Generat el 27/Oct/2010  8:24:46  amb HTTrack --> 
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>Elaboració avançada de documents amb bases de dades</title>
+
+  <link rel="stylesheet" media="all" type="text/css" href="css/cssff6e.css?s=all&amp;t=estatic" />
+<link rel="stylesheet" media="screen" type="text/css" href="css/css6139.css?t=estatic" />
+<link rel="stylesheet" media="print" type="text/css" href="css/css6f71.css?s=print&amp;t=estatic" />
+
+  <link rel="shortcut icon" href="ico/favicon.ico" />
+
+  </head>
+
+
+
+<body>
+<div class="headerinc">
+<a id="inici"> </a>
+<a href="http://apliedu.xtec.cat/wikiform" title="Materials de formació"><img alt="logo" style="border-width:0" src="png/logosuperior.png" /></a>
+</div>
+
+<div class="dokuwiki">
+
+
+<div class="titol">Elaboració avançada de documents amb bases de dades</div><div class="subtitol"> Projecte III. Relacions entre taules</div>
+
+<div class="navega"><div id="navcontainer"><ul id="navlist">
+<li><a href="index.html" title="Inici">&lt;&lt;</a></li>  
+<li><a href="index-4.html">&lt;</a></li>  
+<li><a href="practica_1-3.html">Exercici 1</a></li>  
+<li><a href="practica_2-3.html">Exercici 2</a></li>  
+<li><a href="practica_3-3.html">Exercici 3</a></li>  
+<li id="active"><a id="current" href="#">Projecte III</a></li>
+</ul></div></div>
+
+  
+  <div class="page">
+
+    <!-- ......... wikipage start ......... -->
+    
+
+
+<h3><a name="projecte" id="projecte">Definir les relacions entre taules</a></h3>
+<div class="level3">
+
+<h5><a name="introduccio_projecte" id="introduccio_projecte">Marc general del projecte. Recordatori</a></h5>
+<div class="level5">
+<p>
+El projecte consistirà en crear una base de dades que permeti gestionar un hospital. L'hospital està compost de diferents unitats hospitalàries cada una de les quals té assignat diferents personal sanitari. Per exemple a la unitat de traumatologia se li han assignat 6 metges, 3 anestesistes, 5 fisioterapeutes, 8 infermeres i 15 auxiliars d'infermeria. 
+</p>
+<p>
+Per fer aquestes assignacions caldrà controlar l'especialitat del personal sanitari. l'Especialitat es definirà per una categoria: metge, fisioterapeuta, infermera, ... i una especialitat: trauma, medicina general, neurologia, maxil·lofacial, etc. 
+</p>
+<p>
+La base de dades gestionarà també els pacients de l'hospital, tant els que requereixin d'hospitalització com els que s'intervinguin sense ingrés. Els pacients no s'esborren mai per tal de mantenir un historial d'ingressos i intervencions. 
+</p>
+
+<p>
+Dels ingressos caldrà saber la data de l'ingrés i la data d'alta en cas que ja s'hagi produït, el pacient que es trobava ingressat, l'habitació i el llit on es va hospitalitzar al malalt i el temps que el metge va estimar que romandria ingressat. 
+</p>
+
+<p>
+Les intervencions es classifiquen per tipus. Per exemple visita, operació, radiografia, etc. Cada intervenció ha de tenir un metge responsable que és qui l'ha decidit. Ara bé, a banda del metge responsable, hi podran intervenir altre personal sanitari com fisioterapeutes, infermeres, altres metges, anestesistes, radiòlegs, etc. Es necessita saber qui són tots el que actuïn en una intervenció. 
+</p>
+</div>
+
+<h5><a name="projecte_1_creacio_de_taules" id="projecte_1_creacio_de_taules">Definició de Relacions</a></h5>
+<div class="level5">
+
+<p>
+<strong>Pensa prova i modifica</strong>. Abans de contiuar, però, convé que no facis les proves a la base de dades original. Per això et demanem que tanquis la base de dades, en facis una còpia i obris la còpia.
+</p>
+<p>
+Crea una relació entre la taula PersinalSanitari i la taula EspecialitatsSanitaries. Desa la relació i torna a la finestra principal. 
+</p>
+<p>
+Obre la taula <em>PersonalSanitari</em> i introdueix l'entrada següent:<br/>
+<strong>nif:</strong><em>44444444M</em>
+<strong>nom:</strong><em>Salvador</em>
+<strong>cognoms:</strong><em>Garcia Giralta</em>
+<strong>idEspecialitat:</strong><em>VASC</em>
+<strong>idUnitatAssignada:</strong><em>EXT</em>
+</p>
+<p>
+Has pogut crear el nou registre? Per què? 
+</p>
+<p>Continuem fent proves. Ara obre la taula EspecialitatsSanitaries i dona d'alta el següent registre:<br/>
+<strong>id:</strong><em>VASC</em>
+<strong>categoria:</strong><em>Metge</em>
+<strong>especialitat:</strong><em>Vascular</em>
+</p>
+<p>Un cop donada d'alta l'especialitat, torna a obrir la taula de PersonalSanitari i repteix la mateixa introdució anterior, la que t'ha donat un error.</p>
+<p>Has pogut acabar la introducció aquest cop? Per què?.</p>
+<p>Continuem provant. Intenta ara donar d'altre aquest altre professional:<br/>
+<strong>nif:</strong><em>22222222S</em>
+<strong>nom:</strong><em>Roser</em>
+<strong>cognoms:</strong><em>Cristobal Colon</em>
+<strong>idEspecialitat:</strong><em>EPI</em>
+<strong>idUnitatAssignada:</strong><em>EXT</em>
+</p>
+<p>Veuràs que, com deuries suposar, no s'a pogut completar l'alta. Ara però, en comptes de donar d'alta una especialitat, et damanarem que editis les relacions i eliminis la relació existent entre PersonalSanitari i EspecialitatsSanitaries. </p>
+<p>Repeteix l'alta de la metgesa. Per què ara si que s'han pogut introduir les dades?</p>
+<p>Torna a crear la relació entre ambdues taules (PersonalSanitari i EspecialitatsSanitaries). Pots crear-la? Perquè abans de donar d'alta la metgesa vas poder crear la relació i ara no?</p>
+
+<p>Torna a crear la relació entre ambdues taules (PersonalSanitari i EspecialitatsSanitaries). Pots crear-la? Perquè abans de donar d'alta la metgesa vas poder crear la relació i ara no?</p>
+<p>
+Dona d'alta una nova especialitat amb aquestes dades:<br/>
+<strong>id:</strong><em>EPI</em>
+<strong>categoria:</strong><em>Metge</em>
+<strong>especialitat:</strong><em>Epidemiologia</em>
+</p>
+<p>Si ara intentes crear la relació entre PersonalSanitari i EspecialitatsSanitaries, veuràs que no et suposarà cap problema. Porva-ho i contesta. Què ha canviat? Quines condicions creus que han d'haver abans de crear una relació? Creus que el fet de definir relacions entre taules pot evitar que els usuaris cometin arrors a l'hora de escriure les entrades? Consideres important crear relacions?</p>
+<p>Pensem una mica més. Analitza les taules actuals. Creus que alguna d'elles podria dividir-se en dues taules relacionades entre si de manera que s'evitessin errors tipogràfics?</p>
+
+<p>
+Et donem alguna pista. Escriu Les seguents entrades i valora:
+<br/>taula <strong>EspecialitatsSanitareies</strong><br/>
+<strong>id:</strong><em>EPI</em>
+<strong>categoria:</strong><em>Metge</em>
+<strong>especialitat:</strong><em>Epidemiologia</em>
+<br/>taula <strong>EspecialitatsSanitareies</strong><br/>
+<strong>id:</strong><em>TRAU</em>
+<strong>categoria:</strong><em>Mtege</em>
+<strong>especialitat:</strong><em>Traumatologia</em>
+<br/>taula <strong>Pacients</strong><br/>
+<strong>nom:</strong><em>Carme</em>
+<strong>cognoms:</strong><em>Roldan Fusta</em>
+<strong>nif:</strong><em>12345678H</em>
+<strong>adreca:</strong><em>C/ Únic 22, 1r 6a</em>
+<strong>poblacio:</strong><em>Montcada i Reixac</em>
+<strong>codipostal:</strong><em>08110</em>
+<strong>data_naixament:</strong><em>23/03/1987</em>
+<br/>taula <strong>Pacients</strong><br/>
+<strong>nom:</strong><em>Vicenç</em>
+<strong>cognoms:</strong><em>Peris Bota</em>
+<strong>nif:</strong><em>87654321Z</em>
+<strong>adreca:</strong><em>C/ del Final 33, 6è 1a</em>
+<strong>poblacio:</strong><em>Moncada y Rexac</em>
+<strong>codipostal:</strong><em>08110</em>
+<strong>data_naixament:</strong><em>02/01/1999</em>
+</p>
+<p>
+Ho tens ja? Doncs ara a treballar. Se us demana que:
+</p>
+<p>
+1.- Torneu a la taula original.
+</p>
+<p>
+2.- Modifica l'estructura de les taules d'acord amb les conclusions que has tret de l'experiencia realitazada més amunt. Per exemple, dividint algunes taules, canviant camps definitnt relacions, etc.
+</p>
+<p>
+Si feu algun canvi d'aquest estil, millor que buideu les taules afectades de dades. Per no haver d'introduir de nou les dades a mà us proposem que si heu fet canvis a les dades, feu una exportació de les taules afectades. Si no heu fet cap canvi en les dades de les taules, podreu tornar a importar les dades des dels fitxers originals i no cal que les exporteu.
+</p>
+<p>
+En acabar obriu les taules afectades pels canvis que voleu realitzar, seleccioneu tots els registres i elimineu-los. Un cop eliminats feu les modificacions planificades. 
+</p>
+<p>
+Quan ho consideris necessari fes de nou la importació de les dades tenint en compte que un mateix fitxer pot contenir dades per dues taules diferents. Si esculls correctament els camps a importar, no tindras cap problema.
+</p>
+<p>
+3.- Defineix totes les relacions que les taules haurien de tenir. Estigues atent i no te'n deixis cap.
+</p>
+</div>
+
+<h5><a name="projecte_3_lliurament" id="projecte_3_lliurament">Lliurament d'aquesta part</a></h5>
+<div class="level5">
+
+<p>
+Cal que abans de començar el mòdul següent lliuris el document de base de dades am el que hagis treballat a la bústia del moodle oberta per a l'entrega de la tercera part del projecte (Projecte III), 
+</p>
+</div>
+
+</div>
+
+    <!-- ......... wikipage stop  ......... -->
+
+  </div>
+
+  <div class="clearer">&nbsp;</div>
+
+   
+<br /><br />
+  <a href="#inici" title="Inici pàgina"><img src="gif/up.gif" alt="Inici"/></a> <div class="footerinc">
+  <hr />
+  <table style="width: 100%;">
+  <tr style="vertical-align: middle;">
+    <td  style="width: 30%; ">
+      <div style="float: left;">
+      <a  href="http://apliedu.xtec.cat/wikiform" title="Materials de formació"><img src="png/matfor.png" width="100" height="42" alt="Generalitat de Catalunya" /></a>
+      </div> 
+    </td>
+    <td style="width: 40%;">
+      <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/es/deed.ca"><img alt="Creative Commons License" style="border-width:0" src="png/cc.png" /></a>
+    </td>
+    <td style="width: 30%;">
+      <div style="float: right;">
+      <a href="http://www.xtec.cat/" title="XTEC"><img src="png/xtec.png" width="62" height="15" alt="XTEC" /></a>
+      </div>
+    </td>
+  </tr>  
+  </table>
+<!--
+<rdf:RDF xmlns="http://web.resource.org/cc/"
+    xmlns:dc="http://purl.org/dc/elements/1.1/"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<Work rdf:about="">
+   <dc:type rdf:resource="http://purl.org/dc/dcmitype/Text" />
+   <license rdf:resource="http://creativecommons.org/licenses/by-nc-sa/2.0/" />
+</Work>
+
+<License rdf:about="http://creativecommons.org/licenses/by-nc-sa/2.0/">
+   <permits rdf:resource="http://web.resource.org/cc/Reproduction" />
+   <permits rdf:resource="http://web.resource.org/cc/Distribution" />
+   <requires rdf:resource="http://web.resource.org/cc/Notice" />
+   <requires rdf:resource="http://web.resource.org/cc/Attribution" />
+   <prohibits rdf:resource="http://web.resource.org/cc/CommercialUse" />
+   <permits rdf:resource="http://web.resource.org/cc/DerivativeWorks" />
+   <requires rdf:resource="http://web.resource.org/cc/ShareAlike" />
+</License>
+
+</rdf:RDF>
+-->
+</div>
+
+</div>
+
+</body>
+
+<!-- Generat el 27/Oct/2010  8:24:46  amb HTTrack --> 
+</html>
+
+
+
+

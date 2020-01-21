@@ -1,0 +1,398 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ca" dir="ltr" lang="ca"><head><!-- Generat el 27/Oct/2010  8:24:46  amb HTTrack -->
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  
+
+<title>Elaboració avançada de documents amb bases de dades</title><link rel="stylesheet" media="all" type="text/css" href="css/cssff6e.css?s=all&amp;t=estatic" />
+<link rel="stylesheet" media="screen" type="text/css" href="css/css6139.css?t=estatic" />
+<link rel="stylesheet" media="print" type="text/css" href="css/css6f71.css?s=print&amp;t=estatic" />
+
+  <link rel="shortcut icon" href="ico/favicon.ico" /></head>
+
+
+ 
+<body>
+<div class="headerinc">
+<a id="inici"> </a>
+<a href="http://apliedu.xtec.cat/wikiform" title="Materials de formació"><img alt="logo" style="border-width: 0pt;" src="png/logosuperior.png" /></a>
+</div>
+
+<div class="dokuwiki">
+
+
+<div class="titol">L'entorn de l'Open Base </div><div class="subtitol"> Pràctica 1 - Exercici 4</div><div class="navega"><div id="navcontainer"><ul id="navlist">
+<li><a href="index.html" title="Inici">&lt;&lt;</a></li>  
+<li><a href="index-2.html">&lt;</a></li>  
+<li><a href="practica_1.html">Exercici 1</a></li>  
+<li><a href="practica_2.html">Exercici 2</a></li>  
+<li><a href="practica_3.html">Exercici 3</a></li>  
+<li id="active"><a id="current" href="#">Exercici 4</a></li>
+<li><a href="projecte_1.html">Projecte I</a></li>
+</ul></div></div>
+
+  
+  <div class="page">
+
+    <!-- ......... wikipage start ......... -->
+    
+
+
+<h3><a name="explotacio_basica_de_la_base_de_dades" id="explotacio_basica_de_la_base_de_dades">
+Explotació bàsica de la base de dades
+</a></h3>
+<div class="level3">
+
+<p>
+Malgrat que el paquet Open Base permet crear aplicacions força complexes mitjançant diversos llenguatges de programació, es possible fer una explotació bàsica partint només de les taules. 
+</p>
+</div>
+
+<h4><a name="barra_de_registres" id="barra_de_registres">Introducció de dades</a></h4>
+<div class="level4">
+
+<p>
+Per introduir dades a les taules cal que obriu la base de dades i feu doble clic damunt la taula que voleu obrir o bé clicant el botó dret seleccioneu <em>obre</em>. Obriu per exemple la taula Alumnes.
+</p>
+
+<p>
+Per afegir elements a la taula que acabeu d'obrir, cal que us situeu a la última fila marcada amb el símbol <em>nou</em>.
+</p>
+
+<p>
+<img src="jpg/m1039.jpg" class="mediacenter" alt="" />
+</p>
+
+<p>Afegiu 5 alumnes.</p>
+</div>
+
+<h5><a name="barra_de_registres" id="barra_de_registres">Barra de registres</a></h5>
+<div class="level5">
+
+<p>Com pots comprovar a mesura que introdueixes alumnes la barra de
+Registres de la part inferior de la finestra et va mostrant el registre
+en el que et trobes i el nombre de registres que hi ha en total a la
+taula.
+</p>
+
+<p>
+<img src="jpg/m1050.jpg" class="mediacenter" alt="" />
+</p>
+
+
+<p>
+Aquesta barra s'anomena barra de navegació perquè et permet accedir a qualsevol registre (indicant el nombre corresponent), saltar d'un registre a una altre (endavant o endarrere) o passar directament al primer o a l'últim registre. Fes proves per veure com funciona.
+</p>
+
+<p>
+La mateixa barra disposa també d'una icona per inserir nous registres. Fixeu-vos que si una clau primaria té activa la característica "valor automàtic", no cal dona-li cap valor. Cada cop que inserim nous registres va prenent un valor diferent de forme incremental.
+</p>
+
+<p>
+Ara obriu la resta de taules i afegiu un mínim de cinc registres a cadascuna d'elles.
+</p>
+</div>
+
+
+<h5><a name="barra_d_eines_de_les_taules" id="barra_d_eines_de_les_taules">Barra d'eines de les Taules</a></h5>
+<div class="level5">
+<p>
+Abans de continuar investigant noves formes d'introducció de dades, donarem una ullada a la barra d'eines, ja que ens pot resultar de molta ajuda per l'explotació de les dades.
+</p>
+<p>
+A continuació podeu veure una imatge que recull les principals accions de la barra. Com que entre les versions Linux i Windows hi ha certes diferencies, us posem ambdues barres.
+</p>
+<p>
+<img src="jpg/m1036.jpg" class="mediacenter" alt="" />
+</p>
+<p>
+Les opcions de copiar retallar i enganxar són eines força útils per evitar l'escriptura de dades repetides.
+</p>
+<p>
+<strong>Copia:</strong>
+<br/>
+Pots copiar el valor d'un camp per després enganxar-lo dintre d'un altre camp del mateix o d'un altre registre.
+</p>
+
+<p>
+<img src="jpg/m1m41.jpg" class="mediacenter" alt="" />
+</p>
+
+<p>
+Primer has de seleccionar el valor i prémer el botó de la barra d'eines o com sempre Ctrl+C, o botó dret Copiar.
+També es pot aconseguir el mateix objectiu arrossegant el valor a copiar fins al seu destí.
+</p>
+
+<p>
+Després selecciones on vols enganxar el valor copiat i enganxes fent servir la icona o be la combinació de tecles <em>Ctrl-V</em>.
+</p>
+
+<p>
+Pots <em>duplicar</em> tota una fila arrossegant el quadret de selecció de registre fins al final de la taula.
+</p>
+
+<p>
+<img src="jpg/m1m43.jpg" class="mediacenter" alt="" />
+</p>
+
+<p>
+<strong>Retalla:</strong>
+<br/>
+El mateix que en el cas anterior però tingués present que en aquest cas el valor retallat desapareix de la posició original.
+</p>
+
+<p>
+<strong>Enganxa:</strong>
+<br/>
+Ja comentat anteriorment.
+</p>
+
+<p>
+<img src="jpg/m1m42.jpg" class="mediacenter" alt="" />
+</p>
+
+
+<p>
+Cada cop que feu qualsevol modificació a les dades de la taula podreu desfer els canvis usant la icona de la barra o teclejant Ctrl-Z.
+</p>
+</div>
+
+<h4><a name="eliminacio_de_registres" id="eliminacio_de_registres">Eliminació de registres</a></h4>
+<div class="level4">
+<p>
+Des de les taules es poden eliminar registres si cliqueu el botó dret sobre el marge esquerre de quasevol registre i seleccioneu "Suprimeix les files" tal com mostra la imatge.
+</p>
+<p>
+<img src="jpg/m1035.jpg" class="mediacenter" alt="" />
+</p>
+<p>
+És possible seleccionar més d'un registre clicant sobre el marge esquerre amb el botó esquerre del ratolí al mateix temps que cliquem la tecla Ctrl o la tecla BloqMayus. En aquest cas l'acció anterior eliminaria tots els registres seleccionats.</p>
+<p>
+Podeu també eliminar registres des del menú edita, activant la opció "Suprimeix la fila". Igual que el el cas anterior, eliminarà la fila actual o bé totes les seleccionades.</p>
+</div>
+
+<h4><a name="importacio_de_dades" id="importacio_de_dades">Importació de dades</a></h4>
+<div class="level4">
+<p>
+A vegades ens caldrà importar les dades des d'altres aplicacions. Aquí n'explicarem dues força comuns, la importació de dade des d'un full de càlcul i la importació de dades des d'un document de text.
+</p>
+<h5><a name="importacio_de_dades_des_dun_full_de_calcul" id="importacio_de_dades_des_dun_full_de_calcul">Importació de dades des d'un full de càlcul</a></h5>
+<div class="level5">
+<p>En aquest cas podem realitzar la importació fent servir el porta-retalls. Caldrà obrir el full de càlcul on s'ubiquin les dades i copia totes les cel·les a importar incloses les cel·les de la capçalera amb els noms del camps.</p>
+<p>
+<img src="jpg/m1040.jpg" class="mediacenter" alt="" />
+</p>
+<p>
+Un cop copiades ens traslladarem a la base de dades, a la finestra principal. Cercarem la taula on volem afegir-hi les dades i clicarem a sobre amb el botó dret. Escollirem <em>Enganxa</em>.
+</p>
+<p>
+<img src="jpg/m1034.jpg" class="mediacenter" alt="" />
+</p>
+<p>
+Aquesta acció ens obrirà un quadre de diàleg com el de la següent figura. Escollirem afegir dades i fer servir la primera fila com a nom de les columnes (dels camps) i clicarem el botó següent...
+</p>
+
+<p>
+<img src="jpg/m1033.jpg" class="mediacenter" alt="" />
+</p>
+<p>
+... que ens portarà a un segon quadre de diàleg on podrem aparellar el nom de les columnes amb el nom dels camps de la taula. Si els noms coincideixen l'emparellamanent es fa de manera automàtica. Un cop emparellats cliqueu el botó <em>Crea</em>.
+</p>
+
+<p>
+<img src="jpg/m1041.jpg" class="mediacenter" alt="" />
+</p>
+</div>
+<p>Això afegirar les dades del full de càlcul a la taula.</p>
+</div>
+
+<h5><a name="importacio_de_dades_des_dun_fitxer_de_text" id="importacio_de_dades_des_dun_fitxer_de_text">Importació de dades des d'un fitxer de text</a></h5>
+<div class="level5">
+<p>
+A vegades és possible que el format on es troba la font de les dades sigui un fitxer de text en el que cada línia representi un registre i els camps es torbin separats per un caràcter especial com ara la coma, el punt i coma o d'altres.
+</p>
+<p>
+El mecanisme d'importació en aquest cas passa per obrir el fitxer des de qualsevol aplicació LibreOffice (inclosa l'Open Base). Això, després de passar per un quadre de diàleg obrirà un full de càlcul amb les dades del fitxer. A partir d'aquí caldrà procedir com si es tractés directament d'un full de càlcul.
+</p>
+<p>
+Per obrir el fitxer de text podeu fer-ho des del menú <em>Fitxer</em> o be des de la barra d'eines o bé clicant CTRL-O. Podrem navegar i cercar el fitxer. En obrir-lo ens apareixerà el següent quadre de diàleg
+</p>
+<p>
+<img src="jpg/m1042.jpg" class="mediacenter" alt="" />
+</p>
+<p>
+EL quadre us permet seleccionar el caràcter delimitar dels camps (coma, punt i coma o d'altres). També permet escollir altres característiques que us ajudaran a delimitar les dades correctament. En polsar el botó <em>D'acord</em>, s'obrirà una full de càlcul amb les dades del fitxer.
+</p>
+<p>
+A partir d'aquí seguiu les indicacions d'importació com si es tractés d'un full de càlcul.</p>
+</div>
+
+<h4><a name="exportacio_de_dades" id="exportacio_de_dades">
+Exportació de dades
+</a></h4>
+<div class="level4">
+<p>
+De forma similar a la importació, podem exportar dades de les nostres taules situant-nos a la finestra principal, clicant el botó dret del ratolí i seleccionant còpia.
+Després sobre un full de càlcul,  per exemple, podem enganxar i d'aquesta manera hi copiarem les dades. 
+</p>
+</div>
+
+<h4><a name="Cerca_de_registres_des_de_la_visio_de_la_taula" id="Cerca_de_registres_des_de_la_visio_de_la_taula">
+Trobar, consultar i comparar registres de les taules
+</a></h4>
+<div class="level4">
+
+<p>
+A més d'introduir dades, sovint ens interessarà trobar un cert registre, o fins i tot ordenar-los per poder-los comparar fàcilment.
+</p>
+
+<h5><a name="Cerca_de_registres" id="Cerca_de_registres">
+Cercar un registre
+</a></h5>
+<div class="level5">
+<p>
+Per fer una cerca dels registres que acompleixen un cert criteri
+directament des de la taula de dades, fem servir l'opció Cerca de la
+barra d'eines on ens mostra la següent finestra:
+</p>
+
+<p>
+<img src="jpg/m1m44.jpg" class="mediacenter" alt="" />
+</p>
+
+<p>
+Si polses ara sobre el botó Cerca accediràs als registres que tenen al camp Editorial el valor Alfaguara. 
+Si actives <em>El contingut del camp és buit</em> aleshores al clicar Cerca es marcaran els registres on el camp Editorial està buit.
+Si actives <em>El contingut del camp no és buit</em> es marcaran els registres on el camp té un valor.
+</p>
+
+<p>
+Si selecciones tots els camps buscarà el valor indicat el tots els camps i no només en el que et trobis en aquell moment.
+</p>
+
+<p>Al quadre combinat Posició, podrà seleccionar la part del camp on
+vols que busqui el valor indicat. Per exemple si al quadre Text de la
+part superior poses 19, selecciones el camp Any Edició i a posició
+poses <em>a l'inici del camp</em> aleshores al fer la cerca es mostraran tots els registres dels llibres editats al segle XX.
+</p>
+</div>
+
+<h5><a name="ordenar_registres" id="ordenar_registres">
+Ordenacions
+</a></h5>
+<div class="level5">
+
+<p>
+Pots ordenar el contingut de la taula pel valor de qualsevol dels camps de la taula. 
+</p>
+
+<p>
+<img src="jpg/m1045.jpg" class="mediacenter" alt="" />
+</p>
+
+<p>
+Aquesta finestra mostra la forma d'ordenar la taula de forma ascendent pel valor del camp Titol.
+</p>
+
+<p>
+<img src="jpg/m1m46.jpg" class="mediacenter" alt="" />
+</p>
+
+<p>
+Aquesta imatge mostra la forma d'ordenar els llibres per Autor, i els llibre de mateix autor també per Títol.
+</p>
+
+<p>
+<img src="jpg/m1m48.jpg" class="mediacenter" alt="" />
+</p>
+
+<p>
+Per ordenar pel valor d'un únic camp només hem de seleccionar el camp
+fent un clic sobre el nom del camp i polsar sobre la icona del tipus
+d'ordre que volguem. Ascendent o Descendent.
+</p>
+
+</div>
+<!--
+<h5><a name="filtrar_registres" id="filtrar_registres">
+Filtres
+</a></h5>
+<div class="level5">
+<p>
+Podem filtrar ràpidament les dades corresponents als registres que els coincideixi el valor del camp on tinguem situat el cursor amb el del registre actual. Aquesta mena de filtre anirà molt be per trobar coincidències. Per exemple tots els clients domiciliats la mateixa població que un determinat client. Aconseguirem activar aquest filtre clicant damunt de la icona <em>Filtre automàtic</em>.
+</p>
+<p>
+<img src="jpg/m1043.jpg" class="mediacenter" alt="" />
+</p>
+<p>
+SI el que volem són condicions més complexes, caldrà crear una filtre usant la icona Crear <em>Crear filtre</em>. EL quadre de diàleg obert ens permetrà escollir una o diverses condicions enllaçades per les operacions lògiques <em>I</em> o bé <em>O</em>. Recordem que els registre filtrats han de complir totes les condicions <em>I</em> però només alguna de les condicions <em>O</em>. </p>
+<p>Vegeu a la següent imatge la forma de demanar el llibres de Santillana o Seix Barral editats posteriorment a l'any 2000.
+</p>
+<p>
+<img src="jpg/m1044.jpg" class="mediacenter" alt="" />
+</p>
+<p>
+Un cop creat el filtre caldra clicat el botó de la barra d'eines <em>Aplicar Filtre</em>. Quan deistgem recuperar de nou tots els registre o bé eliminar una ordenació determinada, clicarem la icona <em>Cancel·lar filtre/ordre</em>.
+</p>
+
+<p>
+Finalment comentar que si en qualsevol moment modifiqueu la mida de les columnes i salveu la opció usant la icona pertinent, la propera vegada que obriu la taula recordarà les dimensions establertes.</p>
+</div>
+-->
+</div>
+
+</div>
+
+    <!-- ......... wikipage stop  ......... -->
+
+  </div>
+
+  <div class="clearer">&nbsp;</div>
+
+   
+<br /><br />
+  <a href="#inici" title="Inici pàgina"><img src="gif/up.gif" alt="Inici" /></a> <div class="footerinc">
+  <hr />
+  <table style="width: 100%;">
+  <tbody><tr style="vertical-align: middle;">
+    <td style="width: 30%;">
+      <div style="float: left;">
+      <a href="http://apliedu.xtec.cat/wikiform" title="Materials de formació"><img src="png/matfor.png" alt="Generalitat de Catalunya" height="42" width="100" /></a>
+      </div> 
+    </td>
+    <td style="width: 40%;">
+      <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/es/deed.ca"><img alt="Creative Commons License" style="border-width: 0pt;" src="png/cc.png" /></a>
+    </td>
+    <td style="width: 30%;">
+      <div style="float: right;">
+      <a href="http://www.xtec.cat/" title="XTEC"><img src="png/xtec.png" alt="XTEC" height="15" width="62" /></a>
+      </div>
+    </td>
+  </tr>  
+  </tbody></table>
+<!--
+<rdf:RDF xmlns="http://web.resource.org/cc/"
+    xmlns:dc="http://purl.org/dc/elements/1.1/"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<Work rdf:about="">
+   <dc:type rdf:resource="http://purl.org/dc/dcmitype/Text" />
+   <license rdf:resource="http://creativecommons.org/licenses/by-nc-sa/2.0/" />
+</Work>
+
+<License rdf:about="http://creativecommons.org/licenses/by-nc-sa/2.0/">
+   <permits rdf:resource="http://web.resource.org/cc/Reproduction" />
+   <permits rdf:resource="http://web.resource.org/cc/Distribution" />
+   <requires rdf:resource="http://web.resource.org/cc/Notice" />
+   <requires rdf:resource="http://web.resource.org/cc/Attribution" />
+   <prohibits rdf:resource="http://web.resource.org/cc/CommercialUse" />
+   <permits rdf:resource="http://web.resource.org/cc/DerivativeWorks" />
+   <requires rdf:resource="http://web.resource.org/cc/ShareAlike" />
+</License>
+
+</rdf:RDF>
+-->
+</div>
+
+</div>
+
+<!-- Generat el 27/Oct/2010  8:24:46  amb HTTrack --> 
+</body></html>

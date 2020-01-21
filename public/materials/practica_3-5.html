@@ -1,0 +1,318 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ca" dir="ltr" lang="ca"><head><!-- Generat el 27/Oct/2010  8:24:46  amb HTTrack -->
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  
+
+<title>Elaboració avançada de documents amb bases de dades</title><link rel="stylesheet" media="all" type="text/css" href="css/cssff6e.css?s=all&amp;t=estatic" />
+<link rel="stylesheet" media="screen" type="text/css" href="css/css6139.css?t=estatic" />
+<link rel="stylesheet" media="print" type="text/css" href="css/css6f71.css?s=print&amp;t=estatic" />
+
+  <link rel="shortcut icon" href="ico/favicon.ico" /></head>
+
+
+ 
+<body>
+<div class="headerinc">
+<a id="inici"> </a>
+<a href="http://apliedu.xtec.cat/wikiform" title="Materials de formació"><img alt="logo" style="border-width: 0pt;" src="png/logosuperior.png" /></a>
+</div>
+
+<div class="dokuwiki">
+
+
+<div class="titol">La creació de formularis </div><div class="subtitol"> Pràctica 5 - Exercici 3</div><div class="navega"><div id="navcontainer"><ul id="navlist">
+<li><a href="index.html" title="Inici">&lt;&lt;</a></li>  
+<li><a href="index-6.html">&lt;</a></li>  
+<li><a href="practica_1-5.html">Exercici 1</a></li>  
+<li><a href="practica_2-5.html">Exercici 2</a></li>  
+<li id="active"><a id="current" href="#">Exercici 3</a></li>
+<li><a href="projecte_5.html">Projecte V</a></li>
+</ul></div></div>
+
+
+  
+  <div class="page">
+
+    <!-- ......... wikipage start ......... -->
+    
+
+
+<h3><a name="mes_formularis" id="mes_formularis">Creació avançada de formularis</a></h3>
+<div class="level3">
+
+<p>
+<br />
+<br />
+En aquest capítol estudiarem més a fons el format dels formularis, això com els diferents controls que l'Open Base disposa per dissenyar un formulari. Fins ara només hem vist formularis senzill constituïts per etiquetes de text i quadres de text. Les etiquetes de text es fan servir per mostrar informació textual a l'usuari.	
+</P>
+<p>
+<img src="jpg/m1046.jpg" class="mediacenter" alt="" />
+</p>
+<p>
+Els quadres de text són controls de formulari que permeten a l'usuari introduir dades per mitjà del teclat.
+</p>
+<p>
+<img src="jpg/m4093.jpg" class="mediacenter" alt="" />
+</p>
+<p>
+Els formularis tenen, però, altres controls que cal conèixer per aconseguir facilitar la introducció de dades a l'usuari. Si l'usuari només pogués introduir dades escrivint des de teclat, trigaria molt de temps en omplir un formulari i segurament, el nombre d'errades comeses seria considerable. 
+</p>
+<p>
+Sortosament disposem de controls que ens permeten seleccionar dades sense haver d'escriure-les augmentant així la rapidesa en la introducció de dades i la fiabilitat de les dades entrades. Per treballar amb aquests controls avançats obrirem el formulari en mode d'edició, o en cas que no existeixi crearem una formulari nou en vista de disseny.
+<p>
+Crear tot un formulari nou des de la vista de disseny implica força feina, per això normalment editarem un formulari ja existent. Farem clic amb el botó dret damunt del formulari a editar i seleccionarem "edita". Això ens obrirà la pantalla d'edició del formulari.
+</p>
+<p>
+Per treballar còmodament, hauríem de tenir visibles les barres d'eines <em>Disseny del formulari</em> i <em>Controls de formulari</em> En cas que siguin necessàries les eines de dibuix, podrà visualitzar-se també la barra d'eina de <em>Dibuix</em>. Si no les teniu a la vista podeu visualitzar-les, si les seleccioneu des del menú <em>Visualitza</em>, opció <em>Barra d'eines</em>.
+</p>
+<p>
+<img src="jpg/m4046.jpg" class="mediacenter" alt="" />
+</p>
+
+<h4><a name="formularis_controls_i_pàgina" id="formularis_controls_i_pàgina">formularis controls i pàgina</a></h4>
+<div class="level4">
+
+<p>
+Abans d'analitzar els controls per separat, caldria deixar clara la diferencia entre el <em>&#xAB;document formulari&#x00BB;</em>,  els elements <em>&#xAB;formulari&#xBB;</em>, els elements <em>&#xAB;control&#xBB;</em> i la &#xAB;pàgina&#xBB; o pantalla on s'ubiquen els controls.
+</p> 
+<p>El &#xAB;document formulari&#xBB; és el que estem creant, el resultat global, el conjunt d'elements que configuraran una forma de visualitzar i escriure dades a les taules. El document formulari, estarà format pels elements formulari, pels controls i la pàgina de fons del document.
+</p> 
+<p>
+Cal que tinguem en compte que els elements &#xAB;formulari&#xBB; no tenen una representació gràfica, més aviat cal entendre'ls com el vincle entre las dades i els controls. Cada element formulari es troba associat a una taula de la base de dades i tots els controls continguts en una formulari faran referencia a la taula associada.
+</p>
+<p>
+La representació gràfica dels formularis se sustenta d'una banda, sobre els controls, que són elements gràfics que informen al usuari i li permeten la introducció d'informació. De l'altra, se sustenta també sobre la pàgina de treball on s'ubicaran els controls que actuarà de fons. Ja s'ha comentat que l'editor de formularis és el <em>writter</em> el qual treballarà sobre un document de text amb una única pàgina.
+</p>
+<p>
+<img src="jpg/m4014.jpg" class="mediacenter" alt="" /> 
+</p>
+<p>
+Podeu observar el contingut dels formularis si obriu una finestra anomenada navegador de formularis que permet visualitzar i seleccionar els diferents elements constituents d'un document formulari. Vegeu-ne dos exemples:
+</p>
+<p>
+<img src="jpg/m4032.jpg" class="mediacenter" alt="" /> 
+<br/>
+<img src="jpg/m4033.jpg" class="mediacenter" alt="" />
+</p>
+<p>
+En el navegador, el &#xAB;document formulari&#xBB; estaria representat per l'arrel (Formularis). Aquest conté un o més formularis (elements) i cada formulari contindrà controls o d'altres formularis (subformularis).
+</p>
+<p>
+Per obrir la finestra del navegador de formularis, cal que cliqueu el cinquè botó de la barra <em>Disseny de formulari</em> tal com s'indica a la figura:
+</p>
+<p>
+<img src="jpg/m4034.jpg" class="mediacenter" alt="" />
+</p>
+<h5><a name="propietats_formularis" id="propietats_formularis">Propietats dels formularis</a></h5>
+<div class="level5">
+
+<p>El formularis poden configurar-se canviant alguna de les seves propietats. Podem obrir un quadre de diàleg amb les propietats del formulari, clicant el quart botó de la les barres <em>Disseny de formulari</em>  o be <em>Control de formulari</em> </p>
+<p>
+<img src="jpg/m4035.jpg" class="mediacenter" alt="" />
+</p>
+<p>
+Les propietats que més ens interessen en aquest moment es troben a la pestanya <em>dades</em>. Allà podrem escollir o canviar la taula de dades associada al formulari. De moment, l'Open Base només permet associar una sola taula a un element formulari. De manera que si necessitéssim treballar amb més taules caldrà afegir nous formularis. Ho veurem més endavant.
+</p>
+<p>
+Malgrat que els formularis es poden associar a consultes, aquesta no sol ser una bona decisió ja que quan associem un formulari a una consulta, aquest no pot afegir ni modificar dades a les taules. Per tant deixarem les consultes pels informes.
+</p>
+<p>
+Des de la pestanya dades, també podrem definir un ordre determinat de visualització o un filtre específic.
+</p>
+</div>
+<h5><a name="propietats_pagina" id="propietats_pagina">Propietats de la pàgina</a></h5>
+<div class="level5">
+<p>
+Per configurar la pagina del document, disposem del menú Format opció Pàgina. Podrem canviar la mida, els marges, el color de fons, les vores, etc.
+</p>
+<p></p>
+<p>
+<img src="jpg/m4008.jpg" class="mediacenter" alt="" />
+</p>
+</div>
+
+
+<h5><a name="propietats_controls" id="propietats_controls">Propietats dels controls</a></h5>
+<div class="level5">
+<p>
+Moltes de les propietats dels controls són especifiques da cada tipus. Tot hi això hi ha propietats comunes compartides per tots ells. Per exemple, en tractar-se d'elements gràfics, estan situats en alguna posició de la pàgina i per tant necessiten coordenades. Malgrat tot, l'ancoratge, seguint la filosofia del libreOffice writer, pot associar-se a la pròpia pàgina (coordenades absolutes), a un paràgraf o fins i tot a la posició d'a un caràcter especific (coordenades relatives).
+</p>
+<p>
+Si fem doble clic damunt d'un control, se'ns obrirà la finestra de les propietats. Cal anar alerta perquè si el control s'ha generat de forma automàtica amb l'auxiliar de formularis, els quadres de text i les etiquetes es trobaran agrupats. Per obtenir les propietat de cada control per separat caldrà desagrupar-los (botó dret i en el menú de context sitaur-se sobre <em>Agrupa</em> i seleccionar <em>Desagrupa</em>).	Un cop desagrupats seleccionau el control que desitgeu i en fer doble clic se us obrirà el quadre de diàleg de les propietats.
+</p>
+<p>
+El quadre disposa de 3 pestanyes: General, Dades i Esdeveniments. La primera agrupa aquelles propietats referides a la part gràfica (coordenades, color, tipus de lletra, etc.), la pestanya Dades, conté la configuració referida a la dada vinculada al control. Malgrat hi ha controls com les etiquetes, que no es troben vinculades a cap dada de la base de dades, la majoria d'ells si que tenen vinculació. Concretament els controls continguts a un element formulari, només poden estar vinculats a un camp de la taula associada al formulari. Podreu canviar el vincle modificant la propietat anomenada <em>camp de dades</em>.
+</p>
+</div>
+
+
+<h5><a name="afegir_controls" id="afegir_controls">Afegir nous controls al formulari</a></h5>
+<div class="level5">
+<p>
+No tenim prou temps per estudiar tots els controls a fons, per això escollirem només els més usuals. A banda de les etiquetes i els quadres de text que ja hem vist, destacarem el <em>quadre de llista</em> i el <em>quadre combinat</em>. Són controls molt semblants amb molt poques diferencies que comentarem més endavant. Es tracta d'uns controls molt importants perquè permeten definir una llista de possibles valors del control i de retruc de la dada associada. 
+</p>
+<p>
+Solen fer-se servir de selectors de claus forànies per evitar errors i assegurar l'existència de la clau. Podem afegir un d'aquests controls clicant el botó desè o onzè.
+</p>
+<p>
+<img src="jpg/m1047.jpg" class="mediacenter" alt="" />
+</p>
+<p>
+Per facilitar la configuració d'aquest controls, podem activar l'aparició d'un auxiliar de configuració, cada vegada que afegim un control d'aquest tipus, activant el darrer botó de controls de formulari ("auxiliars habilitats/inhabilitats"). Deixeu-lo habilitat.
+</p>
+<p>
+Si voléssim crear un selector de països en una formulari per editar llibres de la base de dades "biblioteca", clicaríem el botó quadre combinat i delimitaríem l'àrea que hauria d'ocupar. Immediatament s'obrirà un quadre de diàleg preguntat per la font de dades d'on treure el conjunt de valors candidats. Escollirem la taula <em>Pais</em> i clicarem següent:
+</p>
+<p>
+<img src="jpg/m1048.jpg" class="mediacenter" alt="" />
+</p>
+<p>
+Ara ens preguntarà pel camp d'on treure els valors candidats. Escollirem <em>codi_pais</em> en el nostre cas i clicarem següent. 
+</p>
+<p>
+<img src="jpg/m1054.jpg" class="mediacenter" alt="" />
+</p>
+<p>
+La darrera pantalla permet associar el valor escollir a un camp de la taula del formulari. En el nostre cas serà el camp codi_pais de la taula intervencions.
+</p>
+<p>
+El control quadre llista permet visualitzar-se com una llista, visualitzant tots els seus elements o ve com un desplegable, emulant el quadre combinat (propietat Desplegable). Però potser el que més útil el fa és que permet definir dos col·leccions de valors, els valors que es visualitzaran al desplegable o llista i els valors que caldrà emmagatzemar a la taula vinculada. Això permet fer més amable la introducció de dades. Per exemple, haver d'escollir un alumne per el seu codi numèric quan omplim un formulari de préstecs, pot resultat complex d'omplir, ja que implicaria conèixer de memòria el codi dels alumne o haver de consultar contínuament la taula d'alumnes.
+</p>
+<p>
+El quadre de llista pretén mostrar una llista amb el nom dels alumnes però en realitat emmagatzemar el codi de l'alumne a la taula de prestes. Per fer-ho, en obris-se l'auxiliar, cal seleccionar el camp a visualitzar com a llista (per exemple els cognoms de l'alumne):
+</p>
+<p>
+<img src="jpg/m1055.jpg" class="mediacenter" alt="" />
+</p>
+<p>
+I seguidament indicar la correspondència entre la clau principal i la clau forània. o el que és el mateix el valor real a emmagatzemar a la taula vinculada. EN el nostre cas el codi de l'alumne:
+</p>
+<p>
+<img src="jpg/m1056.jpg" class="mediacenter" alt="" />
+</p>
+<p>
+Podem observar la repercussió que això té a les propietats. El camp lligat indica que del dos camps seleccionats (cognoms i id) el que es troba a la posició 1 serà e que es guardarà. Cal dir que OpenBase sempre comença a comptar per valor zero. Per tant la posició 1 es correspondrà amb el segon camp (l'id).
+</p>
+<p>
+<img src="jpg/m4056.jpg" class="mediacenter" alt="" />
+</p>
+<p>
+Uns altres controls a destacar, són els que permeten manipular dates i hores. Per afegir aquest parell de controls caldrà obrir una barra d'eines de controls extres. Per fer-ho caldrà activar la barra clicant l'antepenúltim botó de la barra "Control formulari".
+</p>
+<p>
+<img src="jpg/m4055.jpg" class="mediacenter" alt="" />
+</p>
+<p>
+El control per formatar dates, permet desplegar un calendari per seleccionar la data posant a "si", la propietat anomenada "Desplegable", permet també disposar d'un incrementador de valor activant la propietat "Botó de selecció de valors". A més permet també definir el format de la data, així com un valor màxim i un mínim.
+</p>
+
+<p>
+Altres controls que també convé tenir en compte són:
+</p>
+<ul>
+<li class="level1"><div class="li"> Casella de selecció, que permet triar una opció entre vàries.</div>
+</li>
+<li class="level1"><div class="li"> Botó d'opció, molt semblant al primer però en aquest cas permet triar entre dues opcions excloents entre sí.</div>
+</li>
+<li class="level1"><div class="li"> Botó d'acció. Es crea un botó al qual se li pot assignar una acció o macro prèviament gravada.</div>
+</li>
+<li class="level1"><div class="li"> Quadres amb formats genèrics</div>
+</li>
+<li class="level1"><div class="li"> Quadres amb formats específics (numèrics i de moneda)</div>
+</li>
+<li class="level1"><div class="li"> Control de taula</div>
+</li>
+<li class="level1"><div class="li"> Etc.</div>
+</li>
+</ul>
+<p>
+També comentarem que internament els formularis mantenen un ordre determinat d'introducció de dades que es plasma quan l'usuari va prement la tecla <em>tabulació</em>. L'ordre per defecte coincideix amb l'ordre en que han estat creats. Però sovint aquest ordre sol ser caòtic i no desitjat. Existeix la possibilitat de reordenar ordre dels controls clicant el botó <em>Ordre d'activació</em> a la barra <em>Disseny de formulari</em>.
+</p>
+</div>
+<h5><a name="Ús de múltiples formularis" id="Ús de múltiples formularis">Ús de múltiples elements formulari</a></h5>
+<div class="level5">
+<p>
+Com ja s'ha comentat cada element formulari només es capaç de gestionar una única taula de la base de dades. Què passa si necessitem treballar amb diferents taules dins un mateix document?. La resposta ja l'hem avançat amb anterioritat, cal afegir múltiples formularis.
+</p>
+<p>
+Cada nou formulari afegit pot dependre directament del document (parlarem aleshores de formularis independents), o be pot dependre d'un altre formulari (parlarem a leshores de subformularis), els quals estaran lligats al formulari pare per mitjà d'un camp que actuarà com a clau forània i clau primaria, de manera que si el formulari principal pren el valor X en el camp que faci d'enllaç, el subformulari visualitzarà el registre o registres coincidents amb el valor X en el camp designat com a vinculat amb el formulari pare.
+</p>
+<p>
+Per afegir nous formularis caldrà obrir la finestra de navegació de formularis, clicar el botó dret sobre l'arrel (formularis) o sobre el formulari que haurà de ser pare, activem la opció <em>nou...</em> i escollim <em>Formulari</em>.
+</p>
+
+<p>
+<img src="jpg/m4036.jpg" class="mediacenter" alt="" />
+</p>
+
+<p>
+Un cop creat el formulari, caldrà posar-li el nom que desitgem i a continuació clicant el botó dret, escollir la opció propietats. Això ens obrirà les propietats del nou formulari. A la pestanya dades podrem escollir:
+</p>
+<ul>
+<li class="level1"><div class="li"> La taula associada el formulari.</div>
+</li>
+<li class="level1"><div class="li"> I l'enllaç entre els camps mestres i esclaus que vinculin ambdós formularis, fent clic a qualsevol dels dos botons de la dreta de les propietats esmentades distingits per tres punts (...). Això ens obrirà un quadre de diàleg on podrem escollir els camps de vinculació entre formularis.</div>
+</li>
+</ul>
+
+<p>
+Quan disposem de diversos formularis, els controls afegits pertanyeran al formulari que en el moment d'afegir es trobi seleccionat a la finestra de navegació de formularis. Malgrat tot, si ens equivoquem, podem re-assignar  els controls arrossegant-los en la pròpia finestra de navegació de formularis d'un formulari a un altre.
+</p>
+
+</div>
+</div>
+
+    <!-- ......... wikipage stop  ......... -->
+
+  </div>
+
+  <div class="clearer">&nbsp;</div>
+
+   
+<br /><br />
+  <a href="#inici" title="Inici pàgina"><img src="gif/up.gif" alt="Inici" /></a> <div class="footerinc">
+  <hr />
+  <table style="width: 100%;">
+  <tbody><tr style="vertical-align: middle;">
+    <td style="width: 30%;">
+      <div style="float: left;">
+      <a href="http://apliedu.xtec.cat/wikiform" title="Materials de formació"><img src="png/matfor.png" alt="Generalitat de Catalunya" height="42" width="100" /></a>
+      </div> 
+    </td>
+    <td style="width: 40%;">
+      <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/es/deed.ca"><img alt="Creative Commons License" style="border-width: 0pt;" src="png/cc.png" /></a>
+    </td>
+    <td style="width: 30%;">
+      <div style="float: right;">
+      <a href="http://www.xtec.cat/" title="XTEC"><img src="png/xtec.png" alt="XTEC" height="15" width="62" /></a>
+      </div>
+    </td>
+  </tr>  
+  </tbody></table>
+<!--
+<rdf:RDF xmlns="http://web.resource.org/cc/"
+    xmlns:dc="http://purl.org/dc/elements/1.1/"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<Work rdf:about="">
+   <dc:type rdf:resource="http://purl.org/dc/dcmitype/Text" />
+   <license rdf:resource="http://creativecommons.org/licenses/by-nc-sa/2.0/" />
+</Work>
+
+<License rdf:about="http://creativecommons.org/licenses/by-nc-sa/2.0/">
+   <permits rdf:resource="http://web.resource.org/cc/Reproduction" />
+   <permits rdf:resource="http://web.resource.org/cc/Distribution" />
+   <requires rdf:resource="http://web.resource.org/cc/Notice" />
+   <requires rdf:resource="http://web.resource.org/cc/Attribution" />
+   <prohibits rdf:resource="http://web.resource.org/cc/CommercialUse" />
+   <permits rdf:resource="http://web.resource.org/cc/DerivativeWorks" />
+   <requires rdf:resource="http://web.resource.org/cc/ShareAlike" />
+</License>
+
+</rdf:RDF>
+-->
+</div>
+
+</div>
+
+<!-- Generat el 27/Oct/2010  8:24:46  amb HTTrack --> 
+</body></html>

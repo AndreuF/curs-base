@@ -1,0 +1,280 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ca" dir="ltr" lang="ca"><head><!-- Generat el 27/Oct/2010  8:24:46  amb HTTrack -->
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  
+
+<title>Elaboració avançada de documents amb bases de dades</title><link rel="stylesheet" media="all" type="text/css" href="css/cssff6e.css?s=all&amp;t=estatic" />
+<link rel="stylesheet" media="screen" type="text/css" href="css/css6139.css?t=estatic" />
+<link rel="stylesheet" media="print" type="text/css" href="css/css6f71.css?s=print&amp;t=estatic" />
+
+  <link rel="shortcut icon" href="ico/favicon.ico" /></head>
+
+
+ 
+<body>
+<div class="headerinc">
+<a id="inici"> </a>
+<a href="http://apliedu.xtec.cat/wikiform" title="Materials de formació"><img alt="logo" style="border-width: 0pt;" src="png/logosuperior.png" /></a>
+</div>
+
+<div class="dokuwiki">
+
+
+<div class="titol">Treballem amb la inforamció. Les consultes </div><div class="subtitol"> Pràctica 4 - Exercici 5</div><div class="navega"><div id="navcontainer">
+<ul id="navlist">
+<li><a href="index.html" title="Inici">&lt;&lt;</a></li>  
+<li><a href="index-5.html">&lt;</a></li>  
+<li><a href="practica_1-4.html">Exercici 1</a></li>  
+<li><a href="practica_2-4.html">Exercici 2</a></li>  
+<li><a href="practica_3-4.html">Exercici 3</a></li>  
+<li><a href="practica_4-3.html">Exercici 4</a></li>  
+<li id="active"><a id="current" href="#">Exercici 5</a></li>
+<li><a href="projecte_4.html">Projecte IV</a></li>  
+</ul></div></div>
+
+  
+  <div class="page">
+
+    <!-- ......... wikipage start ......... -->
+    
+<h4><a name="altres_consultes" id="altres_consultes">Altres consultes</a></h4>
+<div class="level4">
+
+<p>
+I per donar una visió més exhaustiva de les consultes, ens faltava tractar dos temes que es detallen a continuació:
+
+</p>
+<ul>
+<li class="level1"><div class="li"> L'ús de caràcters comodí</div>
+</li>
+<li class="level1"><div class="li"> Les consultes amb paràmetres</div>
+</li>
+</ul>
+
+</div>
+
+<h4><a name="l_us_de_caracters_comodi_en_les_consultes" id="l_us_de_caracters_comodi_en_les_consultes">L'ús de caràcters comodí en les consultes</a></h4>
+<div class="level4">
+
+<p>
+De vegades ens interessarà fer una consulta més oberta, és a dir, que
+una mateixa pregunta ens serveixi per més d'un criteri. Per posar-ne un
+exemple de pregunta podriem dir:
+</p>
+<ul>
+<li class="level1"><div class="li"> <em>Vull saber tots els llibres que el seu títol comenci per la paraula “curs…”</em></div>
+</li>
+</ul>
+
+<p>Per fer-ho, necessitem utilitzar els caràcters comodí. Així una
+solució a aquesta pregunta seria: COM 'Curs*' (Hem de pensar que
+diferencia majúscules de minúscules, així doncs en el nostre exemple
+COM 'curs*” no donaria cap resultat.
+</p>
+
+<p>
+Mireu la següent imatge:
+</p>
+
+<p>
+<br />
+
+<br />
+
+<img src="jpg/modul3_55.jpg" class="mediacenter" alt="" />
+<br />
+
+<br />
+
+Com podem veure en la resposta, el caràcter <strong></strong>*
+fa que doni per resposta qualsevol paraula que hi hagi al darrera.
+Estem dient en realitat, qualsevol títol que comenci per la paraula
+Curs.
+</p>
+
+<p>
+<br />
+
+<br />
+
+<img src="jpg/modul3_56.jpg" class="mediacenter" alt="" />
+<br />
+
+<br />
+
+Deseu la consulta amb el nom de <strong>Consulta09:Comodin1</strong>
+</p>
+
+<p>
+Així, i com a resum, podem dir que hi ha comodins dels següents tipus:
+<br />
+
+<br />
+
+<img src="jpg/modul3_57.jpg" class="mediacenter" alt="" />
+<br />
+
+<br />A més a més, si utilitzem l'asterisc abans i després d'una
+paraula o lletra, voldrà dir que contingui aquesta cadena en qualsevol
+part del nom. Per exemple: COM '*català*' ens donarà per resposta el
+que mostra la imatge següent:
+<br />
+
+<br />
+
+<img src="jpg/modul3_58.jpg" class="mediacenter" alt="" />
+<br />
+
+<br />
+
+Feu aquesta consulta i deseu-la amb el nom de <strong>Consulta10:Comodin2</strong>
+</p>
+
+</div>
+
+<h4><a name="les_consultes_amb_parametres" id="les_consultes_amb_parametres">Les consultes amb paràmetres</a></h4>
+<div class="level4">
+
+<p>Un pas més enllà de les consultes són els anomenats paràmetres.
+Seria una pregunta que es fa a la base de dades que queda incompleta i
+que en el moment d'executar-la ens deixa omplir amb dades diferents
+cada cop que s'executi mitjançant una finestra emergent que ens permet
+escriure en ella.
+A continuació se'n mostra un exemple. <br />
+
+<br />
+
+<img src="jpg/modul3_59.jpg" class="mediacenter" alt="" />
+<br />
+
+<br />
+
+En ell es pot veure que en el criteri del camp Autors s'hi ha posat un <strong>?</strong>
+que és el que farà que, en el moment de l'execució de la consulta,
+tinguem la finestra emergent del paràmetre, tal com es pot veure en la
+imatge següent:
+<br />
+
+<br />
+
+<img src="jpg/modul3_60.jpg" class="mediacenter" alt="" />
+<br />
+
+<br />
+
+I si hi escrivim “Asimov, Isaac”, aquest en serà el resultat:
+<br />
+
+<br />
+
+<img src="jpg/modul3_61.jpg" class="mediacenter" alt="" />
+<br />
+
+<br />Per tant, una mateixa consulta ens pot servir per a moltes
+preguntes diferents, només cal que en la finestra emergent del
+paràmetre hi escrivim una altra paraula perquè la resposta sigui una
+altra. És per tant, molt versàtil.
+</p>
+
+<p>
+Desem aquesta consulta amb el nom de: <strong>Consulta11:parametre1</strong>
+</p>
+
+<p>
+En el cas de voler donar més informació a l'usuari es pot posar un paràmetre precedit de dos punts ” : ”
+</p>
+
+<p>
+Així un exemple podria ser aquest:
+<br />
+
+<br />
+
+<img src="jpg/modul3_62.jpg" class="mediacenter" alt="" />
+<br />
+
+<br />
+
+Com podeu veure el paràmetre treu la informació que hem escrit darrera dels dos punts, 
+<br />
+
+<br />
+
+<img src="jpg/modul3_63.jpg" class="mediacenter" alt="" />
+<br />
+
+<br />
+
+i si omplim el quadre inferior amb “Generalitat de Catalunya”, per exemple, ens mostrarà el resultat de la següent imatge:
+<br />
+
+<br />
+
+<img src="jpg/modul3_64.jpg" class="mediacenter" alt="" />
+<br />
+
+<br />
+
+Desem aquesta consulta amb el nom de: <strong>Consulta12:parametre2</strong>
+</p><div class="noteimportant">
+En el cas del paràmetres amb explicació, no admet espais en blanc, per tant, les_paraules_millor_així.
+
+</div>
+
+
+</div>
+
+    <!-- ......... wikipage stop  ......... -->
+
+  </div>
+
+  <div class="clearer">&nbsp;</div>
+
+   
+<br /><br />
+  <a href="#inici" title="Inici pàgina"><img src="gif/up.gif" alt="Inici" /></a> <div class="footerinc">
+  <hr />
+  <table style="width: 100%;">
+  <tbody><tr style="vertical-align: middle;">
+    <td style="width: 30%;">
+      <div style="float: left;">
+      <a href="http://apliedu.xtec.cat/wikiform" title="Materials de formació"><img src="png/matfor.png" alt="Generalitat de Catalunya" height="42" width="100" /></a>
+      </div> 
+    </td>
+    <td style="width: 40%;">
+      <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/es/deed.ca"><img alt="Creative Commons License" style="border-width: 0pt;" src="png/cc.png" /></a>
+    </td>
+    <td style="width: 30%;">
+      <div style="float: right;">
+      <a href="http://www.xtec.cat/" title="XTEC"><img src="png/xtec.png" alt="XTEC" height="15" width="62" /></a>
+      </div>
+    </td>
+  </tr>  
+  </tbody></table>
+<!--
+<rdf:RDF xmlns="http://web.resource.org/cc/"
+    xmlns:dc="http://purl.org/dc/elements/1.1/"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<Work rdf:about="">
+   <dc:type rdf:resource="http://purl.org/dc/dcmitype/Text" />
+   <license rdf:resource="http://creativecommons.org/licenses/by-nc-sa/2.0/" />
+</Work>
+
+<License rdf:about="http://creativecommons.org/licenses/by-nc-sa/2.0/">
+   <permits rdf:resource="http://web.resource.org/cc/Reproduction" />
+   <permits rdf:resource="http://web.resource.org/cc/Distribution" />
+   <requires rdf:resource="http://web.resource.org/cc/Notice" />
+   <requires rdf:resource="http://web.resource.org/cc/Attribution" />
+   <prohibits rdf:resource="http://web.resource.org/cc/CommercialUse" />
+   <permits rdf:resource="http://web.resource.org/cc/DerivativeWorks" />
+   <requires rdf:resource="http://web.resource.org/cc/ShareAlike" />
+</License>
+
+</rdf:RDF>
+-->
+</div>
+
+</div>
+
+<!-- Generat el 27/Oct/2010  8:24:46  amb HTTrack --> 
+</body></html>

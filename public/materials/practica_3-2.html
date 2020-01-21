@@ -1,0 +1,265 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ca" dir="ltr" lang="ca"><head><!-- Generat el 27/Oct/2010  8:24:46  amb HTTrack -->
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  
+
+<title>Elaboració avançada de documents amb bases de dades</title><link rel="stylesheet" media="all" type="text/css" href="css/cssff6e.css?s=all&amp;t=estatic" />
+<link rel="stylesheet" media="screen" type="text/css" href="css/css6139.css?t=estatic" />
+<link rel="stylesheet" media="print" type="text/css" href="css/css6f71.css?s=print&amp;t=estatic" />
+
+  <link rel="shortcut icon" href="ico/favicon.ico" /></head>
+
+
+ 
+<body>
+<div class="headerinc">
+<a id="inici"> </a>
+<a href="http://apliedu.xtec.cat/wikiform" title="Materials de formació"><img alt="logo" style="border-width: 0pt;" src="png/logosuperior.png" /></a>
+</div>
+
+<div class="dokuwiki">
+
+
+<div class="titol">Les taules, element principal. Filtres </div><div class="subtitol"> Pràctica 2 - Exercici 3</div><div class="navega"><div id="navcontainer">
+<ul id="navlist">
+<li><a href="index.html" title="Inici">&lt;&lt;</a></li>  
+<li><a href="index-3.html">&lt;</a></li>  
+<li><a href="practica_1-2.html">Exercici 1</a></li>  
+<li><a href="practica_2-2.html">Exercici 2</a></li>  
+<li id="active"><a id="current" href="#">Exercici 3</a></li>  
+<li><a href="practica_4-2.html">Exercici 4</a></li>
+<li><a href="projecte_2.html">Projecte II</a></li>  
+</ul></div></div>
+
+  
+  <div class="page">
+
+    <!-- ......... wikipage start ......... -->
+    
+
+
+<h3><a name="fases_de_creacio_d_una_base_de_dades" id="fases_de_creacio_d_una_base_de_dades">Fases de creació d'una base de dades</a></h3>
+<div class="level3">
+
+<p>
+
+</p><div class="notetip">
+Aquesta pràctica serveix per explicar el procés de creació d'una base
+de dades i enllaça amb el mòdul següent on s'explica la creació de
+l'estructura amb les relacions
+</div> 
+<br />
+
+<br />Per crear una base de dades és molt important no posar-se a
+treballar sense prèviament haver fet un procés de reflexió en
+profunditat. Cal pensar que en primer lloc convé planificar bé la feina
+doncs si es fa d'una altra forma, els resultats finals no seran gaire
+òptims.
+<br />
+
+<br />
+
+Per tant podem diferenciar dues grans fases:
+
+
+<p>
+<br />
+
+<br />
+
+</p>
+<ul>
+<li class="level1"><div class="li"> <strong>Fase de disseny</strong></div>
+</li>
+<li class="level1"><div class="li"> <strong>Fase de desenvolupament o millora</strong></div>
+</li>
+</ul>
+
+<p>
+<br />
+
+<br />
+
+I aquestes es poden desglosar en altres de més concretes:
+<br />
+
+<br />
+
+</p>
+<ol>
+<li class="level1"><div class="li"> Fase incial: cerca d'objectius.</div>
+</li>
+<li class="level1"><div class="li"> Fase segona: creació del primer esboç en paper.</div>
+</li>
+<li class="level1"><div class="li"> Fase tres: creació de taules i relacions.</div>
+</li>
+<li class="level1"><div class="li"> Fase quatre: o fase de desenvolupament i millora.</div>
+</li>
+</ol>
+
+<p>
+<br />
+
+<br />
+
+Seguin aquest esquema anteriorment expressat, ara s'expliquen les idees bàsiques de cada apartat.
+<br />
+
+<br />
+
+<strong>Fase de disseny:</strong>
+<br />
+
+<br />A les primeres etapes convé treballar amb paper i llapis. En
+elles és primordial fixar els objectius generals de la base de dades.
+Hem de pensar què li volem demanar a l'aplicació resultant, i en funció
+d'aquestes necessitats, dissenyarem tot el procés en un sentit o en un
+altre.
+<br />
+
+<br />Així, per exemple, si no volem saber-ne res d'un aspecte concret
+de la nostra base de dades, no cal que en fem cap taula amb aquesta
+informació: per exemple, si no ens interessen per a res els autors dels
+llibres en una base de dades de biblioteca, no cal crear cap taula
+d'autors… <br />
+
+<br />
+Un altre aspecte a tenir en compte inicialment és quines preguntes
+volem que la base de dades ens resolgui. Per exemple, si pensem que ens
+caldrà saber l'any d'edició dels llibres, o l'editorial, o l'autor,
+etc. convindrà que anem pensant en unes taules que continguin aquesta
+informació i sobre la qual es podran fer unes consultes posteriors…
+<br />
+
+<br />
+
+En funció de tot això, i en aquestes fases inicials, convé tenir clares i deixar per escrit aquests aspectes:
+<br />
+
+<br />
+
+</p>
+<ul>
+<li class="level1"><div class="li"> Les taules necessàries</div>
+</li>
+<li class="level1"><div class="li"> Els camps de totes elles amb unes dades bàsiques de les seves propietats</div>
+</li>
+<li class="level1"><div class="li"> Les relacions entre les taules</div>
+</li>
+<li class="level1"><div class="li"> Creació inicial de l'estructura de les relacions entre totes les taules</div>
+</li>
+<li class="level1"><div class="li"> Principals preguntes que la base de dades ens haurà d'ajudar a respondre.</div>
+</li>
+</ul>
+
+<p>
+<br />
+
+<br />
+
+Un cop arribat a aquest punt, ja tenim la primera gran fase solventada, que és la fase de disseny.
+<br />
+
+<br />
+
+<strong>Fase de desenvolupament o millora</strong>
+<br />
+
+<br />Un cop que hem clarificat les idees i les hem expressat en
+esboços en paper, ja podem passar a l'acció, és a dir, ja podem
+començar a fer la plasmació pràctica de les idees dissenyades amb l'ús,
+ara sí, de l'ordinador.
+<br />
+
+<br />
+
+Així ara podem i en aquest ordre:
+<br />
+
+<br />
+
+</p>
+<ul>
+<li class="level1"><div class="li"> Crear les taules modificar el seu disseny i propietats</div>
+</li>
+<li class="level1"><div class="li"> Crear les relacions entre les taules per tenir una bona estructura</div>
+</li>
+<li class="level1"><div class="li"> Crear les consultes, formularis i informes necessris per arrodonir la feina.</div>
+</li>
+</ul>
+
+<p>
+<br />
+
+<br />Si seguim aquests passos lògics previs, la nostra feina serà molt
+millor, doncs els canvis fets a posteriori en l'estructura, tant en els
+camps de les taules com en les relacions, repercutiran sobre els altres
+ojectes que es basen en aquests (les consultes, els formularis i els
+informes, es basen en les taules i estan supeditats a una estructura de
+relacions concreta.
+<br />
+
+<br />És a dir, que si ja tenim fetes les relacions, consultes i
+formularis-informes i a posteriori ens posem a modificar les propietats
+de les taules, ens donarà problemes, hem de pensar que les taules i
+relacions són els ciments sobre els que descansen pesadament la resta
+d'objectes de la base de dades, i ja se sap, si modifiquem els ciments,
+tenim un greu risc de que tota l'edificació se'ns vingui a terra.
+</p>
+
+</div>
+
+    <!-- ......... wikipage stop  ......... -->
+
+  </div>
+
+  <div class="clearer">&nbsp;</div>
+
+   
+<br /><br />
+  <a href="#inici" title="Inici pàgina"><img src="gif/up.gif" alt="Inici" /></a> <div class="footerinc">
+  <hr />
+  <table style="width: 100%;">
+  <tbody><tr style="vertical-align: middle;">
+    <td style="width: 30%;">
+      <div style="float: left;">
+      <a href="http://apliedu.xtec.cat/wikiform" title="Materials de formació"><img src="png/matfor.png" alt="Generalitat de Catalunya" height="42" width="100" /></a>
+      </div> 
+    </td>
+    <td style="width: 40%;">
+      <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/es/deed.ca"><img alt="Creative Commons License" style="border-width: 0pt;" src="png/cc.png" /></a>
+    </td>
+    <td style="width: 30%;">
+      <div style="float: right;">
+      <a href="http://www.xtec.cat/" title="XTEC"><img src="png/xtec.png" alt="XTEC" height="15" width="62" /></a>
+      </div>
+    </td>
+  </tr>  
+  </tbody></table>
+<!--
+<rdf:RDF xmlns="http://web.resource.org/cc/"
+    xmlns:dc="http://purl.org/dc/elements/1.1/"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<Work rdf:about="">
+   <dc:type rdf:resource="http://purl.org/dc/dcmitype/Text" />
+   <license rdf:resource="http://creativecommons.org/licenses/by-nc-sa/2.0/" />
+</Work>
+
+<License rdf:about="http://creativecommons.org/licenses/by-nc-sa/2.0/">
+   <permits rdf:resource="http://web.resource.org/cc/Reproduction" />
+   <permits rdf:resource="http://web.resource.org/cc/Distribution" />
+   <requires rdf:resource="http://web.resource.org/cc/Notice" />
+   <requires rdf:resource="http://web.resource.org/cc/Attribution" />
+   <prohibits rdf:resource="http://web.resource.org/cc/CommercialUse" />
+   <permits rdf:resource="http://web.resource.org/cc/DerivativeWorks" />
+   <requires rdf:resource="http://web.resource.org/cc/ShareAlike" />
+</License>
+
+</rdf:RDF>
+-->
+</div>
+
+</div>
+
+<!-- Generat el 27/Oct/2010  8:24:46  amb HTTrack --> 
+</body></html>

@@ -1,0 +1,323 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ca" dir="ltr" lang="ca"><head><!-- Generat el 27/Oct/2010  8:24:46  amb HTTrack -->
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  
+
+<title>Elaboració avançada de documents amb bases de dades</title><link rel="stylesheet" media="all" type="text/css" href="css/cssff6e.css?s=all&amp;t=estatic" />
+<link rel="stylesheet" media="screen" type="text/css" href="css/css6139.css?t=estatic" />
+<link rel="stylesheet" media="print" type="text/css" href="css/css6f71.css?s=print&amp;t=estatic" />
+
+  <link rel="shortcut icon" href="ico/favicon.ico" /></head>
+
+
+ 
+<body>
+<div class="headerinc">
+<a id="inici"> </a>
+<a href="http://apliedu.xtec.cat/wikiform" title="Materials de formació"><img alt="logo" style="border-width: 0pt;" src="png/logosuperior.png" /></a>
+</div>
+
+<div class="dokuwiki">
+
+
+<div class="titol">Creació de l'estructura. Les relacions </div><div class="subtitol"> Pràctica 3 - Exercici 2</div><div class="navega"><div id="navcontainer">
+<ul id="navlist">
+<li><a href="index.html" title="Inici">&lt;&lt;</a></li>  
+<li><a href="index-4.html">&lt;</a></li>  
+<li><a href="practica_1-3.html">Exercici 1</a></li>  
+<li id="active"><a id="current" href="#">Exercici 2</a></li>  
+<li><a href="practica_3-3.html">Exercici 3</a></li>
+<li><a href="projecte_3.html">Projecte III</a></li>  
+</ul></div></div>
+
+  
+  <div class="page">
+
+    <!-- ......... wikipage start ......... -->
+    
+<h4><a name="fem_relacions_entre_les_taules" id="fem_relacions_entre_les_taules">Fem relacions entre les taules</a></h4>
+<div class="level4">
+
+<p>
+Aquest és un dels apartats més complexes, costa una mica entendre la
+filosofia de treball de les Bases de Dades relacionals, però si hi
+pareu atenció, us en sortireu. Anem a explicar-ho a poc a poc.
+</p>
+
+<p>
+Bé, abans de posar-nos a fer les relacions, caldrà puntualitzar alguns altres temes previs per evitar errades:
+
+</p>
+<ul>
+<li class="level1"><div class="li"> Tipus de relacions</div>
+</li>
+<li class="level1"><div class="li"> Requisits necessaris previs</div>
+</li>
+<li class="level1"><div class="li"> Proposem un exemple concret</div>
+</li>
+</ul>
+
+</div>
+
+<h4><a name="tipus_de_relacions" id="tipus_de_relacions">Tipus de relacions</a></h4>
+<div class="level4">
+
+<p>
+
+Les relacions poden ser dels tres tipus següents:
+
+</p>
+<ol>
+<li class="level1"><div class="li"> <strong>Relació 1 a 1</strong>.</div>
+</li>
+<li class="level1"><div class="li"> <strong>Relació 1 a n ó el que és el mateix: n a 1</strong></div>
+</li>
+<li class="level1"><div class="li"> <strong>Relació n a n</strong></div>
+</li>
+</ol>
+
+<p>
+
+Per poder explicar aquests conceptes posarem un exemple de la nostra base de dades <strong>Biblioteca</strong>, i més concretament la relació entre les taules: <strong>Llibres</strong> i <strong>Llengua</strong>. En la imatge següent es poden veure unes quantes relacions ja creades:
+<br />
+
+<br />
+
+<img src="jpg/m2_p1_08b.jpg" class="mediacenter" alt="" />
+<br />
+
+<br />Les relacions entre les taules dependran del raonament previ
+sobre la informació. Així, segons això, obtindrem unes modalitats o
+d'altres de relacions. </p>
+
+<p>
+Fem els següents raonaments per entendre les relacions entre les dues taules de l'exemple:
+
+</p>
+<ul>
+<li class="level1"><div class="li"> En una base de dades de llibres, un
+llibre pot tenir varios llengües; i en el cas d'una llengua en podem
+tenir en la nostra biblioteca més d'un llibre. Això ens planteja una
+modalitat concreta de relació: <strong>relació n a n</strong> (varios a varios) <em>Seria una modalitat de relació no consistent, que cal evitar.</em></div>
+</li>
+</ul>
+<ul>
+<li class="level1"><div class="li"> Si el plantejament és que un llibre
+no pot tenir més que una llengua; una llenguapot tenir varios llibres.
+Aquest cas seria un exemple de <strong>relació 1 a n</strong> (d'u a varis o bé de varis a u)  <em>Seria la modalitat de relació millor i a la que hem de tendir.</em></div>
+</li>
+</ul>
+<ul>
+<li class="level1"><div class="li"> Per últim, si es donés el cas de
+que un llibre pot tenir només una llengua, i una llengua només té un
+llibre en la nostra biblioteca, això ens donaria una relació del tipus <strong>1 a 1</strong> (u a u). Aquest cas no seria real, però si en podem trobar d'altres en els quals això es pugui acomplir. <em>Aquesta relació només es fa puntualment, i pot permetre unir les dues taules en una si veiem que és el cas.</em>
+Així per poder-ne veure un cas real, podríem tenir una altra taula
+anomenada llibres_2, amb la qual s'hi vulgués treballar de forma
+temporal per fer un servei de préstec. Aquesta taula es relacionaria
+del tipus 1 a 1 amb la taula llibres original. Quan s'acabés aquest
+préstecs, es podrien tornar a integrar totes dues taules.</div>
+</li>
+</ul>
+
+</div>
+
+<h4><a name="requisits_necessaris_previs" id="requisits_necessaris_previs">Requisits necessaris previs</a></h4>
+<div class="level4">
+
+<p>
+Ara que ja sabem els tipus de relacions existents podem començar a
+fer-les, però abans de posar-nos mans a l'obra, caldrà puntualitzar uns
+requisits previs.
+</p>
+
+<p>Enllaçant amb les explicacions del passat mòdul 1, cal pensar que en
+les taules hi ha d'haver un camp irrepetible que identifiqui cada
+registre dins de la taula corresponent. Així, en una taula de persones,
+el DNI podria ser un camp irrepetible, (o el camp Id_alumne en el
+nostre exemple de la taula Alumnes) al qual se li dóna el nom de <strong>camp clau</strong>. 
+</p>
+
+<p>
+En el cas de l'exemple de la Biblioteca, tenim uns camps codi que tenen
+per funció identificar aquest registre i diferenciar-lo de la resta.
+Observeu aquesta imatge:
+<br />
+
+<br />
+
+<img src="jpg/m2_p1_07.jpg" class="mediacenter" alt="" />
+<br />
+
+<br />En ella podeu veure la taula Llengua des del mode disseny (part
+superior de la imatge) i des del mode edició de dades (part inferior).
+Al disseny veieu el dibuix de la clau, que indica que aquest camp té la
+categoria de camp irrepetible o clau.
+</p>
+
+<p>
+Per poder fer les relacions, els camps han de <strong>tenir el mateix tipus de dades</strong>
+i han de ser del mateix tipus. És a dir, no es pot relacionar un camp
+tipus text amb un altre de numèric, doncs els continguts de cadascun
+d'ells són diferents. És un aspecte importanta tenir en compte:
+</p>
+
+<p>
+</p><div class="notetip">
+Els camps han de ser del mateix tipus. 
+La relació s'inicia en un camp clau i arriba a un altre camp no clau.
+
+</div>
+
+
+<p>Per tant, si tenim presents totes aquestes premises prèvies ja ens
+podem posar mans a l'obra i crear les relacions en el nostre exemple.
+</p>
+
+</div>
+
+<h4><a name="proposem_un_exemple_concret" id="proposem_un_exemple_concret">Proposem un exemple concret</a></h4>
+<div class="level4">
+
+<p>
+
+Com que la teoria ja s'ha vist en les pàgines precedents i ara ho farem amb el programa <strong>Open Base.org</strong>.
+</p>
+
+<p>Es tracta de posar en pràctica la mecànica per crear les relacions.
+Ara caldrà obrir la Base de Dades Biblioteca que anem utilitzant
+d'exemple i inciarem la relació entre dues taules que són: <strong>Llibres</strong> i <strong>Llengua</strong>.
+</p>
+
+<p>
+Per iniciar el procés de creació, primer cal fer un raonament previ i mirar si totes les condicions necessàries estan correctes.
+</p>
+
+<p>
+Així, pensem:
+</p>
+
+<p>
+-Tenen un camp comú totes dues taules per poder fer la relació?
+</p>
+
+<p>
+-Sí, efectivament, el tenen, aquest camp és el que té per nom codi
+llengua. No cal que el nom sigui el mateix, el que sí és imprescindible
+és que les dades siguin les mateixes (en aquest cas concret s'ha fet
+coincidir deliberadament).
+</p>
+
+<p>
+</p><div class="notetip">
+Cal recalcar com important que <strong>el nom</strong> que tinguin els <strong>camps</strong> implicats en una relació entre dues taules <strong>pot ser diferent</strong>, però el que és <strong>absolutament obligatori</strong> és que: <strong>el contingut</strong> i també el <strong>tipus</strong> dels dos camps de la relació <strong>siguin el mateix</strong>.
+
+</div>
+
+
+<p>
+Mireu la següent imatge on es veuen les dues taules amb els seus continguts respectius:
+<br />
+
+<br />
+
+<img src="jpg/m2_p1_09.jpg" class="mediacenter" alt="" />
+<br />
+
+<br />
+
+</p>
+
+<p>Si ens fixem en la figura anterior, podem veure que en la taula
+Llengua només cal donar un sol cop d'alta les dades de cadascuna de les
+llengües, i les escriurem un sol cop. Així, la llengua var, fr, cat,
+(Vàries, Francès, Català, etc.) només estarà un cop incorporada en
+aquesta taula, però moltes vegades en l'altra (Llibres).
+</p>
+
+<p>Ara pensem què passarà amb el codi “cat” de llengua en la taula
+Llibres. Estarà només un cop, o es repetirà alguna vegada aquest codi
+cat de llengua?
+</p>
+
+<p>Si pensem una mica, aquest “cat” es repetirà, només cal que ens
+regalin un altre llibre en llengua catalana, i immediatament en la
+taula Llibres haurem de donar-lo d'alta, i per tant, tindrem dos cops
+la refència a aquesta llengua. Per tant, i com a resum, <strong>la taula Llengua serà el costat 1 de la relació i la taula Llibres serà el costat n o varis de la relació</strong>. 
+</p>
+
+<p>
+Tenim, doncs una relació 1 a n entre aquestes dues taules, que amb un raonament acuarat, podríem dir: 
+
+</p>
+<ul>
+<li class="level1"><div class="li"> Un llibre té una llengua a la nostra biblioteca, </div>
+</li>
+<li class="level1"><div class="li"> Una llengua pot tenir varios llibres en la nostra biblioteca.</div>
+</li>
+</ul>
+
+<p>
+
+Això ens dóna el tipus de relació esmentat.
+</p>
+
+<p>
+Ara la teoria ja la tenim. Passeu a la següent pràctica i ho fareu.
+</p>
+
+</div>
+
+    <!-- ......... wikipage stop  ......... -->
+
+  </div>
+
+  <div class="clearer">&nbsp;</div>
+
+   
+<br /><br />
+  <a href="#inici" title="Inici pàgina"><img src="gif/up.gif" alt="Inici" /></a> <div class="footerinc">
+  <hr />
+  <table style="width: 100%;">
+  <tbody><tr style="vertical-align: middle;">
+    <td style="width: 30%;">
+      <div style="float: left;">
+      <a href="http://apliedu.xtec.cat/wikiform" title="Materials de formació"><img src="png/matfor.png" alt="Generalitat de Catalunya" height="42" width="100" /></a>
+      </div> 
+    </td>
+    <td style="width: 40%;">
+      <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/es/deed.ca"><img alt="Creative Commons License" style="border-width: 0pt;" src="png/cc.png" /></a>
+    </td>
+    <td style="width: 30%;">
+      <div style="float: right;">
+      <a href="http://www.xtec.cat/" title="XTEC"><img src="png/xtec.png" alt="XTEC" height="15" width="62" /></a>
+      </div>
+    </td>
+  </tr>  
+  </tbody></table>
+<!--
+<rdf:RDF xmlns="http://web.resource.org/cc/"
+    xmlns:dc="http://purl.org/dc/elements/1.1/"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<Work rdf:about="">
+   <dc:type rdf:resource="http://purl.org/dc/dcmitype/Text" />
+   <license rdf:resource="http://creativecommons.org/licenses/by-nc-sa/2.0/" />
+</Work>
+
+<License rdf:about="http://creativecommons.org/licenses/by-nc-sa/2.0/">
+   <permits rdf:resource="http://web.resource.org/cc/Reproduction" />
+   <permits rdf:resource="http://web.resource.org/cc/Distribution" />
+   <requires rdf:resource="http://web.resource.org/cc/Notice" />
+   <requires rdf:resource="http://web.resource.org/cc/Attribution" />
+   <prohibits rdf:resource="http://web.resource.org/cc/CommercialUse" />
+   <permits rdf:resource="http://web.resource.org/cc/DerivativeWorks" />
+   <requires rdf:resource="http://web.resource.org/cc/ShareAlike" />
+</License>
+
+</rdf:RDF>
+-->
+</div>
+
+</div>
+
+<!-- Generat el 27/Oct/2010  8:24:46  amb HTTrack --> 
+</body></html>

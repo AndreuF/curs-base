@@ -1,0 +1,373 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ca" dir="ltr" lang="ca"><head><!-- Generat el 27/Oct/2010  8:24:46  amb HTTrack -->
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  
+
+<title>Elaboració avançada de documents amb bases de dades</title><link rel="stylesheet" media="all" type="text/css" href="css/cssff6e.css?s=all&amp;t=estatic" />
+<link rel="stylesheet" media="screen" type="text/css" href="css/css6139.css?t=estatic" />
+<link rel="stylesheet" media="print" type="text/css" href="css/css6f71.css?s=print&amp;t=estatic" />
+
+  <link rel="shortcut icon" href="ico/favicon.ico" /></head>
+<body>
+<div class="headerinc">
+<a id="inici"> </a>
+<a href="http://apliedu.xtec.cat/wikiform" title="Materials de formació"><img alt="logo" style="border-width: 0pt;" src="png/logosuperior.png" /></a>
+</div>
+
+<div class="dokuwiki">
+
+
+<div class="titol">Creació de l'estructura. Les relacions </div><div class="subtitol"> Pràctica 3 - Exercici 1</div><div class="navega"><div id="navcontainer">
+<ul id="navlist">
+<li><a href="index.html" title="Inici">&lt;&lt;</a></li>  
+<li><a href="index-4.html">&lt;</a></li>  
+<li id="active"><a id="current" href="#">Exercici 1</a></li>  
+<li><a href="practica_2-3.html">Exercici 2</a></li>  
+<li><a href="practica_3-3.html">Exercici 3</a></li>
+<li><a href="projecte_3.html">Projecte III</a></li>  
+</ul></div></div>
+
+  
+  <div class="page">
+
+    <!-- ......... wikipage start ......... -->
+    
+<h4><a name="conceptes_inicials" id="conceptes_inicials">Conceptes inicials</a></h4>
+<div class="level4">
+
+<p>
+<br />
+
+<br />
+
+En aquesta pràctica:
+<br />
+
+<br />
+
+</p>
+<ul>
+<li class="level1"><div class="li"> El concepte de Base de dades Relacional</div>
+</li>
+<li class="level1"><div class="li"> La necessitat de les relacions</div>
+</li>
+</ul>
+
+</div>
+
+<h4><a name="el_concepte_de_base_de_dades_relacional" id="el_concepte_de_base_de_dades_relacional">El concepte de Base de Dades Relacional</a></h4>
+<div class="level4">
+
+<p>
+<br />
+
+<br />
+
+</p><div class="notetip">
+Important: per explicar què és una base de dades relacional,
+s'utilitzarà un exemple de fitxer anomenat biblioteca.odb. És diferent
+del fitxer utilitzat en el primer mòdul, i convé que el descarregueu de
+l'enllaç de sota.
+</div> 
+<br />
+
+<br />
+
+Per descarregar el fitxer indicat a la nota superior, cliqueu a l'enllaç següent:
+<br />
+
+<br />
+ <a href="odb/biblioteca-2.odb" class="media mediafile mf_" title="cursos:tic:d124:modul_3:biblioteca.odb">descarregar biblioteca.odb</a>. 
+<br />
+
+<br />Un cop descarregat i desat en el disc dur, pensem que serà de
+summa importància tenir-lo a mà, doncs amb ell estudiarem tot el que
+queda de curs.
+<br />
+
+<br />Comencem amb l'explicació teòrica i després passarem a la
+pràctica completant el fitxer que acabem de descarregar, el qual només
+conté unes taules amb dades però amb moltes accions a fer per
+completar-lo: aprendrem treballant… <br />
+
+<br />
+
+Hem de pensar que estem davant d'un gestor d'informació, un programa de base de dades relacionals.
+Sota aquesta premisa inicial, caldrà clarificar què és això de <strong>Base de Dades Relacional</strong>.
+<br />
+
+<br />
+Doncs bé, si hi ha programes gestors de Bases de Dades que treballen
+amb una sola taula tenim els anomenats gestors plans. L'exemple
+d'aquest tipus de gestor de bases de dades més conegut seria el
+Filemaker.
+<br />
+
+<br />
+
+En el cas del programa que ens ocupa, <strong>Open Base.org</strong>, el podem catalogar com a relacional, com el <strong>Microsoft Access</strong>. 
+<br />
+
+<br />Aquesta modalitat de programes es basen en contenir un grup
+variable de taules interrelacionades entre sí mitjançant l'existència
+de camps comuns. Això vol dir que una mateixa informació, normalment
+breu i de tipus codi, la tenim en dues taules a l'hora i gràcies a això
+podem establir un lligam, enllaç o relació entre les dues taules.
+<br />
+
+<br />
+
+
+<ul>
+<li class="level1"><div class="li"> El concepte de Base de dades Relacional</div>
+</li>
+<li class="level1"><div class="li"> La necessitat de les relacions</div>
+</li>
+</ul>
+
+<p>
+ <br />
+
+<br />
+   
+
+</p>
+
+</div>
+
+<h4><a name="el_concepte_de_base_de_dades_relacional1" id="el_concepte_de_base_de_dades_relacional1">El concepte de Base de Dades Relacional</a></h4>
+<div class="level4">
+
+<p>
+<br />
+
+<br />La filosofia de treball, tot i semblar contradictòria a primer
+cop d'ull, és la de crear diferents taules petites enlloc d'una gran
+taula tradicional. La necessitat de treballar d'aquesta requerirà una
+explicació detallada. </p>
+
+</div>
+
+<h4><a name="la_necessitat_de_les_relacions" id="la_necessitat_de_les_relacions">La necessitat de les relacions</a></h4>
+<div class="level4">
+
+<p>
+<br />
+
+<br />
+
+</p>
+
+<p>
+Ens trobem amb unes preguntes inicials que ens poden venir al cap, i que en les línies següents es procurarà donar resposta.
+<br />
+
+<br />
+
+</p>
+<ul>
+<li class="level1"><div class="li"> Per què fem vàries taules per encabir la informació?</div>
+</li>
+<li class="level1"><div class="li"> No seria més fàcil posar tota la informació en una sola taula per treballar de forma més senzilla i ràpida?</div>
+</li>
+<li class="level1"><div class="li"> Quins avantatges ens reporta aquesta forma de treballar?</div>
+</li>
+</ul>
+
+<p>
+<br />
+
+<br />
+Doncs bé, intentem donar resposta a aquestes preguntes, que ens servirà
+per explicar els conceptes bàsics de les bases de dades relacionals.
+<br />
+
+<br />Ara ja sabem què és una taula, oi? Doncs per ajudar-nos en
+l'explicació utilitzarem l'exemple de la biblioteca començat en el
+primer mòdul. Així, tal com es va comentar en el mòdul 1, una taula és
+un llistat d'informació disposat en files i columnes, essent cada fila
+un registre (les dades d'un sol llibre) i cada columna, un camp (les
+dades dels autors dels llibres).
+<br />
+
+<br />
+
+Partint d'aquesta idea, en la taula <strong>llibres</strong>
+hi posarem les dades relatives als llibres, i serà la taula central de
+totes, doncs representa la informació principal. Però també voldrem
+posar altra informació, potser no tant important, però sí també
+necessària. Per exemple, voldrem saber dades dels autors de cada
+llibre, de l'editorial, del tema, etc. i d'altres aspectes que ens
+podrien ser útils. <br />
+
+<br />
+Per tant, imaginem que quan volem donar d'alta un llibre nou haguessim
+de donar d'alta cadascun d'aquests aspectes. Seria molt llarg i costós,
+doncs cada cop caldria escriure dades com aquestes:
+<br />
+
+<br />
+
+<img src="jpg/m2_p1_05b.jpg" class="mediacenter" alt="" />
+<br />
+
+<br />Si tenim la necessitat de donar d'alta un segon, un tercer,etc.
+llibre del mateix autor, això ens obligaria a introduir les dades del
+mateix autor diverses vegades. També ens passaria igual amb les
+editorials, ens obligaria a teclejar cada cop que donessim d'alta un
+llibre de l'editorial totes les seves dades. I el mateix amb el tema. <br />
+
+<br />
+Per evitar-ho, es va pensar en compartirmentar la informació, és a dir,
+crear diferents taules amb contingut específic. Així, totes les dades
+completes de:
+<br />
+
+<br />
+
+</p>
+<ul>
+<li class="level1"><div class="li"> Les dades de les editorials les posarem en la taula <strong>Editor</strong>.</div>
+</li>
+<li class="level1"><div class="li"> Les dels país a la de <strong>Pais</strong>.</div>
+</li>
+<li class="level1"><div class="li"> dels temes, ho farem a la taula de <strong>Temes</strong>, etc.</div>
+</li>
+</ul>
+
+<p>
+<br />
+
+<br />
+
+I ja només ens quedarà disposar en cadascuna d'elles un camp comú que compartiran entre elles i la taula central <strong>Llibres</strong>.
+Aquest camp serà un tipus codi, que ocuparà poc espai i permetrà
+establir la relació entre la taula Llibres i cadascuna de les altres
+taules esmentades.
+<br />
+
+<br />
+
+Fent això guanyarem: 
+<br />
+
+<br />
+
+</p>
+<ul>
+<li class="level1"><div class="li"> <em>Estalviem espai i guanyem temps.</em>
+No caldrà escriure les dades de cada autor més que un sol cop. Així, de
+l'autor Cervantes, només caldrá escriure tota aquesta informació un sol
+cop: Miguel de Cervantes Saavedra / Alcalá de Henares / 29/19/1547 /
+Autor clasico español, etc. Quan donessim d'alta un segon llibre
+d'aquest autor, no caldria repetir tota aquesta informació, només el
+codi 001 que seria el que identifica a aquest autor en la base de dades.</div>
+</li>
+</ul>
+<ul>
+<li class="level1"><div class="li"> <em>Evitem errades</em> A part
+d'estalviar espai en la base de dades, cosa evident, també evitem
+errades d'escriptura, doncs no seria igual Cervantes que cervantes o
+que cerbantes, o que cer vantes…</div>
+</li>
+</ul>
+<ul>
+<li class="level1"><div class="li"> <em>Tindrem una informació homogènia</em> Sabem que sempre que en la taula llibres en el camp autor hi posem un 001 es referirà a aquest autor i no a un altre.</div>
+</li>
+</ul>
+
+<p>
+<br />
+
+<br />
+Per tant, si mirem la següent imatge podem veure que les dades d'aquest
+autor, d'aquesta editorial i d'aquest tema només les caldrà escriure un
+sol cop en la nostra base de dades, i després, cada cop que utilitzem
+aquestes dades en la taula Llibres, només caldrà escriure el seu codi,
+és a dir, 1, i no les descripcions llargues de cadascun dels camps:
+codi nivell, codi material, codi llengua, etc.
+<br />
+
+<br />
+
+<img src="jpg/m2_p1_06.jpg" class="mediacenter" alt="" />
+<br />
+
+<br />Veient tota aquesta explicació, podem pensar que és molt
+complicat haver de treballar d'aquesta forma. Potser si, però això
+només és al començament, un cop feta l'estructura de relacions entre
+taules, la feina serà molt més fàcil i còmoda. Primer es tracta
+d'agafar el concepte, sense preses, i deprés ja podrem posar-nos a
+treballar amb el programa.
+<br />
+
+<br />Ara que hem fet la justificació de la necessitat de les
+relacions, anirem un pas més enllà, com es fan? Això ho tractarem en la
+següent pràctica.
+<br />
+
+<br />
+
+</p><div class="noteclassic">
+Passem a la pràctica 2 per poder aprendre com es fan les relacions entre dues taules.
+
+</div>
+
+
+
+</div>
+
+    <!-- ......... wikipage stop  ......... -->
+
+  </div>
+
+  <div class="clearer">&nbsp;</div>
+
+   
+<br /><br />
+  <a href="#inici" title="Inici pàgina"><img src="gif/up.gif" alt="Inici" /></a> <div class="footerinc">
+  <hr />
+  <table style="width: 100%;">
+  <tbody><tr style="vertical-align: middle;">
+    <td style="width: 30%;">
+      <div style="float: left;">
+      <a href="http://apliedu.xtec.cat/wikiform" title="Materials de formació"><img src="png/matfor.png" alt="Generalitat de Catalunya" height="42" width="100" /></a>
+      </div> 
+    </td>
+    <td style="width: 40%;">
+      <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/es/deed.ca"><img alt="Creative Commons License" style="border-width: 0pt;" src="png/cc.png" /></a>
+    </td>
+    <td style="width: 30%;">
+      <div style="float: right;">
+      <a href="http://www.xtec.cat/" title="XTEC"><img src="png/xtec.png" alt="XTEC" height="15" width="62" /></a>
+      </div>
+    </td>
+  </tr>  
+  </tbody></table>
+<!--
+<rdf:RDF xmlns="http://web.resource.org/cc/"
+    xmlns:dc="http://purl.org/dc/elements/1.1/"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<Work rdf:about="">
+   <dc:type rdf:resource="http://purl.org/dc/dcmitype/Text" />
+   <license rdf:resource="http://creativecommons.org/licenses/by-nc-sa/2.0/" />
+</Work>
+
+<License rdf:about="http://creativecommons.org/licenses/by-nc-sa/2.0/">
+   <permits rdf:resource="http://web.resource.org/cc/Reproduction" />
+   <permits rdf:resource="http://web.resource.org/cc/Distribution" />
+   <requires rdf:resource="http://web.resource.org/cc/Notice" />
+   <requires rdf:resource="http://web.resource.org/cc/Attribution" />
+   <prohibits rdf:resource="http://web.resource.org/cc/CommercialUse" />
+   <permits rdf:resource="http://web.resource.org/cc/DerivativeWorks" />
+   <requires rdf:resource="http://web.resource.org/cc/ShareAlike" />
+</License>
+
+</rdf:RDF>
+-->
+</div>
+
+</div>
+
+<!-- Generat el 27/Oct/2010  8:24:46  amb HTTrack --> 
+</body></html>

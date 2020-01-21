@@ -1,0 +1,280 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ca" dir="ltr" lang="ca"><head><!-- Generat el 27/Oct/2010  8:24:46  amb HTTrack -->
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  
+
+<title>Elaboració avançada de documents amb bases de dades</title><link rel="stylesheet" media="all" type="text/css" href="css/cssff6e.css?s=all&amp;t=estatic" />
+<link rel="stylesheet" media="screen" type="text/css" href="css/css6139.css?t=estatic" />
+<link rel="stylesheet" media="print" type="text/css" href="css/css6f71.css?s=print&amp;t=estatic" />
+
+  <link rel="shortcut icon" href="ico/favicon.ico" /></head>
+
+
+ 
+<body>
+<div class="headerinc">
+<a id="inici"> </a>
+<a href="http://apliedu.xtec.cat/wikiform" title="Materials de formació"><img alt="logo" style="border-width: 0pt;" src="png/logosuperior.png" /></a>
+</div>
+
+<div class="dokuwiki">
+
+
+<div class="titol">L'entorn de l'Open Base </div><div class="subtitol"> Pràctica 1 - Exercici 3</div><div class="navega"><div id="navcontainer"><ul id="navlist">
+<li><a href="index.html" title="Inici">&lt;&lt;</a></li>  
+<li><a href="index-2.html">&lt;</a></li>  
+<li><a href="practica_1.html">Exercici 1</a></li>  
+<li><a href="practica_2.html">Exercici 2</a></li>  
+<li id="active"><a id="current" href="#">Exercici 3</a></li>  
+<li><a href="practica_4.html">Exercici 4</a></li>
+<li><a href="projecte_1.html">Projecte I</a></li>
+</ul></div></div>
+
+  
+  <div class="page">
+
+    <!-- ......... wikipage start ......... -->
+    
+
+
+<h3><a name="creacio_de_taules" id="creacio_de_taules">Creació de taules</a></h3>
+<div class="level3">
+
+<p>
+Un cop ja hem fet un passeig per l'entorn de treball ara l'alumne haurà de fer una base de dades pròpia: Alumnat.
+</p>
+
+<p>
+Haurà de crear la taula Alumnes: Id_Alumne, Nom, Cognom, Curs, i Comentari.
+</p>
+
+<p>
+Primer pas per crear una base de dades:<br />
+
+</p>
+
+<p>
+Entra dintre de OpenOffice.org Base.
+A la finestra que trobes selecciona l’opció Crea una base de dades nova i a continuació prem Finalitza.
+</p>
+
+<p>
+
+<img src="jpg/sense_titolf4f6.jpg?w=550" class="mediacenter" alt="" width="550" />
+</p>
+
+<p>
+Creació d'una taula:<br />
+
+</p>
+
+<p>
+Ara per crear la primera taula el que has de fer és seleccionar el
+tipus d’objecte amb el que treballaràs, Taules, i a la part dreta de la
+finestra fer clic sobre Crea una taula en vista disseny…
+</p>
+
+<p>
+<img src="jpg/m1_002.jpg" class="mediacenter" title="imatge" alt="imatge" />
+</p>
+
+<p>
+Crea la taula Alumnes tal com pots veure a la següent imatge:
+</p>
+
+<p>
+<img src="jpg/m1027.jpg" class="mediacenter" alt="" />
+</p>
+
+<p>Per començar tens que escriure el primer Nom de camp, ID_Alumne, i
+deixar-ho amb el Tipus de camp, Enter [INTEGER]. A continuació els Nom
+de camp, Nom, Cognoms, Curs, i finalment Comentari.
+</p>
+
+<p>
+Les propietats dels camps seran:
+</p>
+
+<p>
+A continuació et mostrem el tipus de camp que correspon a cadascú i el valor de les propietats Longitud i Valor per defecte:
+</p>
+
+<p>
+<img src="jpg/m1037.jpg" class="mediacenter" alt="" />
+</p>
+
+<p>Per establir una Clau primaria al camp Id_Alumne fes un clic sobre
+el botó dret al quadre de selecció de camp i selecciona al menú l'opció
+Clau Primària.
+</p>
+
+<p>
+Per guardar la taula un cop creada pots fer un clic sobre la següent icona o seleccinar l'opció Desa del menú Fitxer.
+</p>
+
+<p>
+<img src="jpg/m1032.jpg" class="mediacenter" alt="" />
+</p>
+
+<p>
+Ara et demanarà el nom de la taula, escriu: Alumnes.
+</p>
+</div>
+
+<h5><a name="inserim_mes_taules" id="inserim_mes_taules">Inserim més taules</a></h5>
+<div class="level5">
+
+<p>Quan es dissenya una base de dades i es decideix el nombre de taules
+que aquesta tindrà els criteri més importants que es fan servir són:
+</p>
+<ul>
+<li class="level1"><div class="li"> l'estalvi d'informació, osigui duplicar el mínim de vegades les dades, amb l'objectiu també d'estalviar espai de memòria.</div>
+</li>
+<li class="level1"><div class="li"> una estructura que faciliti l'accés a la informació d'una forma ràpida.</div>
+</li>
+</ul>
+
+<p>Les taules que pertanyen a una mateixa base de dades habitualment
+estan relacionades entre sí per tal de complir els criteris indicats
+anteriorment.
+</p>
+
+<p>Per exemple, una informació que seria interessant tenir dels alumnes
+és el grup al que pertany, però aquest valor es repetiria molt ja que
+tindriem molts alumnes on el valor del camp Grup seria el mateix,
+aleshores la solució és crear una taula que contingui el nom del grup i
+un identificador numèric del grup. Aquest identificador seria un valor
+enter que ocuparia poc espai: 0, 1, 2… i aquest seria el valor que
+posariem dintre de la taula Alumnes per tal d'establir una relació amb
+la taula grups.
+</p>
+
+<p>Per exemple es crea una nova taula Grups, on definirem el camp amb
+nom ID_Grup, que estarà relacionada amb el camp Id_grup que també
+posarem a Alumnes. Crearem un altra taula anomenada Notes que es
+relacionarà amb la taula Alumnes mitjançant el camp Id_Alumne.
+En el primer cas molts alumnes pertanyen al mateix grup, i en el segon
+cas un Alumne pot tenir moltes notes.
+</p>
+
+<p>
+</p><div class="noteclassic">Els camps anomenats Id_Alumne, Id_Grup…són
+camps identificadors (Clau Primaria) dels registres d'alumnes o de
+grups de classe…. que permeten no haver de duplicar informació. A més
+normalment el seu valor s'autogenera automàticament amb un camp de
+tipus Enter.
+</div>
+
+
+<p>
+Afegim el camp nou Id_Grup a la taula Alumnes:
+</p>
+
+<p>
+<img src="jpg/m1028.jpg" class="mediacenter" alt="" />
+</p>
+
+<p>
+Aquesta seria l'estructura de la <strong>taula Grups</strong>:
+</p>
+
+<p>
+<img src="jpg/m1029.jpg" class="mediacenter" alt="" />
+</p>
+
+<p>
+Aquestes són les propietats dels camps:
+</p>
+
+<p>
+<img src="jpg/m1051.jpg" class="mediacenter" alt="" />
+</p>
+
+<p>
+Aquest és el disseny de la <strong>taula Notes</strong>:
+</p>
+
+<p>
+<img src="jpg/m1030.jpg" class="mediacenter" alt="" />
+</p>
+
+<p>
+Aquestes són les propietats dels camps:
+</p>
+
+<p>
+<img src="jpg/m1053.jpg" class="mediacenter" alt="" />
+</p>
+
+<p>
+Aquest és el disseny de la <strong>taula Materies</strong>:
+</p>
+
+<p>
+<img src="jpg/m1031.jpg" class="mediacenter" alt="" />
+</p>
+
+<p>
+Aquestes són les propietats dels camps:
+</p>
+
+<p>
+<img src="jpg/m1052.jpg" class="mediacenter" alt="" />
+</p>
+
+</div>
+
+    <!-- ......... wikipage stop  ......... -->
+
+  </div>
+
+  <div class="clearer">&nbsp;</div>
+
+   
+<br /><br />
+  <a href="#inici" title="Inici pàgina"><img src="gif/up.gif" alt="Inici" /></a> <div class="footerinc">
+  <hr />
+  <table style="width: 100%;">
+  <tbody><tr style="vertical-align: middle;">
+    <td style="width: 30%;">
+      <div style="float: left;">
+      <a href="http://apliedu.xtec.cat/wikiform" title="Materials de formació"><img src="png/matfor.png" alt="Generalitat de Catalunya" height="42" width="100" /></a>
+      </div> 
+    </td>
+    <td style="width: 40%;">
+      <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/es/deed.ca"><img alt="Creative Commons License" style="border-width: 0pt;" src="png/cc.png" /></a>
+    </td>
+    <td style="width: 30%;">
+      <div style="float: right;">
+      <a href="http://www.xtec.cat/" title="XTEC"><img src="png/xtec.png" alt="XTEC" height="15" width="62" /></a>
+      </div>
+    </td>
+  </tr>  
+  </tbody></table>
+<!--
+<rdf:RDF xmlns="http://web.resource.org/cc/"
+    xmlns:dc="http://purl.org/dc/elements/1.1/"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<Work rdf:about="">
+   <dc:type rdf:resource="http://purl.org/dc/dcmitype/Text" />
+   <license rdf:resource="http://creativecommons.org/licenses/by-nc-sa/2.0/" />
+</Work>
+
+<License rdf:about="http://creativecommons.org/licenses/by-nc-sa/2.0/">
+   <permits rdf:resource="http://web.resource.org/cc/Reproduction" />
+   <permits rdf:resource="http://web.resource.org/cc/Distribution" />
+   <requires rdf:resource="http://web.resource.org/cc/Notice" />
+   <requires rdf:resource="http://web.resource.org/cc/Attribution" />
+   <prohibits rdf:resource="http://web.resource.org/cc/CommercialUse" />
+   <permits rdf:resource="http://web.resource.org/cc/DerivativeWorks" />
+   <requires rdf:resource="http://web.resource.org/cc/ShareAlike" />
+</License>
+
+</rdf:RDF>
+-->
+</div>
+
+</div>
+
+<!-- Generat el 27/Oct/2010  8:24:46  amb HTTrack --> 
+</body></html>

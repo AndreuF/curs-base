@@ -1,0 +1,247 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+ "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ca" lang="ca" dir="ltr">
+
+<!-- Generat el 27/Oct/2010  8:24:46  amb HTTrack --> 
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>Elaboració avançada de documents amb bases de dades</title>
+
+  <link rel="stylesheet" media="all" type="text/css" href="css/cssff6e.css?s=all&amp;t=estatic" />
+<link rel="stylesheet" media="screen" type="text/css" href="css/css6139.css?t=estatic" />
+<link rel="stylesheet" media="print" type="text/css" href="css/css6f71.css?s=print&amp;t=estatic" />
+
+  <link rel="shortcut icon" href="ico/favicon.ico" />
+
+  </head>
+
+
+
+<body>
+<div class="headerinc">
+<a id="inici"> </a>
+<a href="http://apliedu.xtec.cat/wikiform" title="Materials de formació"><img alt="logo" style="border-width:0" src="png/logosuperior.png" /></a>
+</div>
+
+<div class="dokuwiki">
+
+
+<div class="titol">Elaboració avançada de documents amb bases de dades</div><div class="subtitol"> Projecte II. Modificar taules i filtrar dades</div>
+
+<div class="navega"><div id="navcontainer"><ul id="navlist">
+<li><a href="index.html" title="Inici">&lt;&lt;</a></li>  
+<li><a href="index-3.html">&lt;</a></li>  
+<li><a href="practica_1-2.html">Exercici 1</a></li>  
+<li><a href="practica_2-2.html">Exercici 2</a></li>  
+<li><a href="practica_3-2.html">Exercici 3</a></li>  
+<li><a href="practica_4-2.html">Exercici 4</a></li>
+<li id="active"><a id="current" href="#">Projecte II</a></li>
+</ul></div></div>
+
+  
+  <div class="page">
+
+    <!-- ......... wikipage start ......... -->
+    
+
+
+<h3><a name="projecte" id="projecte">Modificació de taules i importació de dades</a></h3>
+<div class="level3">
+
+<h5><a name="introduccio_projecte" id="introduccio_projecte">Marc general del projecte. Recordatori</a></h5>
+<div class="level5">
+<p>
+El projecte consistirà en crear una base de dades que permeti gestionar un hospital. L'hospital està compost de diferents unitats hospitalàries cada una de les quals té assignat diferents personal sanitari. Per exemple a la unitat de traumatologia se li han assignat 6 metges, 3 anestesistes, 5 fisioterapeutes, 8 infermeres i 15 auxiliars d'infermeria. 
+</p>
+<p>
+Per fer aquestes assignacions caldrà controlar l'especialitat del personal sanitari. l'Especialitat es definirà per una categoria: metge, fisioterapeuta, infermera, ... i una especialitat: trauma, medicina general, neurologia, maxil·lofacial, etc. 
+</p>
+<p>
+La base de dades gestionarà també els pacients de l'hospital, tant els que requereixin d'hospitalització com els que s'intervinguin sense ingrés. Els pacients no s'esborren mai per tal de mantenir un historial d'ingressos i intervencions. 
+</p>
+
+<p>
+Dels ingressos caldrà saber la data de l'ingrés i la data d'alta en cas que ja s'hagi produït, el pacient que es trobava ingressat, l'habitació i el llit on es va hospitalitzar al malalt i el temps que el metge va estimar que romandria ingressat. 
+</p>
+
+<p>
+Les intervencions es classifiquen per tipus. Per exemple visita, operació, radiografia, etc. Cada intervenció ha de tenir un metge responsable que és qui l'ha decidit. Ara bé, a banda del metge responsable, hi podran intervenir altre personal sanitari com fisioterapeutes, infermeres, altres metges, anestesistes, radiòlegs, etc. Es necessita saber qui són tots el que actuïn en una intervenció. 
+</p>
+</div>
+
+<h5><a name="modificacio_taules" id="modificacio_taules">Modificació de les taules</a></h5>
+<div class="level5">
+<p>En aquesta part del projecte modificarem les taules per tal d'assegurar una total compatibilitat amb el projectes futurs. SI durant la modificació obtens erros, elimina, abans de fer les modificacions demanades, totes les dades que vas introduir en el projecte passat.</p>
+<p>
+1.- Obriu el projecte hospital que vàreu començar en el projecte anterior. Assegureu que tingueu les següents taules creades i que el nom coincideixi totalment.
+</p>
+<ul>
+<li class="level1"><div class="li">Pacients</div>
+</li>
+<li class="level1"><div class="li">PersonalSanitari</div>
+</li>
+<li class="level1"><div class="li">UnitatsHospitalaries</div>
+</li>
+<li class="level1"><div class="li">EspecialitatsSanitaries</div>
+</li>
+<li class="level1"><div class="li">Ingressos</div>
+</li>
+<li class="level1"><div class="li">TipusIntervencions</div>
+</li>
+<li class="level1"><div class="li">Intervencions</div>
+</li>
+<li class="level1"><div class="li">IntervencionsPersonalSanitari</div>
+</li>
+</ul>
+
+<p>
+2.- Assegureu-vos també que totes les taules tinguin clau primaria seguint aquestes indicacions:
+</p>
+<ol>
+<li class="level1"><div class="li">Per a les taules UnitatsHospitalaries, TipusIntervencions i EspecialitatsSanitaries, la clau principal sigui textual de mida fixa (5 caràcters) per tal que sigui més fàcil de recordar</div>
+</li>
+<li class="level1"><div class="li">La resta de taules excepte la taula de PersonalSanitari i la taula d'IntervencionsPersonalSanitari tindran la clau primaria numèrica (un enter) i autoincrementable (de valor automàtic).</div>
+</li>
+<li class="level1"><div class="li">La taula de PersonalSanitari tindrà el camp nif per clau principal i serà de tipus caracter de mida fixa de 10 caràcters.</div>
+</li>
+<li class="level1"><div class="li">La taula IntervencionsPersonalSanitari tindrà només dos camps: la referencia de la intervenció i el professional que ha realitzat l'acció. Farem que ambdós siguin clau seleccionant ambdós camps i escollint clau primària. Fent evitarem l'entrada repetida del mateix professional en una mateixa intervenció.</div>
+</li>
+</ol>
+
+<p>
+3.- Seguidament assegureu-vos que les taules tinguin els camps que es mostren a continuació:
+</p>
+<p>
+Pacients:<br/><img src="jpg/m2_pr2_05.jpg" class="mediacenter" alt="" />
+</p>
+
+<p>
+PersonalSanitari:<br/><img src="jpg/m2_pr2_06.jpg" class="mediacenter" alt="" />
+</p>
+<p>
+UnitatsHospitalaries:<br/><img src="jpg/m2_pr2_08.jpg" class="mediacenter" alt="" />
+</p>
+<p>
+EspecialitatsSanitaries:<br/><img src="jpg/m2_pr2_01.jpg" class="mediacenter" alt="" />
+</p>
+<p>
+Ingressos:<br/><img src="jpg/m2_pr2_02.jpg" class="mediacenter" alt="" />
+</p>
+<p>
+TipusIntervencions:<br/><img src="jpg/m2_pr2_07.jpg" class="mediacenter" alt="" />
+</p>
+<p>
+Intervencions:<br/><img src="jpg/m2_pr2_03.jpg" class="mediacenter" alt="" />
+</p>
+<p>
+IntervencionsPersonalSanitari:<br/><img src="jpg/m2_pr2_04.jpg" class="mediacenter" alt="" />
+</p>
+
+<p>
+4.- Modifiqueu les mides del textos per tal de no malbarartar espai. 
+</p>
+<p>
+5.- Configureu els formats numèrics i les dates</p>
+<p>
+6.- Documenteu els camps de les taules per tal que siguin fàcilement interpretables.
+</p>
+
+</div>
+<h5><a name="importancio_de_dades" id="importancio_de_dades">importanció de dades</a></h5>
+<div class="level5">
+
+<p>
+Un cop modificades les taules, haureu d'importar les dades que es troben a:
+<ul>
+<li class="level1"><div class="li"><a href="dades/unitatsHospitalaries.ods">dades de les Unitats Hospitalàries</a></div>
+</li>
+<li class="level1"><div class="li"><a href="dades/especialitats.ods">dades de les especialitats i categories</a></div>
+</li>
+<li class="level1"><div class="li"><a href="dades/pacients.ods">dades dels pacients</a></div>
+</li>
+<li class="level1"><div class="li"><a href="dades/personalsanitari.ods">dades del personal sanitari</a></div>
+</li>
+<li class="level1"><div class="li"><a href="dades/tipusIntervencions.ods">dades dels tipus d'intervencions</a></div>
+</li>
+<li class="level1"><div class="li"><a href="dades/intervencions.ods">dades de les intervencions</a></div>
+</li>
+<li class="level1"><div class="li"><a href="dades/intervencionsPersonalSanitari.ods">dades de les intervencions del personalsamitari</a></div>
+</li>
+<li class="level1"><div class="li"><a href="dades/ingressos.ods">dades dels ingressos</a></div>
+</li>
+</ul>
+
+</p>
+
+</div>
+
+<h5><a name="projecte_2_lliurament" id="projecte_2_lliurament">Lliurament d'aquesta part</a></h5>
+<div class="level5">
+
+<p>
+<p>
+Cal que abans de començar el mòdul següent lliuris el document de base de dades am el que hagis treballat a la bústia del moodle oberta per a l'entrega de la segona part de projecte (Projecte II), 
+</p>
+</div>
+
+</div>
+    <!-- ......... wikipage stop  ......... -->
+
+  </div>
+
+  <div class="clearer">&nbsp;</div>
+
+   
+<br /><br />
+  <a href="#inici" title="Inici pàgina"><img src="gif/up.gif" alt="Inici"/></a> <div class="footerinc">
+  <hr />
+  <table style="width: 100%;">
+  <tr style="vertical-align: middle;">
+    <td  style="width: 30%; ">
+      <div style="float: left;">
+      <a  href="http://apliedu.xtec.cat/wikiform" title="Materials de formació"><img src="png/matfor.png" width="100" height="42" alt="Generalitat de Catalunya" /></a>
+      </div> 
+    </td>
+    <td style="width: 40%;">
+      <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/es/deed.ca"><img alt="Creative Commons License" style="border-width:0" src="png/cc.png" /></a>
+    </td>
+    <td style="width: 30%;">
+      <div style="float: right;">
+      <a href="http://www.xtec.cat/" title="XTEC"><img src="png/xtec.png" width="62" height="15" alt="XTEC" /></a>
+      </div>
+    </td>
+  </tr>  
+  </table>
+<!--
+<rdf:RDF xmlns="http://web.resource.org/cc/"
+    xmlns:dc="http://purl.org/dc/elements/1.1/"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<Work rdf:about="">
+   <dc:type rdf:resource="http://purl.org/dc/dcmitype/Text" />
+   <license rdf:resource="http://creativecommons.org/licenses/by-nc-sa/2.0/" />
+</Work>
+
+<License rdf:about="http://creativecommons.org/licenses/by-nc-sa/2.0/">
+   <permits rdf:resource="http://web.resource.org/cc/Reproduction" />
+   <permits rdf:resource="http://web.resource.org/cc/Distribution" />
+   <requires rdf:resource="http://web.resource.org/cc/Notice" />
+   <requires rdf:resource="http://web.resource.org/cc/Attribution" />
+   <prohibits rdf:resource="http://web.resource.org/cc/CommercialUse" />
+   <permits rdf:resource="http://web.resource.org/cc/DerivativeWorks" />
+   <requires rdf:resource="http://web.resource.org/cc/ShareAlike" />
+</License>
+
+</rdf:RDF>
+-->
+</div>
+
+</div>
+
+</body>
+
+<!-- Generat el 27/Oct/2010  8:24:46  amb HTTrack --> 
+</html>
+
+
+
+

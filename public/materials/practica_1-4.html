@@ -1,0 +1,596 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ca" dir="ltr" lang="ca"><head><!-- Generat el 27/Oct/2010  8:24:46  amb HTTrack -->
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  
+
+<title>Elaboració avançada de documents amb bases de dades</title><link rel="stylesheet" media="all" type="text/css" href="css/cssff6e.css?s=all&amp;t=estatic" />
+<link rel="stylesheet" media="screen" type="text/css" href="css/css6139.css?t=estatic" />
+<link rel="stylesheet" media="print" type="text/css" href="css/css6f71.css?s=print&amp;t=estatic" />
+
+  <link rel="shortcut icon" href="ico/favicon.ico" /></head>
+<body>
+<div class="headerinc">
+<a id="inici"> </a>
+<a href="http://apliedu.xtec.cat/wikiform" title="Materials de formació"><img alt="logo" style="border-width: 0pt;" src="png/logosuperior.png" /></a>
+</div>
+
+<div class="dokuwiki">
+
+
+<div class="titol">Treballem amb la inforamció. Les consultes </div><div class="subtitol"> Pràctica 4 - Exercici 1</div><div class="navega"><div id="navcontainer">
+<ul id="navlist">
+<li><a href="index.html" title="Inici">&lt;&lt;</a></li>  
+<li><a href="index-5.html">&lt;</a></li>  
+<li id="active"><a id="current" href="#">Exercici 1</a></li>  
+<li><a href="practica_2-4.html">Exercici 2</a></li>  
+<li><a href="practica_3-4.html">Exercici 3</a></li>  
+<li><a href="practica_4-3.html">Exercici 4</a></li>  
+<li><a href="practica_5.html">Exercici 5</a></li>
+<li><a href="projecte_4.html">Projecte IV</a></li>  
+</ul></div></div>
+
+  
+  <div class="page">
+
+    <!-- ......... wikipage start ......... -->
+    
+<h4><a name="preparem_la_feina" id="preparem_la_feina">Preparem la feina</a></h4>
+<div class="level4">
+
+<p>
+ <br />
+
+<br />
+Per continuar, caldrà tenir a mà el fitxer de base de dades sobre el
+que estem treballant en aquest curs des del mòdul 2: es tracta del
+fitxer <a href="odb/biblioteca-3.odb" class="media mediafile mf_" title="cursos:tic:d124:modul_2:biblioteca.odb">biblioteca.odb</a> 
+<br />
+
+<br />
+Si el teniu a mà,no cal tornar-lo a descarregar. El que sí que has de
+tenir en compte és que la situació en la qual es va quedar el fitxer a
+final del mòdul 2 és la que representa aquesta imatge:
+<br />
+
+<br />
+
+<img src="jpg/m2_p1_08c.jpg" class="mediacenter" alt="" />
+<br />
+
+<br />
+
+Per tant, tingueu present que estaven fetes moltes de les relacions.
+</p>
+
+<p>
+Observant la imatge, i a mode de recordatori, cal dir que el fitxer <strong>biblioteca.odb</strong>
+conté una taula central amb molts registres (Llibres) i unes quantes de
+més petites que caldrà relacionar amb l'anterior. Són 9 taules en
+total, les quals es relacionen de forma directa amb la taula Llibres, i
+només una (Alumnes) ho fa de forma indirecta mitjançant la taula
+intermèdia Prestecs.
+Una imatge de la llista de taules és aquesta que ja coneixeu per la
+feina feta en l'anterior mòdul:
+<br />
+
+<br />
+
+<img src="jpg/modul3_01b.jpg" class="mediacenter" alt="" />
+<br />
+
+<br />
+
+</p>
+
+<p>
+Aquestes dades, com podreu veure, contenen molts camps tipus codi, que més tard comentarem. 
+</p>
+
+<p>
+Per tant, un cop recuperat el fitxer esmentat, ja podrem obrir-lo i començar la feina de preparació amb ell.
+</p>
+
+</div>
+
+<h4><a name="repassem_el_contigut_de_l_exemple" id="repassem_el_contigut_de_l_exemple">Repassem el contigut de l'exemple</a></h4>
+<div class="level4">
+
+<p>
+
+Obriu el fitxer de la Biblioteca. 
+</p>
+
+<p>
+Un cop obert, el que es mostra és la part de formularis, que està buida. 
+</p>
+
+<p>
+<br />
+
+<br />
+
+<img src="jpg/modul3_02.jpg" class="mediacenter" alt="" />
+<br />
+
+<br />
+
+Si cliquem a l'apartat de “taules” apareixerà a la vista el que mostra la següent imatge:
+<br />
+
+<br />
+
+<img src="jpg/modul3_03.jpg" class="mediacenter" alt="" />
+<br />
+
+<br />
+
+En ella podrem veure una sèrie de taules que abans s'han esmentat.
+</p>
+
+<p>Comencem a veure el contingut de les taules. Si, en primer lloc,
+obrim la taula Llibres amb un doble clic podrem apreciar el seu extens
+contingut: conté molts registres de dades de llibres d'una biblioteca
+escolar d'un centre públic de Catalunya.
+</p>
+
+<p>
+Anem a fer unes operacions senzilles per apreciar les dades que conté:
+
+</p>
+<ul>
+<li class="level1"><div class="li"> Per saber el nombre total de registres que conté, anem a la part inferior esquerra de la taula oberta i fem clic al botó <img src="jpg/modul3_05.jpg" class="media" alt="" />
+i de forma automàtica mostrarà el final dels registres, és a dir, si
+mirem la imatge posterior, podrem veure que la part superior representa
+el fitxer recent obert i la part inferior el final dels registres, per
+tant, podem apreciar que el total de línies, registres o dades de
+llibres diferents que conté és 843.</div>
+</li>
+</ul>
+
+<p>
+
+<br />
+
+<br />
+
+<img src="jpg/modul3_04bis.jpg" class="mediacenter" alt="" />
+<br />
+
+<br />
+Bé, per tant, veiem que es tracta d'un fitxer força gran, amb molts
+registres que ens aniran molt bé per fer consultes variades, que és
+l'objectiu principal d'aquest mòdul.
+</p>
+<ul>
+<li class="level1"><div class="li"> Observem que conté molts camps. Per
+veure-ho, ens desplacem dins de la taula cap a la dreta i anem mirant
+quins són aquests camps: Titol, codi llengua, lloc edició, etc. Alguns
+casos podreu apreciar que el seu contingut són descripcions (com el
+dels Autors, o el de Resum) mentre que la majoria dels altres casos el
+contingut són codis curts. Pensem en els problemes que ens pot causar
+l'existència de camps com els Autors del nostre exemple: contenen unes
+dades molt llargues, en molts casos repetides en els diferents
+registres (posar-se a sobre del camp Autors i amb el botó <img src="jpg/modul3_07.jpg" class="media" alt="" /> ordeneu els registres, i podreu observar que hi unes dades repetides en alguns dels registres)</div>
+</li>
+</ul>
+
+<p>
+<br />
+
+<br />
+
+<img src="jpg/modul3_06.jpg" class="mediacenter" alt="" />
+<br />
+
+<br />
+Per tant, pensem que la feina que ens obligui a fer en el moment que
+substituïm els contingut dels camps com el cas dels que apareixen codis
+enlloc de descripcions, després ho guanyem en espai i en facilitat de
+treball.
+</p>
+<ul>
+<li class="level1"><div class="li"> Per una altra banda, anem a mirar
+el disseny de la taula per apreciar els tipus de camps que hi ha i el
+total de camps. Per això, tanquem la taula, i des de la finestra
+general de l'aplicació, amb el botó secundari del ratolí a sobre del
+nom de la taula, triem l'opció Edita, com mostra la següent imatge, i…</div>
+</li>
+</ul>
+
+<p>
+<br />
+
+<br />
+
+<img src="jpg/modul3_08.jpg" class="mediacenter" alt="" />
+<br />
+
+<br />
+
+…entrarem en el disseny de la taula, representat en la següent imatge:
+<br />
+
+<br />
+
+<img src="jpg/modul3_09bis.jpg" class="mediacenter" alt="" />
+<br />
+
+<br />
+Aquí podem veure tots els noms de camps i els tipus de cadascun d'ells.
+També veiem que no hi ha cap camp clau i que caldria crear-lo ara
+mateix. Fem clic a l'esquerra del nom del camp Registre i amb el botó
+secundari del ratolí, triem l'opció Clau primària, com es veu en la
+següent imatge:
+<br />
+
+<br />
+
+<img src="jpg/modul3_10.jpg" class="mediacenter" alt="" />
+<br />
+
+<br />
+
+Un cop fet això veurem el camp Registre que s'ha convertit en el Clau de la seva taula: <img src="jpg/modul3_11.jpg" class="media" alt="" />
+</p>
+
+<p>
+Ara només ens faltarà que tancar la taula i desar els canvis.
+<br />
+
+<br />
+
+<img src="jpg/modul3_12.jpg" class="mediacenter" alt="" />
+<br />
+
+<br />
+
+</p>
+
+<p>Podem fer operacions semblants amb la resta de les taules,
+comprovant el seu disseny i també el seu contingut.
+De moment l'espai que ocupa la base de dades no és massa gran per la
+gran quantitat de dades que conté. A mesura que anem treballant amb
+ell, l'augment de la mida del fitxer experimentarà un fort creixement.
+</p>
+
+</div>
+
+<h4><a name="feines_finalscompletem_totes_les_relacions" id="feines_finalscompletem_totes_les_relacions">Feines finals: completem totes les relacions</a></h4>
+<div class="level4">
+
+<p>
+
+Finalment, per poder treballar de forma més completa amb aquest fitxer anomenat <strong>biblioteca.odb</strong>,
+només ens cal una darrera acció: crear les relacions entre les tres
+taules que encara falta. Per fer-ho, cal entrar a l'opció del menú
+Eines | Relacions. <br />
+
+<br />
+
+<img src="jpg/modul3_22.jpg" class="mediacenter" alt="" />
+<br />
+
+<br />
+
+</p>
+
+<p>
+Cas de que faltés a la vista del disseny de les relacions alguna de les
+taules, amb el botó es poden mostrar el llistat de totes les taules i
+mitjançant el botó <img src="jpg/modul3_22b.jpg" class="media" alt="" /> d'Afegir taula, la podrem incorporar a la pantalla.
+</p>
+
+<p>
+Molt important: pensem que hem de tenir en compte uns aspectes previs inicials com són aquests:
+
+</p>
+<ul>
+<li class="level1"><div class="li"> Dins de l'estructura de relacions
+entre les taules d'una base de dades, caldrà diferenciar entre unes
+taules del costat 1 i unes altres del costat n. Així, en el nostre
+exemple, tenim unes quantes taules que ocupen el costat 1, i una altra
+de central que ocupa el costat n, que en aquest cas concret és la de
+Llibres. Sempre caldrà començar a omplir les dades a les taules del
+costat 1 i després podrem completar les dades de les del costat n.</div>
+</li>
+</ul>
+<ul>
+<li class="level1"><div class="li"> Les taules que seran del costat 1
+de les relacions, han de tenir un camp clau, que es correspon amb el
+camp codi de cadascuna d’elles. És un camp irrepetible i únic, el que
+identifica un registre i el diferencia de la resta de registres (igual
+que un DNI diferencia unes persones d'altres).</div>
+</li>
+</ul>
+<ul>
+<li class="level1"><div class="li"> A la taula Llibres ha d'haver-hi de
+forma obligatòria, a part d'altres camps propis, uns camps el contingut
+dels quals sigui exacte al dels camps claus de les altres taules amb
+les quals es vol establir les relacions. Així, si a la taula Llengua hi
+ha un camp codi llengua, a la taula Llibres hi ha d'haver també un camp
+codi llengua amb un contingut que prèviament s'ha hagut de donar d'alta
+a la taula Llibres: primer donem d'alta una llengua (anglès) i deprés
+podrem donar d'alta un llibre en aquesta llengua (llibre en anglès)</div>
+</li>
+</ul>
+<ul>
+<li class="level1"><div class="li"> Cal pensar que en la majoria dels
+casos la taula central és Llibres i que les altres són secundàries, és
+a dir, són majoritàriament del costat 1 de les relacions menys Llibres
+que serà del costat n (a part de les taules Alumnes i Prestecs, es
+clar). </div>
+</li>
+</ul>
+
+<p>
+
+L'única excepció a això és la relació que cal establir entre Llibres i Prestecs.
+</p>
+
+<p>
+Les anem creant una a una arrossegant els camps des del costat u fins
+al costat n (que és en tots els casos, tal com s'ha dit, els camps de
+la taula <em>Llibres</em>.)
+</p>
+
+<p>
+Anem fent, i tot sembla anar bé. Però en el moment de voler relacionar
+la taula Pais, ens surt aquest missatge d'avís com que la cosa no
+funciona:
+</p>
+
+<p>
+
+<br />
+
+<br />
+
+<img src="jpg/modul3_23.jpg" class="mediacenter" alt="" />
+<br />
+
+<br />
+
+</p>
+
+<p>Ara caldrà investigar perquè falla. Normalment és perquè hi ha algun
+registre de la taula Llibres que no té la dada donada prèviament a la
+taula Pais, és a dir, que estem assignant a algun llibre un codi de
+país que no s'ha donat d'alta en la taula Pais. Cal repassar i comparar
+les dades de les dues taules per solucionar-ho.
+Un cop revisades les dades, es pot apreciar que en la taula Llibres, el
+país Estat Units figura com a codi “USA” i en la taula Pais, els Estat
+Units figuren com a “usa”, per la qual cosa el programa detecta que no
+és igual i no deixa fer la relació. Si anem a una de les dues taules, a
+Pais serà més fàcil de localitzar i canviem les minúscules per la
+majúscules, ja ens deixarà fer la relació entre aquestes dues taules.
+</p>
+
+<p>
+Ara cal completar les relacions de la següent forma:
+
+</p>
+<ul>
+<li class="level1"><div class="li"> <strong>Llibres amb Prestecs.</strong> </div>
+</li>
+<li class="level1"><div class="li"> <strong>Alumnes amb Prestecs.</strong></div>
+</li>
+</ul>
+<ul>
+<li class="level1"><div class="li"> El raonament per <strong>Llibres amb Prestecs</strong> és aquest:</div>
+</li>
+</ul>
+<ol>
+<li class="level1"><div class="li"> Un llibre pot tenir varios préstecs en la nostra base de dades? Resposta: sí.</div>
+</li>
+</ol>
+<ol>
+<li class="level1"><div class="li"> Un préstec pot afectar a varios llibres? </div>
+</li>
+</ol>
+
+<p>
+Resposta: No, cada llibre té el seu propi registre de préstec.
+
+</p>
+<ol>
+<li class="level1"><div class="li"> Per tant, el raonament ens porta a dir que la taula Llibres serà el costat 1 de la relació i la Prestecs el costat n o varios.</div>
+</li>
+</ol>
+
+<p>
+
+* El raonament per <strong>Alumnes amb Prestecs</strong> és aquest:
+</p>
+
+<p>
+- Un alumne pot tenir varios préstecs en la nostra base de dades? Resposta: sí.
+
+</p>
+<ol>
+<li class="level1"><div class="li"> Un préstec pot afectar a varios alumnes a l'hora? </div>
+</li>
+</ol>
+
+<p>
+Resposta: No, cada alumne i llibre tenen el seu propi registre de préstec.
+
+</p>
+<ol>
+<li class="level1"><div class="li"> Per tant, el raonament ens porta a dir que la taula Alumnes serà el costat 1 de la relació i la Presctec el costat n o varios.</div>
+</li>
+</ol>
+
+<p>
+
+Bé, ara que sabem què hem de fer, provem de dur-ho a la pràctica.
+Comencem a fer la relació entre les taules Llibres i Prestecs i després entre Alumnes i Prestecs.
+</p>
+
+<p>La primera d'elles no hi ha cap problema, arrosseguem el camp
+Registre de la taula Llibres a sobre del camp Registre de la taula
+Prestecs i feina feta.
+</p>
+
+<p>Quant a la segona, en el moment d'intentar fer l'arrossegament entre
+el camp Id_alumne de la taula Alumne sobre el camp Id_alumne de la
+taula Prestecs, ens dóna aquest missatge d'errada:
+<br />
+
+<br />
+
+<img src="jpg/modul3_24b.jpg" class="mediacenter" alt="" />
+<br />
+
+<br />
+
+</p>
+
+<p>Un altre de les possibles errades en les relacions és que els tipus
+dels camps que es volen relacionar entre sí, no siguin compatibles, és
+a dir, un camp tipus text amb un altre tipus numèric no es poden
+relacionar.
+Això ens obliga a repassar el disseny de les dues taules implicades en
+la relació i comprovar si el camp Id_alumne és del mateix tipus o no.
+</p>
+
+<p>La imatge següent mostra les dues taules en mode disseny i tal com
+es pot veure, en una d'elles és tipus text i en l'altra és numèric. Per
+crear la mínima distorsió convindria canviar el camp que no és clau
+dels dos, d'aquesta forma tindrem menys problemes, en aquest cas,
+canviar el camp de la taula Prestecs (que a més a més la tenim buida de
+dades, i correm menys risc de pèrdua d'informació)
+</p>
+
+<p>
+<br />
+
+<br />
+
+<img src="jpg/modul3_24c.jpg" class="mediacenter" alt="" />
+<br />
+
+<br />
+
+</p>
+
+<p>
+Un cop fet aquest canvi, ja ens deixarà establir totes les relacions i la finestra que quedarà així:
+</p>
+
+<p>
+<br />
+
+<br />
+
+<img src="jpg/modul3_25.jpg" class="mediacenter" alt="" />
+<br />
+
+<br />
+
+</p>
+
+<p>
+Ara ja tenim el camp preparat per a treballar amb les consultes.
+</p>
+
+<p>
+</p><div class="noteclassic">Com que fins ara la majoria d'usuaris de
+bases de dades utilitzaven el programa Access, aquí us passem uns
+petits trucs per poder convertir les dades del <strong>Microsoft Access</strong> a <strong>Open Base</strong>.
+
+</div>
+
+
+
+</div>
+
+<h4><a name="conversio_de_dades_del_programa_microsoft_access_a_open_base" id="conversio_de_dades_del_programa_microsoft_access_a_open_base">Conversió de dades del programa Microsoft Access a Open Base</a></h4>
+<div class="level4">
+
+<p>
+
+Seguiu aquestes petites intruccions i ho aconseguireu:
+</p>
+<ol>
+<li class="level1"><div class="li"> Obriu el programa <strong>Microsoft Access</strong> amb qualsevol versió que tingueu del mateix.</div>
+</li>
+<li class="level1"><div class="li"> Obriu una taula en mode “Hoja de datos”</div>
+</li>
+<li class="level1"><div class="li"> Seleccioneu totes les dades de la taula.</div>
+</li>
+<li class="level1"><div class="li"> Copieu les dades amb el botó secundari del ratolí o mitjançant el menú.</div>
+</li>
+<li class="level1"><div class="li"> Obriu el programa de Full de Càlcul <strong>Open Calc</strong>.</div>
+</li>
+<li class="level1"><div class="li"> Enganxeu en una cel.la qualsevol la informació copiada prèviament en <strong>Microsoft Access</strong>.</div>
+</li>
+<li class="level1"><div class="li"> Seleccioneu tot el rang recent enganxat. El tornem a copiar (Edició copiar, o amb qualsevol altre mètode semblant)</div>
+</li>
+<li class="level1"><div class="li"> Anem al programa <strong>Open Base</strong> i a la finestra de taules donem a l'opció enganxar (fent clic amb el botó secundari del ratolí o amb el menú corresponent)</div>
+</li>
+<li class="level1"><div class="li"> S'iniciarà l'assistent que ens
+ajudarà en la resta del procés, que només amb un parell de preguntes
+ens permetrà disposar de la informació en format <strong>Open Base</strong> en breus moments.</div>
+</li>
+</ol>
+
+<p>
+Els resultats són força bons, tenim les dades convertides al nou format sense pérdues d'informació.
+</p>
+
+</div>
+
+    <!-- ......... wikipage stop  ......... -->
+
+  </div>
+
+  <div class="clearer">&nbsp;</div>
+
+   
+<br /><br />
+  <a href="#inici" title="Inici pàgina"><img src="gif/up.gif" alt="Inici" /></a> <div class="footerinc">
+  <hr />
+  <table style="width: 100%;">
+  <tbody><tr style="vertical-align: middle;">
+    <td style="width: 30%;">
+      <div style="float: left;">
+      <a href="http://apliedu.xtec.cat/wikiform" title="Materials de formació"><img src="png/matfor.png" alt="Generalitat de Catalunya" height="42" width="100" /></a>
+      </div> 
+    </td>
+    <td style="width: 40%;">
+      <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/es/deed.ca"><img alt="Creative Commons License" style="border-width: 0pt;" src="png/cc.png" /></a>
+    </td>
+    <td style="width: 30%;">
+      <div style="float: right;">
+      <a href="http://www.xtec.cat/" title="XTEC"><img src="png/xtec.png" alt="XTEC" height="15" width="62" /></a>
+      </div>
+    </td>
+  </tr>  
+  </tbody></table>
+<!--
+<rdf:RDF xmlns="http://web.resource.org/cc/"
+    xmlns:dc="http://purl.org/dc/elements/1.1/"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<Work rdf:about="">
+   <dc:type rdf:resource="http://purl.org/dc/dcmitype/Text" />
+   <license rdf:resource="http://creativecommons.org/licenses/by-nc-sa/2.0/" />
+</Work>
+
+<License rdf:about="http://creativecommons.org/licenses/by-nc-sa/2.0/">
+   <permits rdf:resource="http://web.resource.org/cc/Reproduction" />
+   <permits rdf:resource="http://web.resource.org/cc/Distribution" />
+   <requires rdf:resource="http://web.resource.org/cc/Notice" />
+   <requires rdf:resource="http://web.resource.org/cc/Attribution" />
+   <prohibits rdf:resource="http://web.resource.org/cc/CommercialUse" />
+   <permits rdf:resource="http://web.resource.org/cc/DerivativeWorks" />
+   <requires rdf:resource="http://web.resource.org/cc/ShareAlike" />
+</License>
+
+</rdf:RDF>
+-->
+</div>
+
+</div>
+
+<!-- Generat el 27/Oct/2010  8:24:46  amb HTTrack --> 
+</body></html>

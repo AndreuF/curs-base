@@ -1,0 +1,353 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ca" dir="ltr" lang="ca"><head><!-- Generat el 27/Oct/2010  8:24:46  amb HTTrack -->
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  
+
+<title>Elaboració avançada de documents amb bases de dades</title><link rel="stylesheet" media="all" type="text/css" href="css/cssff6e.css?s=all&amp;t=estatic" />
+<link rel="stylesheet" media="screen" type="text/css" href="css/css6139.css?t=estatic" />
+<link rel="stylesheet" media="print" type="text/css" href="css/css6f71.css?s=print&amp;t=estatic" />
+
+  <link rel="shortcut icon" href="ico/favicon.ico" /></head>
+
+
+ 
+<body>
+<div class="headerinc">
+<a id="inici"> </a>
+<a href="http://apliedu.xtec.cat/wikiform" title="Materials de formació"><img alt="logo" style="border-width: 0pt;" src="png/logosuperior.png" /></a>
+</div>
+
+<div class="dokuwiki">
+
+
+<div class="titol">Treballem amb la inforamció. Les consultes </div><div class="subtitol"> Pràctica 4 - Exercici 4</div><div class="navega"><div id="navcontainer">
+<ul id="navlist">
+<li><a href="index.html" title="Inici">&lt;&lt;</a></li>  
+<li><a href="index-5.html">&lt;</a></li>  
+<li><a href="practica_1-4.html">Exercici 1</a></li>  
+<li><a href="practica_2-4.html">Exercici 2</a></li>  
+<li><a href="practica_3-4.html">Exercici 3</a></li>  
+<li id="active"><a id="current" href="#">Exercici 4</a></li>  
+<li><a href="practica_5.html">Exercici 5</a></li>
+<li><a href="projecte_4.html">Projecte IV</a></li>  
+</ul></div></div>
+
+  
+  <div class="page">
+
+    <!-- ......... wikipage start ......... -->
+    
+<h4><a name="consultes_condicionals" id="consultes_condicionals">Consultes condicionals</a></h4>
+<div class="level4">
+
+<p>
+El tema consultes no s'acaba aquí, tot al contrari. Queden una rica i
+variada gama de les mateixes que s'aniran estudiant a continuació.
+</p>
+<ul>
+<li class="level1"><div class="li"> Consultes amb varios criteris.</div>
+</li>
+<li class="level1"><div class="li"> Consultes condicionals: I i O lògics.</div>
+</li>
+</ul>
+
+</div>
+
+<h4><a name="consultes_amb_varios_criteris" id="consultes_amb_varios_criteris">Consultes amb varios criteris</a></h4>
+<div class="level4">
+
+<p>Fins ara per explicar el concepte de consulta hi hem posat una
+consulta amb un sol criteri: el país, el material (tipus de llibre),
+etc. d'un o de varios llibres.
+</p>
+
+<p>
+També es poden fer preguntes a la base de dades que afectin a més d'un aspecte, així es podrien plantejar exemples com aquests:
+
+</p>
+<ol>
+<li class="level1"><div class="li"> <em>Quants llibres hi ha de nivell eso i escrits en castellà?</em> Anomeneu a la consulta: <strong>Consulta03:eso-castella</strong></div>
+</li>
+<li class="level1"><div class="li"> <em>Quants llibres hi ha en català i que siguin de nivell universitari i que siguin de l'editorial Edicions 62?</em> Doneu nom a la consulta com: <strong>Consulta04:catala-univ-e62</strong></div>
+</li>
+<li class="level1"><div class="li"> <em>Llibres en castellà editats abans de 1960 (aquest any inclòs)</em> Ara el nom demanat és: <strong>Consulta05:castella-1960</strong></div>
+</li>
+</ol>
+
+<p>
+  
+A la finestra general de les consultes, podem veure que hi ha tres formes possibles de crear-ne una de nova. Aquestes són:
+</p>
+
+<p>
+<br />
+
+<br />
+
+<img src="jpg/modul3_44b.jpg" class="mediacenter" alt="" />
+<br />
+
+<br />
+
+De les tres, ens falta veure'n la tercera, anomenada Vista <acronym title="Structured Query Language">SQL</acronym>. Això de l'<acronym title="Structured Query Language">SQL</acronym>
+és un llenguatge estàndard de bases de dades que caldria estudiar llarg
+temps per dominar-lo, es treballa en una pantalla semblant a la de la
+imatge següent i cal saber tot un llenguatge de programació molt
+específic del món de les bases de dades. El seu estudi queda lluny dels 
+objectius d'aquest curs i per tant no l'explicarem.
+</p>
+
+<p>
+<br />
+
+<br />
+
+<img src="jpg/modul3_44.jpg" class="mediacenter" alt="" />
+</p>
+
+<p>
+Quant a la <strong>Consulta4:catala-bat-e62</strong>, la imatge de la solució seria aquesta:
+<br />
+
+<br />
+
+<img src="jpg/modul3_47bis.jpg" class="mediacenter" alt="" />
+<br />
+
+<br />Com veieu, es pot treballar sobre l'anterior consulta però hi
+caldria afegir noves taules en el disseny de la mateixa. Per afegir
+taules en la vista disseny, es pot fer mitjançant el botó <img src="jpg/modul3_48.jpg" class="media" alt="" /> que ens mostrarà aquesta finestra que ja coneixem:
+<br />
+
+<br />
+
+<img src="jpg/modul3_49.jpg" class="mediacenter" alt="" />
+<br />
+
+<br />
+
+</p>
+
+<p>
+Per al cas de l'altra consulta demanada, <strong>Consulta05:castella-1960</strong>,
+només cal dir que el criteri amb xifres es pot fer treballant amb els
+signes de &gt; (major que), &lt; (menor que) També es pot combinar el
+signe = i el &gt; per significar <em>major o igual que…</em> Observeu el quadre següent amb les possibilitats principals:
+<br />
+
+<br />
+
+<img src="jpg/modul3_50.jpg" class="mediacenter" alt="" />
+<br />
+
+<br />
+Podeu anar provant els efectes dels operadors de la imatge anterior i
+deseu finalment el criteri que es demana al començament d'aquesta
+pràctica, concretament llibres en castellà editats abans de 1960, per
+tant &lt;1960 i 'cas', en les columnes corresponents als camps Any
+edicio i codi llengua.
+</p>
+
+</div>
+
+<h4><a name="consultes_condicionalsi_i_o_logics" id="consultes_condicionalsi_i_o_logics">Consultes condicionals: I i O lògics</a></h4>
+<div class="level4">
+
+<p>
+
+Quan parlem del criteri <strong>I lògic</strong>, això vol dir
+que la consulta ha de complir els criteris de forma simultània, és a
+dir, a l'hora. Aquests es posen en la mateixa fila (o mateixa línia) de
+criteris.
+Un exemple d'aquest tipus de criteri I lògic, ja l'hem vist abans en
+les altres consultes, doncs es feia que complissin de vegada més d'una
+condició: que siguin en català (llengua)i universitaris (nivell), etc.
+</p>
+
+<p>
+Per una altra banda, el criteri <strong>O lògic</strong>, s'aplica
+posant el segon criteri a sota del primer. Afecta al mateix camp i pot
+ser un o l'altre (donarà per resposta els registres que compleixin una
+condició i l'altra). </p>
+
+<p>
+Per veure-ho posarem uns exemples:
+</p>
+
+<p>
+Farem la <strong>Consulta06:frances-angles-1997</strong>
+</p>
+
+<p>
+Si ens fixem en la següent imatge del disseny de la Consulta06, podrem observar que en ella hi ha criteris <strong>I</strong> i també criteris <strong>O</strong>:
+<br />
+
+<br />
+
+<img src="jpg/modul3_51bis.jpg" class="mediacenter" alt="" />
+<br />
+
+<br />
+
+</p>
+<ul>
+<li class="level1"><div class="li"> Tal com es pot veure en una mateixa fila hi ha els criteris <strong>I</strong>,
+és a dir, els llibres de llengua anglesa “an” i que també han de
+complir una segona condició, que siguin posteriors a l'any 1997
+”&gt;1997”</div>
+</li>
+<li class="level1"><div class="li"> Per una altra banda, a la filera de sota, hi apareix el criteri <strong>O</strong>.
+Concretament, es diu “fr”, i això ho cal interpretar com que al criteri
+anterior s'hi ha de sumar tots els llibres que tiguin per llengua fr,
+és a dir, francès, i en aquest cas de tots els anys sense cap
+limitació. Aquest és el criteri <strong>O</strong> que se suma a l'anterior.</div>
+</li>
+</ul>
+
+<p>
+Si volem veure els resultats sense sortir del disseny de la consulta, polsem sobre el botó <img src="jpg/modul3_52.jpg" class="media" alt="" /> i obtindrem la resposta a la consulta, tal com podeu comprovar aquí:
+<br />
+
+<br />
+
+<img src="jpg/modul3_53.jpg" class="mediacenter" alt="" />
+<br />
+
+<br />
+Tal com es pot veure, sense sortir del disseny tenim la resposta en la
+mateixa pantalla: veiem tots els registres de llengua francesa, sense
+tenir en compte els anys, i els registrs de llengua anglesa, però en
+aquest cas només posteriors a 1997.
+</p>
+
+<p>
+Exemples d'aquests tipus en podem posar i trobar molts. Aquí se'n planteja un altre:
+</p>
+
+<p>
+<strong>Consulta7:Madrid-Barcelona-vic-1000-100</strong>
+</p>
+
+<p>Volem que la nova consulta ens mostri tots els registres dels
+llibres que no siguin editats a Madrid ni a Barcelona i que tinguin més
+de 1000 pàgines. També volem veure en la mateixa consulta els llibres
+editats a Vic amb més de 100 pàgines.
+</p>
+
+<p>
+Mireu la solució de l'exercici anterior:
+<br />
+
+<br />
+
+<img src="jpg/modul3_54.jpg" class="mediacenter" alt="" />
+<br />
+
+<br />Com podeu observar en la imatge anterior, els camps relacionats
+en aquesta consulta, són codi edicio de la taula Lloc edicio i el camp
+Lloc edicio de la taula Llibres. Cal recordar que el que importa en una
+relació no és el nom dels camps, sinó el seu contingut. Si feu la prova
+de relacionar els camps lloc edicio de les dues taules implicades, els
+resultats de la consulta seran de 0 registres, i això passa perquè un
+dels camps és un camp codi (el de la taula Llibres) i l'altre és un
+camp amb una descripció (de la taula Lloc edicio). Per tant, tot i que
+el seu nom sigui igual, el que realment importa, és el seu contingut,
+tal com es demostra en aquest exemple.
+</p>
+
+<p>
+I els resultats, són un exemple de tres critesis <strong>I</strong> i tres criteris <strong>O lògics</strong>.
+</p>
+
+<p>Per últim, si volem fer intervals del tipus: Llibres publicats entre
+un primer any determinat i un segon any, això ho caldria fer amb l'ús
+dels signes <strong>&gt;</strong> i <strong>&lt;</strong>
+i com que volem que acompleixin tots dos criteris a l'hora, estem
+parlant d'un criteri I. Per tant, per poder-lo posar cal utilitzar dos
+cops el nom del camp i en un d'ells posar-hi el primer criteri, i a
+l'altre el segon criteri.
+Aquí en mostrem un exemple.
+Desarem la consulta com <strong>Consulta08:Llibres Barcelona de 2000 i 2001</strong>
+El disseny de la mateixa haurà de ser com el de la següent imatge:
+<br />
+
+<br />
+
+<img src="jpg/modul3_14.jpg" class="mediacenter" alt="" />
+<br />
+
+<br />
+
+I el resultat que n'obtindrem serà com aquest:
+<br />
+
+<br />
+
+<img src="jpg/modul3_15.jpg" class="mediacenter" alt="" />
+<br />
+
+<br />
+
+</p>
+
+<p>
+Fins aquí els criteris múltiples, ara uns pocs aspectes més sobre consultes.
+
+</p>
+
+</div>
+
+    <!-- ......... wikipage stop  ......... -->
+
+  </div>
+
+  <div class="clearer">&nbsp;</div>
+
+   
+<br /><br />
+  <a href="#inici" title="Inici pàgina"><img src="gif/up.gif" alt="Inici" /></a> <div class="footerinc">
+  <hr />
+  <table style="width: 100%;">
+  <tbody><tr style="vertical-align: middle;">
+    <td style="width: 30%;">
+      <div style="float: left;">
+      <a href="http://apliedu.xtec.cat/wikiform" title="Materials de formació"><img src="png/matfor.png" alt="Generalitat de Catalunya" height="42" width="100" /></a>
+      </div> 
+    </td>
+    <td style="width: 40%;">
+      <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/es/deed.ca"><img alt="Creative Commons License" style="border-width: 0pt;" src="png/cc.png" /></a>
+    </td>
+    <td style="width: 30%;">
+      <div style="float: right;">
+      <a href="http://www.xtec.cat/" title="XTEC"><img src="png/xtec.png" alt="XTEC" height="15" width="62" /></a>
+      </div>
+    </td>
+  </tr>  
+  </tbody></table>
+<!--
+<rdf:RDF xmlns="http://web.resource.org/cc/"
+    xmlns:dc="http://purl.org/dc/elements/1.1/"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<Work rdf:about="">
+   <dc:type rdf:resource="http://purl.org/dc/dcmitype/Text" />
+   <license rdf:resource="http://creativecommons.org/licenses/by-nc-sa/2.0/" />
+</Work>
+
+<License rdf:about="http://creativecommons.org/licenses/by-nc-sa/2.0/">
+   <permits rdf:resource="http://web.resource.org/cc/Reproduction" />
+   <permits rdf:resource="http://web.resource.org/cc/Distribution" />
+   <requires rdf:resource="http://web.resource.org/cc/Notice" />
+   <requires rdf:resource="http://web.resource.org/cc/Attribution" />
+   <prohibits rdf:resource="http://web.resource.org/cc/CommercialUse" />
+   <permits rdf:resource="http://web.resource.org/cc/DerivativeWorks" />
+   <requires rdf:resource="http://web.resource.org/cc/ShareAlike" />
+</License>
+
+</rdf:RDF>
+-->
+</div>
+
+</div>
+
+<!-- Generat el 27/Oct/2010  8:24:46  amb HTTrack --> 
+</body></html>

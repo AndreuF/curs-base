@@ -1,0 +1,219 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ca" dir="ltr" lang="ca"><head><!-- Generat el 27/Oct/2010  8:24:46  amb HTTrack -->
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  
+
+<title>Elaboració avançada de documents amb bases de dades</title><link rel="stylesheet" media="all" type="text/css" href="css/cssff6e.css?s=all&amp;t=estatic" />
+<link rel="stylesheet" media="screen" type="text/css" href="css/css6139.css?t=estatic" />
+<link rel="stylesheet" media="print" type="text/css" href="css/css6f71.css?s=print&amp;t=estatic" />
+
+  <link rel="shortcut icon" href="ico/favicon.ico" /></head>
+<body>
+<div class="headerinc">
+<a id="inici"> </a>
+<a href="http://apliedu.xtec.cat/wikiform" title="Materials de formació"><img alt="logo" style="border-width: 0pt;" src="png/logosuperior.png" /></a>
+</div>
+
+<div class="dokuwiki">
+
+
+<div class="titol">L'entorn de l'Open Base </div><div class="subtitol"> Pràctica 1 - Exercici 1</div>
+<div class="navega"><div id="navcontainer"><ul id="navlist">
+<li><a href="index.html" title="Inici">&lt;&lt;</a></li>  
+<li><a href="index-2.html">&lt;</a></li>  
+<li id="active"><a id="current" href="#">Exercici 1</a></li>  
+<li><a href="practica_2.html">Exercici 2</a></li> 
+<li><a href="practica_3.html">Exercici 3</a></li> 
+<li><a href="practica_4.html">Exercici 4</a></li>
+<li><a href="projecte_1.html">Projecte I</a></li>
+</ul></div></div>
+
+  
+  <div class="page">
+
+    <!-- ......... wikipage start ......... -->
+    
+
+
+<h3><a name="concepte_de_base_de_dades" id="concepte_de_base_de_dades">Concepte de Base de Dades</a></h3>
+<div class="level3">
+
+<p>
+L'Open Base és una aplicació que permet la creació de bases de dades
+relacionals. Aquest tipus de bases de dades incorpora múltiples
+objectes relacionats entresi que fa que la informació flueixi d'una
+forma ràpida i amb uns formats molt còmodes i no difícils de generar.
+</p>
+
+<p>Els programes de Bases de Dades com és l'Open Base tenen per funció
+principal la d'organitzar la informació (dades) d'una forma
+estructurada (o ordenada) per poder després accedir a ella el més
+còmodament possible.
+</p>
+
+<p>Open Base esta integrat dintre del paquet ofimàtic Libre Office i
+això li garanteix una connectivitat molt gran amb la resta
+d'aplicacions del paquet, així com també la possibilitat de lligar la
+informació amb programes d'altres aplicacions.
+</p>
+
+<p>La nostra vida personal i professional està plena de bases de dades,
+que no són més que blocs d'informació homogènia agrupada i que podem
+relacionar amb altres blocs amb els que tenen alguna relació.
+</p>
+
+<p>Exemples de bases de dades: Tota empresa té una base de dades amb
+els seus clients, tots tenim una agenda en paper o electrònica on
+emmagatzemem les dades de la gent coneguda…
+</p>
+
+<p>Per desenvolupar el curs d'una manera molt clara farem servir una
+base de dades exemple: una Biblioteca, per tal de poder mostrar d'una
+manera clara tot el que es va explicant.
+</p>
+
+<p>A l'exemple que farem servir com a fil conductor, la Biblioteca,
+tenim clar que és un arxiu on tenim una llista dels llibres que té una
+biblioteca, o al centre de treball… i a més de cada llibre disposem
+d'una sèrie d'informació (títol, autor, editorial…). I no hem d'oblidar
+que aquestes bases de dades estan ordenades pel valor d'una de les
+informacions que tenim dels llibres: per títol, per autor…
+</p>
+
+<p>El que ens permet una base de dades generada amb Open Base és:
+emmagatzemar gran quantitat d'informació i poder accedir a ella d'una
+forma molt ràpida, demanant a l'aplicació que ens doni resposta a les
+consultes que volguem:
+</p>
+<ul>
+<li class="level1"><div class="li"> Quins llibres del tema aventures tinc?</div>
+</li>
+<li class="level2"><div class="li"> Quants en tinc editats d'abans de l'any 2000?</div>
+</li>
+<li class="level2"><div class="li"> Quins llibres tinc de Mercè Rodoreda?</div>
+</li>
+<li class="level2"><div class="li"> De quina editorial és el llibre “La plaça del Diamant”?</div>
+</li>
+<li class="level2"><div class="li"> Qui és l'autor del llibre “El Nom de la Rosa”?</div>
+</li>
+<li class="level2"><div class="li"> I un llanguíssim etc.</div>
+</li>
+</ul>
+
+</div>
+
+<h4><a name="comencem_el_passeig_per_l_open_base" id="comencem_el_passeig_per_l_open_base">Comencem el passeig per l'Open Base</a></h4>
+<div class="level4">
+
+<p>
+
+Per fer aquest passeig primer us heu de descarregar el següent arxiu que conté la base de dades Biblioteca.
+</p>
+
+<p>
+Descarregueu el fitxer de la Biblioteca: 
+</p>
+
+<p>
+<a href="odb/biblioteca.odb" class="media mediafile mf_" title="cursos:tic:d124:modul_1:biblioteca.odb">Feu clic per descarregar-la</a>
+</p>
+
+<p>
+Finestra d'inici d'Open Base on el que farem en el nostre cas serà obrir la base de dades Biblioteca.
+</p>
+
+<p>
+<img src="jpg/m1013.jpg" class="mediacenter" title="Primera" alt="Primera" />
+</p>
+
+<p>Aquí podem veure la finestra de treball d'Open Base en la que podem
+observar tres apartats: el de la columna de l'esquerra en la que es
+mostren els diferents tipus d'objectes que pot contenir una base de
+dades (taules, consultes, formularis i informes), l'espai superior-dret
+es mostra la llista d'accions que es pot fer amb el tipus d'objecte
+seleccionat, i l'espai inferior-dret on es mostra una llista dels
+diferents objectes creats del tipus indicat. En la següent finestra
+podem veure que hi ha creada una taula anomenada Llibres i que si
+polsem sobre els altres tipus d'objectes (Consultes, Formularis,
+Informes)comprovarem que no hi ha cap més element creat en aquesta base
+de dades.
+</p>
+
+<p>
+<img src="jpg/m1011.jpg" class="mediacenter" alt="" />
+</p>
+
+<p>
+Si fem un doble clic sobre el nom de la taula Llibres podem veure el seu contingut.
+</p>
+
+<p>
+<img src="jpg/m1m12.jpg" class="mediacenter" alt="" />
+</p>
+
+<p>Un cop estem en aquesta finestra l'usuari pot afegir un nou llibre,
+eliminar algun llibre, fer una cerca d'un llibre o modificar les dades
+d'algun llibre.
+</p>
+
+<p>Com podeu veure en aquesta finestra la taula Llibres conté 11
+llibres, i de cadascun d'ells disposem d'una determinada informació
+(Títol, Autor, Editorial…) estructurada en columnes.
+</p>
+
+</div>
+
+    <!-- ......... wikipage stop  ......... -->
+
+  </div>
+
+  <div class="clearer">&nbsp;</div>
+
+   
+<br /><br />
+  <a href="#inici" title="Inici pàgina"><img src="gif/up.gif" alt="Inici" /></a> <div class="footerinc">
+  <hr />
+  <table style="width: 100%;">
+  <tbody><tr style="vertical-align: middle;">
+    <td style="width: 30%;">
+      <div style="float: left;">
+      <a href="http://apliedu.xtec.cat/wikiform" title="Materials de formació"><img src="png/matfor.png" alt="Generalitat de Catalunya" height="42" width="100" /></a>
+      </div> 
+    </td>
+    <td style="width: 40%;">
+      <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/es/deed.ca"><img alt="Creative Commons License" style="border-width: 0pt;" src="png/cc.png" /></a>
+    </td>
+    <td style="width: 30%;">
+      <div style="float: right;">
+      <a href="http://www.xtec.cat/" title="XTEC"><img src="png/xtec.png" alt="XTEC" height="15" width="62" /></a>
+      </div>
+    </td>
+  </tr>  
+  </tbody></table>
+<!--
+<rdf:RDF xmlns="http://web.resource.org/cc/"
+    xmlns:dc="http://purl.org/dc/elements/1.1/"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<Work rdf:about="">
+   <dc:type rdf:resource="http://purl.org/dc/dcmitype/Text" />
+   <license rdf:resource="http://creativecommons.org/licenses/by-nc-sa/2.0/" />
+</Work>
+
+<License rdf:about="http://creativecommons.org/licenses/by-nc-sa/2.0/">
+   <permits rdf:resource="http://web.resource.org/cc/Reproduction" />
+   <permits rdf:resource="http://web.resource.org/cc/Distribution" />
+   <requires rdf:resource="http://web.resource.org/cc/Notice" />
+   <requires rdf:resource="http://web.resource.org/cc/Attribution" />
+   <prohibits rdf:resource="http://web.resource.org/cc/CommercialUse" />
+   <permits rdf:resource="http://web.resource.org/cc/DerivativeWorks" />
+   <requires rdf:resource="http://web.resource.org/cc/ShareAlike" />
+</License>
+
+</rdf:RDF>
+-->
+</div>
+
+</div>
+
+<!-- Generat el 27/Oct/2010  8:24:46  amb HTTrack --> 
+</body></html>

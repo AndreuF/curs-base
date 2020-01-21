@@ -1,0 +1,319 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ca" dir="ltr" lang="ca"><head><!-- Generat el 27/Oct/2010  8:24:46  amb HTTrack -->
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  
+
+<title>Elaboració avançada de documents amb bases de dades</title><link rel="stylesheet" media="all" type="text/css" href="css/cssff6e.css?s=all&amp;t=estatic" />
+<link rel="stylesheet" media="screen" type="text/css" href="css/css6139.css?t=estatic" />
+<link rel="stylesheet" media="print" type="text/css" href="css/css6f71.css?s=print&amp;t=estatic" />
+
+  <link rel="shortcut icon" href="ico/favicon.ico" /></head>
+
+
+ 
+<body>
+<div class="headerinc">
+<a id="inici"> </a>
+<a href="http://apliedu.xtec.cat/wikiform" title="Materials de formació"><img alt="logo" style="border-width: 0pt;" src="png/logosuperior.png" /></a>
+</div>
+
+<div class="dokuwiki">
+
+
+<div class="titol">Creació de l'estructura. Les relacions </div><div class="subtitol"> Pràctica 3 - Exercici 3</div><div class="navega"><div id="navcontainer">
+<ul id="navlist">
+<li><a href="index.html" title="Inici">&lt;&lt;</a></li>  
+<li><a href="index-4.html">&lt;</a></li>  
+<li><a href="practica_1-3.html">Exercici 1</a></li>  
+<li><a href="practica_2-3.html">Exercici 2</a></li>  
+<li id="active"><a id="current" href="#">Exercici 3</a></li>
+<li><a href="projecte_3.html">Projecte III</a></li>  
+</ul></div></div>
+
+  
+  <div class="page">
+
+    <!-- ......... wikipage start ......... -->
+    
+<h4><a name="fem_una_relacio" id="fem_una_relacio">Fem una relació</a></h4>
+<div class="level4">
+
+<p>
+
+En la pràctica anterior s'ha anat fent l'explicació teòrica. Ara passem a l'acció: farem les relacions. 
+</p>
+
+<p>
+Respecte al mòdul 1, tal com s'ha anunciat en la pràctica anterior,
+s'ha preparat un fitxer de base de dades sobre el qual es treballarà en
+aquest segon mòdul. </p>
+
+<p>
+Si no l'heu descarregat a la pràctica anterior, cal fer-ho ara mateix
+per poder iniciar la feina, doncs estudiarem la base de dades a partir
+del procés de completar aquest fitxer “a mig fer”.
+Per obrir la Base de Dades <em>Biblioteca</em>, <a href="odb/biblioteca-2.odb" class="media mediafile mf_" title="cursos:tic:d124:modul_3:biblioteca.odb">feu clic aquí</a> i comencem a fer la primera de les relacions: la de les taules <strong>Llibres</strong> i <strong>Llengua</strong>.
+</p>
+
+</div>
+
+<h4><a name="ho_posem_en_practica" id="ho_posem_en_practica">Ho posem en pràctica</a></h4>
+<div class="level4">
+
+<p>
+
+Bé, ara que ja ho sabem tot sobre el tema, anem a fer-ho.
+</p>
+
+<p>
+Des de la finestra general de la Base de Dades, accedim a l'opció del menú: <strong>Eines | Relacions</strong> tal com es veu en la imatge següent:
+<br />
+
+<br />
+
+<img src="jpg/m2_p1_10.jpg" class="mediacenter" alt="" />
+<br />
+
+<br />
+
+</p>
+
+<p>
+
+Automàticament ens apareixerà la finestra següent:
+<br />
+
+<br />
+
+<img src="jpg/m2_p1_11.jpg" class="mediacenter" alt="" />
+<br />
+
+<br />
+
+En ella haurem de triar les dues taules amb les quals volem treballar, i que són <strong>Llibres</strong> i <strong>Llengua</strong>.
+</p>
+
+<p>
+Seleccionant cadascuna d'elles i fent clic al botó Afegir, les tindrem
+totes dues a la part central de la finestra, tal com mostra la següent
+imatge que s'amplia en l'altra:
+<br />
+
+<br />
+
+<img src="jpg/m2_p1_12.jpg" class="mediacenter" alt="" />
+<br />
+
+<br />
+
+</p>
+
+<p>Arrosseguem les vores de la taula Llibres perquè mostri tots els
+seus camps continguts. És una forma de tenir tota la informació a la
+vista d'un sol cop.
+<br />
+
+<br />
+
+<img src="jpg/m2_p1_13.jpg" class="mediacenter" alt="" />
+<br />
+
+<br />
+
+</p>
+
+<p>Ara només ens queda arrossegar el camp codi llengua de la taula
+Llengua (costat 1 de la relació) i deixar-lo anar just a sobre del camp
+codi llengua de la taula Llibres (Costat n de la relació, tal com
+mostra la imatge:
+<br />
+
+<br />
+
+<img src="jpg/m2_p1_14.jpg" class="mediacenter" alt="" />
+<br />
+
+<br />
+
+</p>
+
+<p>
+Observem que ens apareix una línia entre les dues taules que té aquest aspecte:
+<br />
+
+<br />
+
+<img src="jpg/m2_p1_15.jpg" class="mediacenter" alt="" />
+<br />
+
+<br />
+
+</p>
+
+<p>Com es pot apreciar, és una línia fina que uneix els dos camps, i
+que a un dels seus extrems té un 1 petit, i a l'altre extrem té una n.
+Ens indica quin tipus de relació és i el punt inicial o costat 1 de la
+mateixa i el final o n de la mateixa, el 1 i el varios.
+Aquesta finestra mostra l'aspecte esmentat de la primera relació feta
+entre les dues taules:
+<br />
+
+<br />
+
+<img src="jpg/m2_p1_16.jpg" class="mediacenter" alt="" />
+<br />
+
+<br />
+
+</p>
+
+<p>Si fem clic sobre la línia, aquesta quedarà seleccionada (es mostra
+amb un gruix superior) i, si la volem esborrar, només hem de polsar el
+botó suprimir del teclat. La relació deixarà d'existir.
+</p>
+
+<p>Una altra acció que podem fer, es fer clic sobre la línia, però amb
+el botó secundari del ratolí, i ens apareixerà aquest petit submenú amb
+dues opcions:
+<br />
+
+<br />
+
+<img src="jpg/m2_p1_17.jpg" class="mediacenter" alt="" />
+<br />
+
+<br />
+
+</p>
+
+<p>
+Efectivament, la primera opció <em>Eliminar</em> és per esborrar la relació recent feta. 
+Quant a la segona <em>Editar</em>,
+permet modificar una sèrie de característiques importants de la
+relació, i que podem fer mitjançant aquesta finestra que apareix al
+donar sobre <em>Edita</em>:
+<br />
+
+<br />
+
+<img src="jpg/m2_p1_16.jpg" class="mediacenter" alt="" />
+<br />
+
+<br />
+
+</p>
+
+<p>
+Com podeu veure hi ha dues parts a la pantalla, les opcions
+d'Actualització i les d'Eliminació. Això vol dir que si esborrem un
+camp que té relació amb l'altra taula, el programa <strong>Open Data.org</strong> s'ha de comportar d'una forma determinada. 
+</p>
+
+<p>
+En cas de tenir activada l'opció: <img src="jpg/m2_p1_18.jpg" class="media" alt="" />, si esborro un autor de la taula <em>Llengua</em>, què farà el programa amb el llibre d'aquesta llengua concreta?
+Doncs si esborro la llengua fr de la taula <em>Llengua</em>, s'eliminaran els llibres d'aquesta llengua de la taula <em>Llibres</em>.
+</p>
+
+<p>
+Per tant, és important controlar aquests tipus d'accions de cara a un
+correcte funcionament del programa. Les altres opcions, són lògiques,
+oi?
+</p>
+
+</div>
+
+<h5><a name="fem_unes_quantes_relacions_mes" id="fem_unes_quantes_relacions_mes">Fem unes quantes relacions més</a></h5>
+<div class="level5">
+
+<p>A continuació se us demana que intenteu fer-ne algunes més vosaltres
+sols. En el proper mòdul, es completaran totes, però de moment,
+interessa que aneu practicant en la seva creació.
+</p>
+
+<p>Es proposa que feu vosaltres les relacions que es mostren en la
+imatge inferior d'aquesta pàgina. Gairebé la feina estarà acabada, però
+com que hi ha algunes de les taules que donen petits problemes, es
+completarà tot més endavant.
+</p>
+
+<p>
+El resultat momentani haurà de ser tal com la imatge que podem veure a continuació:
+</p>
+
+<p>
+<br />
+
+<br />
+
+<img src="jpg/m2_p1_08c.jpg" class="mediacenter" alt="" />
+<br />
+
+<br />En aquest punt s'ha proposat fer unes quantes relacions i
+deixar-ne tres per completar en el mòdul següent, doncs donen una sèrie
+de problemes que s'explicaran en el seu moment. Les altres que es
+proposen no haurien de suposar gaires dificultats.
+</p>
+
+<p>A l'apartat d'exercicis d'aquest mòdul es proposa un altre exemple
+per aplicar i consolidar el tema de les relacions, i fer un petit
+escrit confirmant que les relacions fetes aquí s'han completat amb
+èxit.
+</p>
+
+</div>
+
+    <!-- ......... wikipage stop  ......... -->
+
+  </div>
+
+  <div class="clearer">&nbsp;</div>
+
+   
+<br /><br />
+  <a href="#inici" title="Inici pàgina"><img src="gif/up.gif" alt="Inici" /></a> <div class="footerinc">
+  <hr />
+  <table style="width: 100%;">
+  <tbody><tr style="vertical-align: middle;">
+    <td style="width: 30%;">
+
+      <div style="float: left;">
+      <a href="http://apliedu.xtec.cat/wikiform" title="Materials de formació"><img src="png/matfor.png" alt="Generalitat de Catalunya" height="42" width="100" /></a>
+      </div> 
+    </td>
+    <td style="width: 40%;">
+      <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/es/deed.ca"><img alt="Creative Commons License" style="border-width: 0pt;" src="png/cc.png" /></a>
+    </td>
+    <td style="width: 30%;">
+      <div style="float: right;">
+      <a href="http://www.xtec.cat/" title="XTEC"><img src="png/xtec.png" alt="XTEC" height="15" width="62" /></a>
+      </div>
+    </td>
+  </tr>  
+  </tbody></table>
+<!--
+<rdf:RDF xmlns="http://web.resource.org/cc/"
+    xmlns:dc="http://purl.org/dc/elements/1.1/"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<Work rdf:about="">
+   <dc:type rdf:resource="http://purl.org/dc/dcmitype/Text" />
+   <license rdf:resource="http://creativecommons.org/licenses/by-nc-sa/2.0/" />
+</Work>
+
+<License rdf:about="http://creativecommons.org/licenses/by-nc-sa/2.0/">
+   <permits rdf:resource="http://web.resource.org/cc/Reproduction" />
+   <permits rdf:resource="http://web.resource.org/cc/Distribution" />
+   <requires rdf:resource="http://web.resource.org/cc/Notice" />
+   <requires rdf:resource="http://web.resource.org/cc/Attribution" />
+   <prohibits rdf:resource="http://web.resource.org/cc/CommercialUse" />
+   <permits rdf:resource="http://web.resource.org/cc/DerivativeWorks" />
+   <requires rdf:resource="http://web.resource.org/cc/ShareAlike" />
+</License>
+
+</rdf:RDF>
+-->
+</div>
+
+</div>
+
+<!-- Generat el 27/Oct/2010  8:24:46  amb HTTrack --> 
+</body></html>
